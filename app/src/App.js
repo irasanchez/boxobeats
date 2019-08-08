@@ -10,7 +10,7 @@ function App() {
   };
   return (
     <div className="App">
-      <RandomBeatList />
+      {type === "playCircle" ? null : <RandomBeatList />}
       <MorphIcon type={type} onClick={playButtonHandler} />
     </div>
   );

@@ -1,24 +1,17 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import { iconTypes, MorphIcon } from "react-svg-buttons";
+import RandomBeatList from "./components/RandomBeatList";
+import "./App.css";
 
 function App() {
+  const [type, setType] = useState("playCircle");
+  const playButtonHandler = () => {
+    type === "playCircle" ? setType("pauseCircle") : setType("playCircle");
+  };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <RandomBeatList />
+      <MorphIcon type={type} onClick={playButtonHandler} />
     </div>
   );
 }

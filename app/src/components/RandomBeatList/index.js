@@ -1,9 +1,21 @@
 import React from "react";
+import beatsData from "../../assets/beatsData.json";
+import Beat from "./Beat";
 
 const index = () => {
+  const beats = beatsData.beats.filter(beat => beat.included);
+
   return (
     <section>
-      <p>B T K B T K</p>
+      {beats.map(beat => {
+        return (
+          <Beat
+            name={beat.name}
+            included={beat.included}
+            symbol={beat.symbol}
+          />
+        );
+      })}
     </section>
   );
 };

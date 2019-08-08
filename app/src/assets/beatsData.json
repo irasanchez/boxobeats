@@ -1,0 +1,8 @@
+{
+  "beats": [
+    { "name": "test", "included": false, "symbol": "" },
+    { "name": "kick", "included": true, "symbol": "b" },
+    { "name": "hi-hat", "included": true, "symbol": "t" },
+    { "name": "k snare", "included": true, "symbol": "k" }
+  ]
+}

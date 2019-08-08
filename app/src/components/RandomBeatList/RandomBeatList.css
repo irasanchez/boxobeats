@@ -1,0 +1,16 @@
+.random-beat-list {
+  display: flex;
+  justify-content: space-evenly;
+  width: 50%;
+  border: 15px solid #c4c4c4;
+  font-weight: bold;
+}
+
+.random-beat-list p {
+  background-color: #c4c4c4;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

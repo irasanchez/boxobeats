@@ -19,8 +19,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <h1>Box-O-Beats: Beatbox Trainer</h1>
         {this.state.type === "playCircle" ? null : <RandomBeatList />}
-        <div />
+
         <MorphIcon type={this.state.type} onClick={this.playButtonHandler} />
       </div>
     );

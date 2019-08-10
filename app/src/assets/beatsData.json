@@ -1,8 +1,81 @@
 {
   "beats": [
-    { "name": "test", "included": false, "symbol": "" },
-    { "name": "kick", "included": true, "symbol": "b" },
-    { "name": "hi-hat", "included": true, "symbol": "t" },
-    { "name": "k snare", "included": true, "symbol": "k" }
+    {
+      "name": "kick drum",
+      "included": true,
+      "symbol": "b",
+      "tutorials": ["https://www.youtube.com/watch?v=g703Y7xtyo8"],
+      "prerequisites": []
+    },
+    {
+      "name": "hi-hat",
+      "included": true,
+      "symbol": "t",
+      "tutorials": ["https://www.youtube.com/watch?v=hR-OwR2cFv8"],
+      "prerequisites": []
+    },
+    {
+      "name": "k snare",
+      "included": true,
+      "symbol": "k",
+      "tutorials": ["https://www.youtube.com/watch?v=zem4mFhLhCg"],
+      "prerequisites": []
+    },
+    {
+      "name": "f hi-hat",
+      "included": true,
+      "symbol": "f",
+      "tutorials": ["https://www.youtube.com/watch?v=_K_k6aLv3Nc"],
+      "prerequisites": []
+    },
+    {
+      "name": "trap hi-hat",
+      "included": false,
+      "symbol": "ttt",
+      "tutorials": ["https://www.youtube.com/watch?v=_e5IOEHFzxo"],
+      "prerequisites": []
+    },
+    {
+      "name": "inward k snare",
+      "included": false,
+      "symbol": "^k",
+      "tutorials": ["https://www.youtube.com/watch?v=YXmKtHsXt4U"],
+      "prerequisites": []
+    },
+    {
+      "name": "cough snare",
+      "included": false,
+      "symbol": "cgh",
+      "tutorials": ["https://www.youtube.com/watch?v=8u_Yf1OPvSU"],
+      "prerequisites": []
+    },
+    {
+      "name": "psh snare",
+      "included": true,
+      "symbol": "psh",
+      "tutorials": ["https://www.youtube.com/watch?v=bATBrXbRt0w"],
+      "prerequisites": []
+    },
+    {
+      "name": "pf snare",
+      "included": true,
+      "symbol": "pf",
+      "tutorials": ["https://www.youtube.com/watch?v=vfvhihyGCnk"],
+      "prerequisites": []
+    },
+    {
+      "name": "lip oscillation",
+      "included": true,
+      "symbol": "bbb",
+      "tutorials": ["https://www.youtube.com/watch?v=vfvhihyGCnk"],
+      "prerequisites": []
+    },
+    {
+      "name": "tkk",
+      "included": false,
+      "symbol": "tkk",
+      "tutorials": ["https://www.youtube.com/watch?v=vfvhihyGCnk"],
+      "prerequisites": ["hi-hat", "k snare", "rimshot"]
+    }
   ]
 }

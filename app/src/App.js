@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { MorphIcon } from "react-svg-buttons";
 import RandomBeatList from "./components/RandomBeatList";
+import PlayButton from "./components/buttons/PlayButton";
+import PretendComponent from "./components/PretendComponent";
 import "./App.css";
 
 class App extends Component {
@@ -21,8 +23,12 @@ class App extends Component {
       <div className="App">
         <h1>Box-O-Beats: Beatbox Trainer</h1>
         {this.state.type === "playCircle" ? null : <RandomBeatList />}
-
-        <MorphIcon type={this.state.type} onClick={this.playButtonHandler} />
+        <PlayButton
+          type={this.state.type}
+          playButtonHandler={this.playButtonHandler}
+          // whatever="butts"
+        />
+        <PretendComponent whatever="butts" />
       </div>
     );
   }

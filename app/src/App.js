@@ -1,34 +1,34 @@
 import React, { Component } from "react";
-import { MorphIcon } from "react-svg-buttons";
 import RandomBeatList from "./components/RandomBeatList";
-import PlayButton from "./components/buttons/PlayButton";
-import PretendComponent from "./components/PretendComponent";
+import PlayButton from "./components/buttons/PlayButton/PlayButton";
+import Box from "./components/MainBox/Box";
+
 import "./App.css";
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      type: "playCircle"
+      isPlaying: true
     };
   }
 
-  playButtonHandler = () => {
-    this.state.type === "playCircle"
-      ? this.setState({ type: "pauseCircle" })
-      : this.setState({ type: "playCircle" });
+  handlePlayingToggle = () => {
+    this.setState(prevState => ({
+      isPlaying: !prevState.isPlaying
+    }));
   };
+
   render() {
     return (
       <div className="App">
         <h1>Box-O-Beats: Beatbox Trainer</h1>
-        {this.state.type === "playCircle" ? null : <RandomBeatList />}
+        {this.state.isPlaying ? <RandomBeatList /> : null}
+        <Box isPlaying={this.state.isPlaying} />
         <PlayButton
-          type={this.state.type}
-          playButtonHandler={this.playButtonHandler}
-          // whatever="butts"
+          handlePlayingToggle={this.handlePlayingToggle}
+          isPlaying={this.state.isPlaying}
         />
-        <PretendComponent whatever="butts" />
       </div>
     );
   }

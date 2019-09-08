@@ -24,3 +24,9 @@ svg {
   height: 100px;
   border: none;
 }
+
+button {
+  outline: none;
+  border: none;
+  background: none;
+}

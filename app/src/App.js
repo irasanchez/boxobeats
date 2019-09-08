@@ -22,7 +22,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>Box-O-Beats: Beatbox Trainer</h1>
+        <p>
+          Push play to see a random list of sounds to incorporate into your
+          practice.
+        </p>
         {this.state.isPlaying ? <RandomBeatList /> : null}
         <Box isPlaying={this.state.isPlaying} />
         <PlayButton

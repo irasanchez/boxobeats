@@ -6,6 +6,7 @@ import Box from "./components/MainBox/Box";
 import "./App.css";
 
 import TotalBeatList from "./components/TotalBeatList/TotalBeatList";
+import Metronome from "./components/Metronome/Metronome";
 
 class App extends Component {
   constructor(props) {
@@ -34,7 +35,7 @@ class App extends Component {
           handlePlayingToggle={this.handlePlayingToggle}
           isPlaying={this.state.isPlaying}
         />
-        <TotalBeatList />
+        <Metronome />
       </div>
     );
   }

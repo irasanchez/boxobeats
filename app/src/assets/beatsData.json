@@ -5,80 +5,469 @@
       "included": true,
       "symbol": "b",
       "tutorials": ["https://www.youtube.com/watch?v=g703Y7xtyo8"],
-      "prerequisites": []
+      "prerequisites": ""
     },
     {
       "name": "hi-hat",
       "included": true,
       "symbol": "t",
       "tutorials": ["https://www.youtube.com/watch?v=hR-OwR2cFv8"],
-      "prerequisites": []
+      "prerequisites": ""
     },
     {
       "name": "k snare",
       "included": true,
       "symbol": "k",
       "tutorials": ["https://www.youtube.com/watch?v=zem4mFhLhCg"],
-      "prerequisites": []
+      "prerequisites": ""
     },
     {
-      "name": "f hi-hat",
-      "included": true,
-      "symbol": "f",
-      "tutorials": ["https://www.youtube.com/watch?v=_K_k6aLv3Nc"],
-      "prerequisites": []
-    },
-    {
-      "name": "trap hi-hat",
+      "name": "cough snare ",
       "included": false,
-      "symbol": "ttt",
-      "tutorials": ["https://www.youtube.com/watch?v=_e5IOEHFzxo"],
-      "prerequisites": []
-    },
-    {
-      "name": "inward k snare",
-      "included": false,
-      "symbol": "^k",
-      "tutorials": ["https://www.youtube.com/watch?v=YXmKtHsXt4U"],
-      "prerequisites": []
-    },
-    {
-      "name": "cough snare",
-      "included": false,
-      "symbol": "cgh",
+      "symbol": "",
       "tutorials": ["https://www.youtube.com/watch?v=8u_Yf1OPvSU"],
-      "prerequisites": []
-    },
-    {
-      "name": "psh snare",
-      "included": true,
-      "symbol": "psh",
-      "tutorials": ["https://www.youtube.com/watch?v=bATBrXbRt0w"],
-      "prerequisites": []
+      "prerequisites": ""
     },
     {
       "name": "pf snare",
-      "included": true,
-      "symbol": "pf",
+      "included": false,
+      "symbol": "",
       "tutorials": ["https://www.youtube.com/watch?v=vfvhihyGCnk"],
-      "prerequisites": []
+      "prerequisites": ""
+    },
+    {
+      "name": "psh snare ",
+      "included": false,
+      "symbol": "",
+      "tutorials": ["https://www.youtube.com/watch?v=bATBrXbRt0w"],
+      "prerequisites": ""
+    },
+    {
+      "name": "tongue click",
+      "included": false,
+      "symbol": "",
+      "tutorials": ["https://www.youtube.com/watch?v=W50-NSZUnJQ"],
+      "prerequisites": ""
+    },
+    {
+      "name": "throat kick",
+      "included": false,
+      "symbol": "",
+      "tutorials": ["https://www.youtube.com/watch?v=x0zIFZQZtsE"],
+      "prerequisites": ""
+    },
+    {
+      "name": "trumpet",
+      "included": false,
+      "symbol": "",
+      "tutorials": ["https://www.youtube.com/watch?v=2hNEs5VCQR8"],
+      "prerequisites": ""
+    },
+    {
+      "name": "lip roll 1 , lip roll 2",
+      "included": false,
+      "symbol": "",
+      "tutorials": ["https://www.youtube.com/watch?v=-50nUNHjo8E"],
+      "prerequisites": ""
+    },
+    {
+      "name": "lip bass",
+      "included": false,
+      "symbol": "",
+      "tutorials": ["https://youtu.be/b1-6SyiViYs?t=70"],
+      "prerequisites": ""
+    },
+    {
+      "name": "fart bass",
+      "included": false,
+      "symbol": "",
+      "tutorials": ["https://youtu.be/_HziA_wdgWc?t=8"],
+      "prerequisites": ""
+    },
+    {
+      "name": "starsky bass ",
+      "included": false,
+      "symbol": "",
+      "tutorials": ["https://youtu.be/_HziA_wdgWc?t=63"],
+      "prerequisites": ""
+    },
+    {
+      "name": "rimshot ",
+      "included": false,
+      "symbol": "",
+      "tutorials": ["https://www.youtube.com/watch?v=1vh-dno27Dw&t=7s"],
+      "prerequisites": ""
+    },
+    {
+      "name": "dry kick ",
+      "included": false,
+      "symbol": "",
+      "tutorials": ["https://www.youtube.com/watch?v=A-lBiy0yr64"],
+      "prerequisites": ""
+    },
+    {
+      "name": "sucker punch",
+      "included": false,
+      "symbol": "",
+      "tutorials": ["https://www.youtube.com/watch?v=l3c6UcIkZ4o"],
+      "prerequisites": ""
+    },
+    {
+      "name": "pop/tennis ball sound",
+      "included": false,
+      "symbol": "",
+      "tutorials": ["https://www.youtube.com/watch?v=3q6npU-fPtU"],
+      "prerequisites": ""
+    },
+    {
+      "name": "snore bass",
+      "included": false,
+      "symbol": "",
+      "tutorials": ["https://www.youtube.com/watch?v=lZvLQmDwPC8&t=117s"],
+      "prerequisites": ""
+    },
+    {
+      "name": "siren ",
+      "included": false,
+      "symbol": "",
+      "tutorials": ["https://www.youtube.com/watch?v=asHG9d3aDLs"],
+      "prerequisites": ""
     },
     {
       "name": "lip oscillation",
-      "included": true,
-      "symbol": "bbb",
-      "tutorials": ["https://www.youtube.com/watch?v=vfvhihyGCnk"],
-      "prerequisites": []
+      "included": false,
+      "symbol": "",
+      "tutorials": ["https://www.youtube.com/watch?v=gcaaYS1xUIs"],
+      "prerequisites": ""
     },
     {
-      "name": "tkk",
+      "name": "lip oscillation (on the side) ",
       "included": false,
-      "symbol": "tkk",
-      "tutorials": [
-        "https://www.youtube.com/watch?v=vfvhihyGCnk",
-        "second link test"
-      ],
-      "prerequisites": ["hi-hat", "k snare", "rimshot"]
+      "symbol": "",
+      "tutorials": [""],
+      "prerequisites": ""
+    },
+    {
+      "name": "hollow clop ",
+      "included": false,
+      "symbol": "",
+      "tutorials": ["https://www.youtube.com/watch?v=CEG7oUnULA0"],
+      "prerequisites": ""
+    },
+    {
+      "name": "reverse liproll ",
+      "included": false,
+      "symbol": "",
+      "tutorials": ["https://youtu.be/xrp5lPmdSYA?t=276"],
+      "prerequisites": ""
+    },
+    {
+      "name": "click roll ",
+      "included": false,
+      "symbol": "",
+      "tutorials": ["https://www.youtube.com/watch?v=gqRZ_cmE6-o"],
+      "prerequisites": ""
+    },
+    {
+      "name": "throat bass",
+      "included": false,
+      "symbol": "",
+      "tutorials": ["https://www.youtube.com/watch?v=wxh4Nvi6S-M"],
+      "prerequisites": ""
+    },
+    {
+      "name": "OD bass",
+      "included": false,
+      "symbol": "",
+      "tutorials": ["https://www.youtube.com/watch?v=y8Gxke_Ph8k"],
+      "prerequisites": ""
+    },
+    {
+      "name": "synth sound",
+      "included": false,
+      "symbol": "",
+      "tutorials": ["https://www.youtube.com/watch?v=2MFi5sl5jjI"],
+      "prerequisites": ""
+    },
+    {
+      "name": "zipper ",
+      "included": false,
+      "symbol": "",
+      "tutorials": ["https://www.youtube.com/watch?v=90Uw02w2RvI"],
+      "prerequisites": ""
+    },
+    {
+      "name": "meow squeak",
+      "included": false,
+      "symbol": "",
+      "tutorials": ["https://www.youtube.com/watch?v=6RA4HVoAevY"],
+      "prerequisites": ""
+    },
+    {
+      "name": "water drop",
+      "included": false,
+      "symbol": "",
+      "tutorials": ["https://www.youtube.com/watch?v=PFOxDvpKl6M"],
+      "prerequisites": ""
+    },
+    {
+      "name": "crab scratch",
+      "included": false,
+      "symbol": "",
+      "tutorials": ["https://www.youtube.com/watch?v=cE-oPz7zK60"],
+      "prerequisites": ""
+    },
+    {
+      "name": "vocal scratch",
+      "included": false,
+      "symbol": "",
+      "tutorials": ["https://www.youtube.com/watch?v=8DM3H7mOgTk"],
+      "prerequisites": ""
+    },
+    {
+      "name": "cricket whistle",
+      "included": false,
+      "symbol": "",
+      "tutorials": ["https://www.youtube.com/watch?v=MaB3b25Lsf8"],
+      "prerequisites": ""
+    },
+    {
+      "name": "outward sub bass",
+      "included": false,
+      "symbol": "",
+      "tutorials": ["https://www.youtube.com/watch?v=KdYl0dvOApc"],
+      "prerequisites": ""
+    },
+    {
+      "name": "tkK",
+      "included": false,
+      "symbol": "",
+      "tutorials": ["https://www.youtube.com/watch?v=UWPj0Bq3Fco"],
+      "prerequisites": ""
+    },
+    {
+      "name": "inward bass",
+      "included": false,
+      "symbol": "",
+      "tutorials": ["https://www.youtube.com/watch?v=V6k66FVQCE0"],
+      "prerequisites": ""
+    },
+    {
+      "name": "polyphonic voice/double voice ",
+      "included": false,
+      "symbol": "",
+      "tutorials": ["https://youtu.be/_HziA_wdgWc?t=150"],
+      "prerequisites": ""
+    },
+    {
+      "name": "sega sound",
+      "included": false,
+      "symbol": "",
+      "tutorials": ["https://www.youtube.com/watch?v=T0phy1yrnaA"],
+      "prerequisites": ""
+    },
+    {
+      "name": "Calexy whistle",
+      "included": false,
+      "symbol": "",
+      "tutorials": ["https://www.youtube.com/watch?v=5Ki40-b0kRI"],
+      "prerequisites": ""
+    },
+    {
+      "name": "vortex whistle",
+      "included": false,
+      "symbol": "",
+      "tutorials": ["https://www.youtube.com/watch?v=ITXh8EIWVSg&t=0s"],
+      "prerequisites": ""
+    },
+    {
+      "name": "vibration bass ",
+      "included": false,
+      "symbol": "",
+      "tutorials": ["https://www.youtube.com/watch?v=emcV-PaIozM"],
+      "prerequisites": ""
+    },
+    {
+      "name": "vocalized chest bass",
+      "included": false,
+      "symbol": "",
+      "tutorials": ["https://www.youtube.com/watch?v=SBGwm8j-lc0&t=0s"],
+      "prerequisites": ""
+    },
+    {
+      "name": "D-low scratch",
+      "included": false,
+      "symbol": "",
+      "tutorials": ["https://www.youtube.com/watch?v=Y6c-yIzqUuQ"],
+      "prerequisites": ""
+    },
+    {
+      "name": "D-low click ",
+      "included": false,
+      "symbol": "",
+      "tutorials": ["https://www.youtube.com/watch?v=04Gs21FES7w"],
+      "prerequisites": ""
+    },
+    {
+      "name": "Contrix/Babeli combo",
+      "included": false,
+      "symbol": "",
+      "tutorials": ["https://www.youtube.com/watch?v=qhmdpNNMMSM&t=2s"],
+      "prerequisites": ""
+    },
+    {
+      "name": "Colaps click ",
+      "included": false,
+      "symbol": "",
+      "tutorials": ["https://www.youtube.com/watch?v=oKh7P3EiDUw"],
+      "prerequisites": ""
+    },
+    {
+      "name": "Beat Rhino snare",
+      "included": false,
+      "symbol": "",
+      "tutorials": ["https://youtu.be/CSXJv4TnZ60?t=297"],
+      "prerequisites": ""
+    },
+    {
+      "name": "ESH snare",
+      "included": false,
+      "symbol": "",
+      "tutorials": ["https://www.youtube.com/watch?v=zpFNqPUohA4"],
+      "prerequisites": ""
+    },
+    {
+      "name": "Two.h snare (outward sub bass snare) ",
+      "included": false,
+      "symbol": "",
+      "tutorials": ["https://www.youtube.com/watch?v=A5iGjf4AbuI&t=0s"],
+      "prerequisites": ""
+    },
+    {
+      "name": "ZeDe scratch ",
+      "included": false,
+      "symbol": "",
+      "tutorials": ["https://www.youtube.com/watch?v=5_wR4oKoZsg"],
+      "prerequisites": ""
+    },
+    {
+      "name": "Trung Bao Đ ",
+      "included": false,
+      "symbol": "",
+      "tutorials": ["https://youtu.be/ID7AC5kv0Po?t=40"],
+      "prerequisites": ""
+    },
+    {
+      "name": "Trung Bao cannon bass",
+      "included": false,
+      "symbol": "",
+      "tutorials": ["https://www.youtube.com/watch?v=mp14wMmnCmc"],
+      "prerequisites": ""
+    },
+    {
+      "name": "Gene lip bass ",
+      "included": false,
+      "symbol": "",
+      "tutorials": ["https://www.youtube.com/watch?v=gcaaYS1xUIs&t=0s"],
+      "prerequisites": ""
+    },
+    {
+      "name": "D-low zipper",
+      "included": false,
+      "symbol": "",
+      "tutorials": ["https://www.youtube.com/watch?v=hPlHOHHjaBc"],
+      "prerequisites": ""
+    },
+    {
+      "name": "K.I.M. squeak ",
+      "included": false,
+      "symbol": "",
+      "tutorials": ["https://www.youtube.com/watch?v=RkNrI5RtEhE&t=0s"],
+      "prerequisites": ""
+    },
+    {
+      "name": "MB14/Dharni's gauteng (chinese instrument)",
+      "included": false,
+      "symbol": "",
+      "tutorials": ["https://www.youtube.com/watch?v=NXNBrSU12Qo&t=6s"],
+      "prerequisites": ""
+    },
+    {
+      "name": "Skiller roll ",
+      "included": false,
+      "symbol": "",
+      "tutorials": ["https://www.youtube.com/watch?v=D8zQhJmJ-kE"],
+      "prerequisites": ""
+    },
+    {
+      "name": "Effaybee/Colaps/Inertia's reverse sound",
+      "included": false,
+      "symbol": "",
+      "tutorials": ["https://www.youtube.com/watch?v=fw-tWYz0G8w"],
+      "prerequisites": ""
+    },
+    {
+      "name": "ShowGo double voice",
+      "included": false,
+      "symbol": "",
+      "tutorials": ["https://www.youtube.com/watch?v=CsnCEQnC6CE"],
+      "prerequisites": ""
+    },
+    {
+      "name": "Slizzer roll ",
+      "included": false,
+      "symbol": "",
+      "tutorials": ["https://www.youtube.com/watch?v=d7FR9YTpxd0"],
+      "prerequisites": ""
+    },
+    {
+      "name": "Pash shimmer ",
+      "included": false,
+      "symbol": "",
+      "tutorials": ["https://www.youtube.com/watch?v=ZcsB7G9ZoZo&t=64s"],
+      "prerequisites": ""
+    },
+    {
+      "name": "Pash double voice ",
+      "included": false,
+      "symbol": "",
+      "tutorials": ["https://www.youtube.com/watch?v=Qgx2Y74emR0"],
+      "prerequisites": ""
+    },
+    {
+      "name": "pitch snare 1 , pitch snare 2 ",
+      "included": false,
+      "symbol": "",
+      "tutorials": ["https://www.youtube.com/watch?v=tPgMx69lw9A"],
+      "prerequisites": ""
+    },
+    {
+      "name": "Helium tongue zipper",
+      "included": false,
+      "symbol": "",
+      "tutorials": [""],
+      "prerequisites": ""
+    },
+    {
+      "name": "Helium k snare ",
+      "included": false,
+      "symbol": "",
+      "tutorials": [""],
+      "prerequisites": ""
+    },
+    {
+      "name": "Ralik whistle",
+      "included": false,
+      "symbol": "",
+      "tutorials": ["https://www.youtube.com/watch?v=o8llTTI8B5I"],
+      "prerequisites": ""
+    },
+    {
+      "name": "Frosty special sound1 , Frost special sound2 ",
+      "included": false,
+      "symbol": "",
+      "tutorials": [""],
+      "prerequisites": ""
     }
   ]
 }

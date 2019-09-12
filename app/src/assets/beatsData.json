@@ -74,7 +74,10 @@
       "name": "tkk",
       "included": false,
       "symbol": "tkk",
-      "tutorials": ["https://www.youtube.com/watch?v=vfvhihyGCnk"],
+      "tutorials": [
+        "https://www.youtube.com/watch?v=vfvhihyGCnk",
+        "second link test"
+      ],
       "prerequisites": ["hi-hat", "k snare", "rimshot"]
     }
   ]

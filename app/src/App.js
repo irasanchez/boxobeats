@@ -1,15 +1,17 @@
 import React, { Component } from "react";
-import RandomBeatList from "./components/RandomBeatList";
+import RandomBeatList from "./components/RandomBeatList/RandomBeatList";
 import PlayButton from "./components/buttons/PlayButton/PlayButton";
 import Box from "./components/MainBox/Box";
 
 import "./App.css";
 
+import TotalBeatList from "./components/TotalBeatList/TotalBeatList";
+
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isPlaying: true
+      isPlaying: false
     };
   }
 
@@ -32,6 +34,7 @@ class App extends Component {
           handlePlayingToggle={this.handlePlayingToggle}
           isPlaying={this.state.isPlaying}
         />
+        <TotalBeatList />
       </div>
     );
   }

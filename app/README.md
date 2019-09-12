@@ -6,3 +6,4 @@
 - Add Volume Icons
 - Add Metronome
   https://www.codeproject.com/Articles/1202580/Build-a-Metronome-in-React
+- Clean up my naming conventions

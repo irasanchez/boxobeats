@@ -13,10 +13,12 @@ const ProgressView = props => {
             <div className="progress-bar">
               <div className="completed-progress"></div>
             </div>
-            <h2>{sound.name}</h2>
-            <p>
-              Tutorial: <a href={sound.tutorials[0]}>Watch on YouTube</a>
-            </p>
+            <section>
+              <h2>{sound.name}</h2>
+              <p>
+                Tutorial: <a href={sound.tutorials[0]}>Watch on YouTube</a>
+              </p>
+            </section>
           </li>
         );
       })}

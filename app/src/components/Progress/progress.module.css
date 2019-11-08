@@ -1,0 +1,32 @@
+/* //TODO:
+Look up how to change this to class names to up the specificity. When I tried last, the styles were not applied despite importing just fine. Used class name .progress-view instead of ul */
+ul {
+  width: 500px;
+  margin: 0 auto;
+}
+
+ul li {
+  width: 300px;
+  display: grid;
+  place-content: center;
+  background-color: grey;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 25px;
+}
+
+/* progress-bar total*/
+ul div {
+  width: 90%;
+  height: 10px;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+}
+
+/* progress bar completed */
+ul div div {
+  background-color: green;
+  height: 100%;
+  width: 50%;
+}

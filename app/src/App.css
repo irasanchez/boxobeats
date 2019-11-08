@@ -9,24 +9,3 @@
   justify-content: space-evenly;
   background-color: #e5e5e5;
 }
-
-h1 {
-  margin-bottom: 150px;
-}
-
-#main-box-icon {
-  width: 300px;
-  height: 300px;
-}
-
-svg {
-  width: 100px;
-  height: 100px;
-  border: none;
-}
-
-button {
-  outline: none;
-  border: none;
-  background: none;
-}

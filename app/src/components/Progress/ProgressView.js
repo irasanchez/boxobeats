@@ -1,5 +1,6 @@
 import React from "react";
 import style from "./progress.module.css";
+
 /* //TODO:
     - Look up how to make the progress percentage dynamic, so that I can make each one specific to each sound 
     - Separate out the li's into their own components. 
@@ -23,6 +24,7 @@ const ProgressView = props => {
               <p>
                 Tutorial: <a href={sound.tutorials[0]}>Watch on YouTube</a>
               </p>
+              {sound.tips ? <p className="tip">{sound.tips[0].tip} </p> : null}
             </section>
           </li>
         );

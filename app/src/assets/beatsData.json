@@ -468,6 +468,19 @@
       "symbol": "",
       "tutorials": [""],
       "prerequisites": ""
+    },
+    {
+      "name": "nasal humming",
+      "included": true,
+      "symbol": "",
+      "tutorials": [""],
+      "prerequisites": "",
+      "tips": [
+        {
+          "tip": "Try humming while brushing your teeth/holding water in your mouth to learn how to hum through your nose.",
+          "user": "beatBud"
+        }
+      ]
     }
   ]
 }

@@ -4,6 +4,8 @@ import beatsData from "./assets/beatsData.json";
 import ProgressView from "./components/Progress/ProgressView";
 import CreateView from "./components/Create/CreateView";
 
+import "./App.css";
+
 //NOTE: beatBud is the mascot for the app
 
 const App = () => {

@@ -7,24 +7,38 @@ import style from "./progress.module.css";
     - Add more data like "exit" and "origin" to data set to be able to render those notes here.
     - Render those notes here.
     - Watch on YouTube links open in new window
+    - Make tips random rather than hard coded
 */
 
 const ProgressView = props => {
   const { beats } = props;
+  const {
+    progressView,
+    soundCard,
+    progressBarTotal,
+    progressBarCompleted,
+    soundContent,
+    tipsContainer
+  } = style;
   return (
-    <ul className="progress-view" style={style}>
+    <ul className={progressView}>
       {beats.map(sound => {
         return (
-          <li>
-            <div className="progress-bar">
-              <div className="completed-progress"></div>
+          <li className={soundCard}>
+            <div className={progressBarTotal}>
+              <div className={progressBarCompleted}></div>
             </div>
-            <section>
+            <section className={soundContent}>
               <h2>{sound.name}</h2>
               <p>
                 Tutorial: <a href={sound.tutorials[0]}>Watch on YouTube</a>
               </p>
-              {sound.tips ? <p className="tip">{sound.tips[0].tip} </p> : null}
+              {sound.tips ? (
+                <div className={tipsContainer}>
+                  <h3>User Tips:</h3>
+                  <p className="tip">{sound.tips[0].tip} </p>
+                </div>
+              ) : null}
             </section>
           </li>
         );

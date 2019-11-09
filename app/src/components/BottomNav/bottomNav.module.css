@@ -29,6 +29,13 @@
   color: limegreen;
 }
 
+.metronomeContainer {
+  border: 1px solid purple;
+  height: 100%;
+  width: height;
+  background-color: black;
+}
+
 #icon3 {
   color: dodgerblue;
 }

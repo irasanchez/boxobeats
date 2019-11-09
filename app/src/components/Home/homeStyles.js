@@ -9,15 +9,15 @@ export const byline = css`
   flex-grow: 0;
 `;
 
-export const nav = {
-  width: "100%",
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "stretch",
-  textAlign: "center",
-  fontSize: "1.6rem",
-  flexGrow: 1
-};
+export const nav = css`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  text-align: center;
+  font-size: 1.6rem;
+  flex-grow: 1;
+`;
 
 export const link = css`
   text-decoration: none;

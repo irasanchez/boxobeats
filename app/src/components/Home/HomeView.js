@@ -1,7 +1,9 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import style from "./home.module.css";
-
+/*
+ //TODO: make video compilation of beatbox mouths for background
+*/
 const HomeView = () => {
   return (
     <>

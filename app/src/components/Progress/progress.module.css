@@ -1,5 +1,3 @@
-/* //TODO:
-Look up how to change this to class names to up the specificity. When I tried last, the styles were not applied despite importing just fine. Used class name .progress-view instead of ul */
 /* using snake casing to make ProgressView.js easier to work with */
 .progressView {
   width: 90%;

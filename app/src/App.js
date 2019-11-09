@@ -1,3 +1,5 @@
+/** @jsx jsx */
+import { Global, css, jsx } from "@emotion/core";
 import React, { useState } from "react";
 import { Route } from "react-router-dom";
 //FIXME: hardcoded data to later be removed after I make some sort of backend
@@ -11,18 +13,19 @@ import FocusView from "./components/Focus/FocusView";
 import ImprovView from "./components/Improv/ImprovView";
 
 //styles
-import "./App.css";
+import { app, global } from "./AppStyles.js";
 
 //NOTE: beatBud is the mascot for the app
 
-const App = () => {
+const App = props => {
   //grab data from json file and set it to state
   const [beats, setBeats] = useState(beatsData.beats);
 
   return (
-    <div className="App">
+    <div css={app}>
+      <Global styles={global} />
       {/* HOME VIEW */}
-      <Route exact path="/" render={() => <HomeView />} />
+      <Route exact path="/" render={() => <HomeView {...props} />} />
 
       {/* PROGRESS VIEW */}
       <Route path="/progress" render={() => <ProgressView beats={beats} />} />

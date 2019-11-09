@@ -11,9 +11,9 @@ import style from "./create.module.css";
 
 const CreateView = props => {
   const { beats } = props;
-  const { comboContainer, soundOption } = style;
+  const { comboContainer, soundOption, create } = style;
   return (
-    <section className="create-view">
+    <section className={create}>
       <p>Try to combine</p>
       <div className={comboContainer}>
         <FiRefreshCcw />

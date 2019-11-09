@@ -55,6 +55,13 @@
   margin-top: 15px;
 }
 
+.title {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+
 .soundContent h2 {
   /* border: 2px dashed green; */
   margin: 0 0 10px 0;

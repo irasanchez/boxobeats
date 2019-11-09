@@ -1,3 +1,7 @@
+.create {
+  width: 90%;
+  margin: 0 auto;
+}
 .comboContainer {
   width: 100%;
   display: flex;

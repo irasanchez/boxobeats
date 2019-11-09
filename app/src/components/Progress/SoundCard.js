@@ -1,4 +1,5 @@
 import React from "react";
+import { FaPlayCircle } from "react-icons/fa";
 import style from "./progress.module.css";
 
 const SoundCard = props => {
@@ -8,6 +9,7 @@ const SoundCard = props => {
     progressBarTotal,
     progressBarCompleted,
     soundContent,
+    title,
     tipsContainer,
     tipTitle,
     tipText
@@ -19,7 +21,10 @@ const SoundCard = props => {
         <div className={progressBarCompleted}></div>
       </div>
       <section className={soundContent}>
-        <h2>{sound.name}</h2>
+        <div className={title}>
+          <h2>{sound.name}</h2>
+          <FaPlayCircle />
+        </div>
         <p>
           Tutorial: <a href={sound.tutorials[0]}>Watch on YouTube</a>
         </p>

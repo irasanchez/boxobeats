@@ -1,5 +1,6 @@
 import React from "react";
 import SoundCard from "./SoundCard";
+import BottomNav from "../BottomNav/BottomNav";
 import style from "./progress.module.css";
 
 /* 
@@ -15,12 +16,15 @@ const ProgressView = props => {
   const { beats } = props;
   const { progressView } = style;
   return (
-    <ul className={progressView}>
-      <h1>PROGRESS</h1>
-      {beats.map(sound => {
-        return <SoundCard sound={sound} />;
-      })}
-    </ul>
+    <>
+      <ul className={progressView}>
+        <h1>PROGRESS</h1>
+        {beats.map(sound => {
+          return <SoundCard sound={sound} />;
+        })}
+      </ul>
+      <BottomNav />
+    </>
   );
 };
 

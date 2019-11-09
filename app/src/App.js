@@ -1,13 +1,16 @@
 import React, { useState } from "react";
 import { Route } from "react-router-dom";
+//FIXME: hardcoded data to later be removed after I make some sort of backend
+//FIXME: Remove font awesome stuff from package.json and index.html
 import beatsData from "./assets/beatsData.json";
-
+//component imports
 import HomeView from "./components/Home/HomeView";
 import ProgressView from "./components/Progress/ProgressView";
 import CreateView from "./components/Create/CreateView";
 import FocusView from "./components/Focus/FocusView";
 import ImprovView from "./components/Improv/ImprovView";
 
+//styles
 import "./App.css";
 
 //NOTE: beatBud is the mascot for the app
@@ -19,7 +22,7 @@ const App = () => {
   return (
     <div className="App">
       {/* HOME VIEW */}
-      <Route exact path="/" component={HomeView} />
+      <Route exact path="/" render={() => <HomeView />} />
 
       {/* PROGRESS VIEW */}
       <Route path="/progress" render={() => <ProgressView beats={beats} />} />
@@ -32,8 +35,6 @@ const App = () => {
 
       {/* FOCUS VIEW */}
       <Route path="/create" render={() => <FocusView beats={beats} />} />
-
-      <footer>Copyright Ira Sanchez</footer>
     </div>
   );
 };

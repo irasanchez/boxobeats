@@ -15,6 +15,7 @@ const HomeView = () => {
         <NavLink to="/focus">Focus</NavLink>
         <NavLink to="/create">Create</NavLink>
       </nav>
+      <footer>Copyright Ira Sanchez</footer>
     </>
   );
 };

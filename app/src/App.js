@@ -16,6 +16,7 @@ const App = () => {
     <div className="App">
       <ProgressView beats={beats} />
       <CreateView beats={beats} />
+      <footer>Copyright Ira Sanchez</footer>
     </div>
   );
 };

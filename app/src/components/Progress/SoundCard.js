@@ -8,7 +8,9 @@ const SoundCard = props => {
     progressBarTotal,
     progressBarCompleted,
     soundContent,
-    tipsContainer
+    tipsContainer,
+    tipTitle,
+    tipText
   } = style;
 
   return (
@@ -23,8 +25,8 @@ const SoundCard = props => {
         </p>
         {sound.tips ? (
           <div className={tipsContainer}>
-            <h3>User Tips:</h3>
-            <p className="tip">{sound.tips[0].tip} </p>
+            <h3 id={tipTitle}>User Tips:</h3>
+            <p id={tipText}>{sound.tips[0].tip} </p>
           </div>
         ) : null}
       </section>

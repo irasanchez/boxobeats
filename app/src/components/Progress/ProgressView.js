@@ -16,7 +16,7 @@ const ProgressView = props => {
   const { progressView } = style;
   return (
     <ul className={progressView}>
-      <h1>Progress</h1>
+      <h1>PROGRESS</h1>
       {beats.map(sound => {
         return <SoundCard sound={sound} />;
       })}

@@ -6,6 +6,7 @@
 
 import React from "react";
 import { FiRefreshCcw, FiPlusSquare } from "react-icons/fi";
+import BottomNav from "../BottomNav/BottomNav";
 import style from "./create.module.css";
 
 const CreateView = props => {
@@ -32,6 +33,7 @@ const CreateView = props => {
           timing sometimes. So, don't give up if you don't get it right away.
         </p>
       </div>
+      <BottomNav />
     </section>
   );
 };

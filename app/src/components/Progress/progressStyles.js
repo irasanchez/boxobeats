@@ -1,16 +1,18 @@
-/* using snake casing to make ProgressView.js easier to work with */
-.progressView {
+/** @jsx jsx */
+import { css, jsx } from "@emotion/core";
+
+export const progressView = css`
   width: 90%;
   margin: 0 auto;
-}
+`;
 
-.progressView h1 {
+export const progressViewTitle = css`
   display: flex;
   justify-content: center;
   margin-bottom: 50px;
-}
+`;
 
-.soundCard {
+export const soundCard = css`
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -20,10 +22,9 @@
   margin: 20px 0;
   padding: 20px 0;
   border-radius: 25px;
-}
+`;
 
-/* progress-bar total*/
-.progressBarTotal {
+export const progressBarTotal = css`
   width: 90%;
   height: 8px;
   background-color: white;
@@ -32,39 +33,39 @@
   /* x, y, blur/spread, color */
   box-shadow: 5px 5px 5px black;
   border-radius: 3px;
-}
+`;
 
-/* progress bar completed */
-.progressBarCompleted {
+export const progressBarCompleted = css`
   background-color: green;
   height: 8px;
   width: 30%;
   box-shadow: none;
-  /* TL TR BR BL */
   border-radius: 3px 0px 0px 3px;
-}
+`;
 
 /* content section below progress bar */
-.soundContent {
+export const soundContent = css`
   /* border: 2px dashed red; */
   width: 90%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   margin-top: 15px;
-}
+`;
 
-.title {
+export const soundContentTitleContainer = css`
   display: flex;
-  flex-direction: row;
   width: 100%;
   justify-content: space-between;
-}
+  align-items: space-between;
+`;
 
-.soundContent h2 {
-  /* border: 2px dashed green; */
+export const soundContentTitleText = css`
+  border: 2px dashed green;
   margin: 0 0 10px 0;
+
   /* allows dividing line to extend beyond title */
   width: 60%;
   /* wrap sound title if too long */
@@ -73,34 +74,34 @@
   border-bottom: 1px solid black;
   padding-bottom: 10px;
   margin-bottom: 20px;
-}
+`;
 
-.playIcon {
+export const playIcon = css`
   width: 1.6rem;
   height: 1.6rem;
-}
+`;
 
-.soundContent p {
+export const soundContentText = css`
   /* border: 2px dashed yellow; */
   width: 100%;
   flex-grow: 0;
-}
+`;
 
-.tipsContainer {
+export const tipsContainer = css`
   width: 100%;
   margin-top: 20px;
   padding: 10px 2.5%;
   filter: opacity(25%);
   background-color: black;
   border-radius: 5px;
-}
+`;
 
-.tipsContainer #tipTitle {
+export const tipsTitle = css`
   font-size: 1.2rem;
   color: white;
-}
+`;
 
-.tipsContainer #tipText {
+export const tipsText = css`
   font-size: 1rem;
   color: white;
-}
+`;

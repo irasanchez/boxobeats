@@ -1,7 +1,9 @@
+/** @jsx jsx */
 import React from "react";
+import { css, jsx } from "@emotion/core";
 import SoundCard from "./SoundCard";
 import BottomNav from "../BottomNav/BottomNav";
-import style from "./progress.module.css";
+import { progressView, progressViewTitle } from "./progressStyles";
 
 /* 
     //TODO: Look up how to make the progress percentage dynamic, so that I can make each one specific to each sound 
@@ -14,11 +16,11 @@ import style from "./progress.module.css";
 
 const ProgressView = props => {
   const { beats } = props;
-  const { progressView } = style;
+
   return (
     <>
-      <ul className={progressView}>
-        <h1>PROGRESS</h1>
+      <ul css={progressView}>
+        <h1 css={progressViewTitle}>PROGRESS</h1>
         {beats.map(sound => {
           return <SoundCard sound={sound} />;
         })}

@@ -1,44 +1,42 @@
-import React, { Component } from "react";
-import RandomBeatList from "./components/RandomBeatList/RandomBeatList";
-import PlayButton from "./components/buttons/PlayButton/PlayButton";
-import Box from "./components/MainBox/Box";
+import React, { useState } from "react";
+import { Route } from "react-router-dom";
+//FIXME: hardcoded data to later be removed after I make some sort of backend
+//FIXME: Remove font awesome stuff from package.json and index.html
+import beatsData from "./assets/beatsData.json";
+//component imports
+import HomeView from "./components/Home/HomeView";
+import ProgressView from "./components/Progress/ProgressView";
+import CreateView from "./components/Create/CreateView";
+import FocusView from "./components/Focus/FocusView";
+import ImprovView from "./components/Improv/ImprovView";
 
+//styles
 import "./App.css";
 
-import TotalBeatList from "./components/TotalBeatList/TotalBeatList";
-import Metronome from "./components/Metronome/Metronome";
+//NOTE: beatBud is the mascot for the app
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      isPlaying: false
-    };
-  }
+const App = () => {
+  //grab data from json file and set it to state
+  const [beats, setBeats] = useState(beatsData.beats);
 
-  handlePlayingToggle = () => {
-    this.setState(prevState => ({
-      isPlaying: !prevState.isPlaying
-    }));
-  };
+  return (
+    <div className="App">
+      {/* HOME VIEW */}
+      <Route exact path="/" render={() => <HomeView />} />
 
-  render() {
-    return (
-      <div className="App">
-        <p>
-          Push play to see a random list of sounds to incorporate into your
-          practice.
-        </p>
-        {this.state.isPlaying ? <RandomBeatList /> : null}
-        <Box isPlaying={this.state.isPlaying} />
-        <PlayButton
-          handlePlayingToggle={this.handlePlayingToggle}
-          isPlaying={this.state.isPlaying}
-        />
-        <Metronome />
-      </div>
-    );
-  }
-}
+      {/* PROGRESS VIEW */}
+      <Route path="/progress" render={() => <ProgressView beats={beats} />} />
+
+      {/* CREATE VIEW */}
+      <Route path="/create" render={() => <CreateView beats={beats} />} />
+
+      {/* IMPROV VIEW */}
+      <Route path="/create" render={() => <ImprovView beats={beats} />} />
+
+      {/* FOCUS VIEW */}
+      <Route path="/create" render={() => <FocusView beats={beats} />} />
+    </div>
+  );
+};
 
 export default App;

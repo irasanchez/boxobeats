@@ -13,7 +13,7 @@ const App = () => {
   const [beats, setBeats] = useState(beatsData.beats);
 
   return (
-    <div>
+    <div className="App">
       <ProgressView beats={beats} />
       <CreateView beats={beats} />
     </div>

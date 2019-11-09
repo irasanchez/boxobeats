@@ -1,4 +1,5 @@
 import React from "react";
+import SoundCard from "./SoundCard";
 import style from "./progress.module.css";
 
 /* //TODO:
@@ -12,36 +13,12 @@ import style from "./progress.module.css";
 
 const ProgressView = props => {
   const { beats } = props;
-  const {
-    progressView,
-    soundCard,
-    progressBarTotal,
-    progressBarCompleted,
-    soundContent,
-    tipsContainer
-  } = style;
+  const { progressView } = style;
   return (
     <ul className={progressView}>
+      <h1>Progress</h1>
       {beats.map(sound => {
-        return (
-          <li className={soundCard}>
-            <div className={progressBarTotal}>
-              <div className={progressBarCompleted}></div>
-            </div>
-            <section className={soundContent}>
-              <h2>{sound.name}</h2>
-              <p>
-                Tutorial: <a href={sound.tutorials[0]}>Watch on YouTube</a>
-              </p>
-              {sound.tips ? (
-                <div className={tipsContainer}>
-                  <h3>User Tips:</h3>
-                  <p className="tip">{sound.tips[0].tip} </p>
-                </div>
-              ) : null}
-            </section>
-          </li>
-        );
+        return <SoundCard sound={sound} />;
       })}
     </ul>
   );

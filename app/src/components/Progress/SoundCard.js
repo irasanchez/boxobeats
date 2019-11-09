@@ -10,6 +10,7 @@ const SoundCard = props => {
     progressBarCompleted,
     soundContent,
     title,
+    playIcon,
     tipsContainer,
     tipTitle,
     tipText
@@ -23,7 +24,7 @@ const SoundCard = props => {
       <section className={soundContent}>
         <div className={title}>
           <h2>{sound.name}</h2>
-          <FaPlayCircle />
+          <FaPlayCircle className={playIcon} />
         </div>
         <p>
           Tutorial: <a href={sound.tutorials[0]}>Watch on YouTube</a>

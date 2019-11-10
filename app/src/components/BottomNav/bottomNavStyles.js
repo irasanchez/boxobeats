@@ -4,9 +4,8 @@ import { css, jsx } from "@emotion/core";
 export const bottomNavContainer = css`
   border: 2px solid red;
   width: 100%;
-  height: 50px;
-  background-color: grey;
-  filter: opacity(70%);
+  height: 60px;
+  background-color: purple;
   position: fixed;
   bottom: 0;
   display: flex;
@@ -22,9 +21,11 @@ export const bottomNav = css`
   align-items: center;
 `;
 
-export const icons = css`
-  background-color: black;
-  border-radius: 50%;
+export const iconContainer = css`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 19%;
 `;
 
 export const icon1 = css`
@@ -36,11 +37,16 @@ export const icon2 = css`
 `;
 
 export const metronomeContainer = css`
-  color: black;
-  border: 1px dashed yellow;
-  height: 100%;
   display: flex;
-  align-items: center;
+  justify-content: space-evenly;
+  width: 24%;
+`;
+
+export const metronomeIcon = css`
+  color: white;
+  background: black;
+  border-radius: 50%;
+  padding: 1em;
 `;
 
 export const icon3 = css`

@@ -3,14 +3,13 @@ import { css, jsx } from "@emotion/core";
 import { mainBg } from "../../assets/cssVariables";
 
 export const bottomNavContainer = css`
-  border: 2px solid red;
   width: 100%;
   height: 60px;
-  background-color: mainBg;
   position: fixed;
   bottom: 0;
   display: flex;
   align-items: center;
+  background: mainBg;
 `;
 
 export const bottomNav = css`

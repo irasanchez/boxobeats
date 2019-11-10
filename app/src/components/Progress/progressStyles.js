@@ -1,9 +1,11 @@
 /** @jsx jsx */
 import { css, jsx } from "@emotion/core";
+import { mainBg } from "../../assets/cssVariables.js";
 
 export const progressView = css`
   width: 90%;
   margin: 0 auto;
+  background: mainBg;
 `;
 
 export const progressViewTitle = css`

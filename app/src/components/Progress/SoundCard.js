@@ -60,7 +60,11 @@ const SoundCard = props => {
           onClick={cardToggler}
         />
         {sound.tips ? (
-          <TipContainer sound={sound} shouldIOpenCard={shouldIOpenCard} />
+          <TipContainer
+            sound={sound}
+            shouldIOpenCard={shouldIOpenCard}
+            tips={sound.tips}
+          />
         ) : null}
         <MdKeyboardArrowUp
           size="2em"

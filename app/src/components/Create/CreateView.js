@@ -1,7 +1,5 @@
 /** @jsx jsx */
 /* TODOS
-  //TODO: "Now try to combine"
-  //TODO: Sound 1 and Sound 2 rendered
   //TODO: make each one refreshable for the user to be able to change things.
 */
 

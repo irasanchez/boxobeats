@@ -2,7 +2,7 @@
 
 import { jsx } from "@emotion/core";
 import userData from "../../assets/userData.json";
-import { tipsTitle, tipsText } from "./progressStyles";
+import { tipsTitle, tipsText } from "./soundCardStyles";
 
 const TipContainer = props => {
   const { shouldIOpenCard, tips } = props;

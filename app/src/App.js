@@ -30,12 +30,15 @@ const App = props => {
       {/* PROGRESS VIEW */}
       <Route
         path="/progress"
-        render={() => (
+        render={props => (
           <ProgressView
             beats={beats}
             onEnter={() => {
               console.log("progress view");
             }}
+            match={props.match}
+            history={props.history}
+            location={props.location}
           />
         )}
       />
@@ -46,7 +49,14 @@ const App = props => {
       {/* IMPROV VIEW */}
       <Route
         path="/improv"
-        render={() => <ImprovView beats={beats} />}
+        render={props => (
+          <ImprovView
+            beats={beats}
+            match={props.match}
+            history={props.history}
+            location={props.location}
+          />
+        )}
         onEnter={() => {
           console.log("progress view");
         }}

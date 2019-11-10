@@ -14,7 +14,7 @@ import {
   playIcon,
   soundContentText,
   tipContainer
-} from "./progressStyles";
+} from "./soundCardStyles";
 
 import { hideThisElement } from "../../assets/cssVariables";
 import TipContainer from "./TipContainer";
@@ -36,6 +36,8 @@ const SoundCard = props => {
   const width = css`
     width: ${progressStatus}%;
   `;
+
+  // use props.location.pathname
   return (
     <li css={soundCard}>
       <div css={progressBarTotal}>

@@ -3,7 +3,7 @@
 import { jsx } from "@emotion/core";
 
 import { improvView } from "./improvStyles";
-import SoundCard from "../Progress/SoundCard";
+import SoundCard from "../SoundCard/SoundCard";
 
 const ImprovView = props => {
   const { beats } = props;
@@ -17,7 +17,13 @@ const ImprovView = props => {
       </p>
       <ul>
         {fiveRandomSounds.map(sound => (
-          <SoundCard sound={sound} key={Math.random()} />
+          <SoundCard
+            sound={sound}
+            key={Math.random()}
+            match={props.match}
+            history={props.history}
+            location={props.location}
+          />
         ))}
       </ul>
     </div>

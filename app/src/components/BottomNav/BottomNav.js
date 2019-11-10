@@ -18,7 +18,6 @@ import {
   icon2,
   icon3,
   icon4,
-  metronomeContainer,
   metronomeIcon
 } from "./bottomNavStyles";
 
@@ -34,9 +33,7 @@ const BottomNav = props => {
           <FaRegLightbulb size={sideIconSize} css={icon2} />
         </div>
 
-        <div css={metronomeContainer}>
-          <GiMetronome css={metronomeIcon} size="4.5em" />
-        </div>
+        <GiMetronome css={metronomeIcon} size="8em" />
 
         <div css={iconContainer}>
           <FaHammer size={sideIconSize} css={icon3} />

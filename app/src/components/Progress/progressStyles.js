@@ -1,6 +1,11 @@
 /** @jsx jsx */
 import { css, jsx } from "@emotion/core";
-import { secondaryBg } from "../../assets/cssVariables.js";
+import {
+  secondaryBg,
+  highlight,
+  accentColor,
+  center
+} from "../../assets/cssVariables.js";
 
 export const progressView = css`
   width: 90%;
@@ -9,7 +14,7 @@ export const progressView = css`
 
 export const progressViewTitle = css`
   display: flex;
-  justify-content: center;
+  ${center}
   margin-bottom: 50px;
 `;
 
@@ -28,7 +33,7 @@ export const soundCard = css`
 export const progressBarTotal = css`
   width: 90%;
   height: 8px;
-  background-color: white;
+  background-color: ${highlight};
   margin: 5px 0 20px 0;
   padding: 0;
   /* x, y, blur/spread, color */
@@ -37,22 +42,23 @@ export const progressBarTotal = css`
 `;
 
 export const progressBarCompleted = css`
-  background-color: green;
+  background-color: ${accentColor};
   height: 8px;
   width: 30%;
   box-shadow: none;
   border-radius: 3px 0px 0px 3px;
+  padding: 0;
+  margin: 0;
 `;
 
 /* content section below progress bar */
 export const soundContent = css`
-  /* border: 2px dashed red; */
   width: 90%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  /* flex-wrap: wrap; */
+  flex-wrap: wrap;
   margin-top: 15px;
 `;
 
@@ -64,10 +70,8 @@ export const soundContentTitleContainer = css`
 `;
 
 export const soundContentTitleText = css`
-  border: 2px dashed green;
   margin: 0 0 10px 0;
-
-  /* allows dividing line to extend beyond title */
+  /* allows dividing line to extend beyond title's actual text*/
   width: 60%;
   /* wrap sound title if too long */
   display: flex;

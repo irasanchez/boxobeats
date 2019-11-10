@@ -9,3 +9,6 @@ export const secondaryBg = `rgba(100, 114, 130, 1)`;
 export const accentColor = `rgba(91, 36, 66, 1)`;
 
 export const highlight = `rgba(242, 229, 204, 1)`;
+
+//POSITIONING AND ALIGNMENT
+export const center = `justify-content: center; align-items: center;`;

@@ -7,6 +7,7 @@ import {
   soundCard,
   progressBarTotal,
   progressBarCompleted,
+  soundContent,
   soundContentTitleContainer,
   soundContentTitleText,
   playIcon,
@@ -25,13 +26,14 @@ const SoundCard = props => {
       <div css={progressBarTotal}>
         <div css={progressBarCompleted}></div>
       </div>
-      <section css={soundContentTitleContainer}>
-        <div css={soundContentTitleText}>
-          <h2>{sound.name}</h2>
+      <section css={soundContent}>
+        <div css={soundContentTitleContainer}>
+          <h2 css={soundContentTitleText}>{sound.name}</h2>
+          <FaPlayCircle css={playIcon} />
         </div>
-        <FaPlayCircle css={playIcon} />
+        <p css={soundContentText}>Sound description here</p>
       </section>
-      <p css={soundContentText}>Sound description here</p>
+
       {sound.tips ? (
         <div css={tipsContainer}>
           <h3 css={tipsTitle}>User Tips:</h3>

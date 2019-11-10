@@ -1,14 +1,20 @@
 /** @jsx jsx */
 import { css, jsx } from "@emotion/core";
-import { mainBg } from "../../assets/cssVariables";
+import {
+  mainBg,
+  accentColor,
+  highlight,
+  center
+} from "../../assets/cssVariables";
 
 export const bottomNavContainer = css`
   width: 100%;
-  height: 60px;
+  height: 100px;
   position: fixed;
   bottom: 0;
   display: flex;
   align-items: center;
+  background-color: ${accentColor};
 `;
 
 export const bottomNav = css`
@@ -35,17 +41,11 @@ export const icon2 = css`
   color: limegreen;
 `;
 
-export const metronomeContainer = css`
-  display: flex;
-  justify-content: space-evenly;
-  width: 24%;
-`;
-
 export const metronomeIcon = css`
-  color: white;
-  background: black;
+  color: ${highlight};
+  background: ${mainBg};
   border-radius: 50%;
-  padding: 1em;
+  padding: 2.5em;
 `;
 
 export const icon3 = css`

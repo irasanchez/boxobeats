@@ -12,6 +12,8 @@ export const app = css`
   align-items: center;
 `;
 
+const sample;
+
 export const global = css`
   html {
     font-size: 62.5%;

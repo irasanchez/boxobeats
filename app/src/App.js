@@ -3,7 +3,6 @@ import { Global, css, jsx } from "@emotion/core";
 import React, { useState } from "react";
 import { Route } from "react-router-dom";
 //FIXME: hardcoded data to later be removed after I make some sort of backend
-//FIXME: Remove font awesome stuff from package.json and index.html
 import beatsData from "./assets/beatsData.json";
 //component imports
 import HomeView from "./components/Home/HomeView";

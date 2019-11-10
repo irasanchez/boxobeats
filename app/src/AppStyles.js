@@ -10,13 +10,13 @@ export const app = css`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: ${mainBg};
 `;
 
 export const global = css`
   html {
     font-size: 62.5%;
     color: ${textColor};
+    background: ${mainBg};
   }
 
   p,

@@ -9,6 +9,7 @@ import {
 } from "../../assets/cssVariables";
 
 export const bottomNavContainer = css`
+  border: 1px solid red;
   width: 100%;
   height: 5rem;
   position: fixed;

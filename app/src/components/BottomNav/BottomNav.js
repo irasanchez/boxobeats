@@ -1,6 +1,10 @@
 /** @jsx jsx */
 import React from "react";
 import { css, jsx } from "@emotion/core";
+//react router
+import { NavLink } from "react-router-dom";
+
+// icons
 // sizes have to be put on the size prop. default is 1em. rem doesn't appear to work.
 import {
   FaRegMap,
@@ -10,6 +14,7 @@ import {
   FaCircle
 } from "react-icons/fa";
 import { GiMetronome } from "react-icons/gi";
+// styles
 import {
   bottomNavContainer,
   bottomNav,
@@ -22,22 +27,22 @@ const BottomNav = props => {
   return (
     <footer css={bottomNavContainer}>
       <nav css={bottomNav}>
-        <div css={iconContainer}>
+        <NavLink to="/progress" css={iconContainer}>
           <FaRegMap size={sideIconSize} />
-        </div>
-        <div css={iconContainer}>
+        </NavLink>
+        <NavLink to="/improv" css={iconContainer}>
           <FaRegLightbulb size={sideIconSize} />
-        </div>
+        </NavLink>
 
         <GiMetronome css={metronomeIcon} size="4em" />
 
-        <div css={iconContainer}>
+        <NavLink to="/create" css={iconContainer}>
           <FaHammer size={sideIconSize} />
-        </div>
+        </NavLink>
 
-        <div css={iconContainer}>
+        <NavLink to="/focus" css={iconContainer}>
           <FaRegEye size={sideIconSize} />
-        </div>
+        </NavLink>
       </nav>
     </footer>
   );

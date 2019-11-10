@@ -33,7 +33,6 @@ const CreateView = props => {
           timing sometimes. So, don't give up if you don't get it right away.
         </p>
       </div>
-      <BottomNav />
     </section>
   );
 };

@@ -5,14 +5,13 @@ import {
   highlight,
   textColor,
   accentColor,
-  center
+  center,
+  viewSize
 } from "../../assets/cssVariables.js";
 
 export const progressView = css`
-  width: 90%;
-  margin: 0 auto;
+  ${viewSize}
 `;
-
 export const progressViewTitle = css`
   display: flex;
   ${center}

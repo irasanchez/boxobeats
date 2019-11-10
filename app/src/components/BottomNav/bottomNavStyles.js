@@ -9,7 +9,6 @@ export const bottomNavContainer = css`
   bottom: 0;
   display: flex;
   align-items: center;
-  background: mainBg;
 `;
 
 export const bottomNav = css`

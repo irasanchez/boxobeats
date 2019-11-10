@@ -1,11 +1,10 @@
 /** @jsx jsx */
 import { css, jsx } from "@emotion/core";
-import { mainBg } from "../../assets/cssVariables.js";
+import { secondaryBg } from "../../assets/cssVariables.js";
 
 export const progressView = css`
   width: 90%;
   margin: 0 auto;
-  background: mainBg;
 `;
 
 export const progressViewTitle = css`
@@ -20,7 +19,7 @@ export const soundCard = css`
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  background-color: grey;
+  background-color: ${secondaryBg};
   margin: 20px 0;
   padding: 20px 0;
   border-radius: 25px;

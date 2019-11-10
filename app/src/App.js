@@ -13,7 +13,6 @@ import ImprovView from "./components/Improv/ImprovView";
 
 //styles
 import { app, global } from "./AppStyles.js";
-import { mainBg } from "./assets/cssVariables";
 
 //NOTE: beatBud is the mascot for the app
 

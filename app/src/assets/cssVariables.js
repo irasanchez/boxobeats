@@ -1,4 +1,11 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core";
 
-export const mainBg = `#080001`;
+/* Coolors Exported Palette - coolors.co/080001-f2e5cc-647282-5b2442-c3ddf7 */
+export const mainBg = `rgba(8, 0, 1, 1)`;
+export const textColor = `rgba(195, 221, 247, 1)`;
+export const secondaryBg = `rgba(100, 114, 130, 1)`;
+
+export const accentColor = `rgba(91, 36, 66, 1)`;
+
+export const highlight = `rgba(242, 229, 204, 1)`;

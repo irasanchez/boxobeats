@@ -1,5 +1,5 @@
 /** @jsx jsx */
-
+import React from "react"; //Do not delete even if you get a warning about not "using" it or it will break the app
 import { NavLink } from "react-router-dom";
 import { jsx } from "@emotion/core";
 import { homeFooter, title, byline, nav, link } from "./homeStyles.js";

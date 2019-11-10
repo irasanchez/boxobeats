@@ -14,10 +14,10 @@ export const bottomNavContainer = css`
   bottom: 0;
   display: flex;
   align-items: center;
-  background-color: ${secondaryBg};
-  -webkit-box-shadow: 0px -1px 5px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px -1px 5px 0px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px -1px 5px 0px rgba(0, 0, 0, 0.75);
+  background-color: ${mainBg};
+  -webkit-box-shadow: 0px -1px 5px 0px ${mainBg};
+  -moz-box-shadow: 0px -1px 5px 0px ${mainBg};
+  box-shadow: 0px -1px 5px 0px ${mainBg};
 `;
 
 export const bottomNav = css`
@@ -44,4 +44,8 @@ export const metronomeIcon = css`
   border-radius: 50%;
   padding: 2em;
   margin-bottom: 1rem;
+  -webkit-box-shadow: 0px -1px 5px 0px ${mainBg};
+  -moz-box-shadow: 0px -1px 5px 0px ${mainBg};
+  box-shadow: 0px -1px 5px 0px ${mainBg};
+  border: none;
 `;

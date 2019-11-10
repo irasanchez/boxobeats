@@ -38,7 +38,6 @@ export const progressBarTotal = css`
 export const progressBarCompleted = css`
   background-color: ${accentColorGreen};
   height: 8px;
-  width: 30%;
   border-radius: 3px 0px 0px 3px;
   padding: 0;
   margin: 0;
@@ -81,7 +80,6 @@ export const playIcon = css`
 `;
 
 export const soundContentText = css`
-  /* border: 2px dashed yellow; */
   width: 100%;
   flex-grow: 0;
   margin-bottom: 20px;
@@ -103,20 +101,20 @@ export const tipContainer = css`
 
   ${boxShadow};
 
+  /* Tip title */
+  div h3 {
+    font-size: 1.4rem;
+  }
+
   /* Tip content */
   div p {
+    font-size: 1.2rem;
     padding-top: 5px;
   }
   /* user who made the tip */
   .imageContainer {
-    align-self: flex-end;
     margin-right: 2%;
-
-    color: ${mainBg};
-    display: flex;
-    flex-direction: column;
-    ${center}
-    text-align: center;
+    align-self: flex-end;
 
     img {
       height: 100%;
@@ -127,10 +125,6 @@ export const tipContainer = css`
   }
 `;
 
-export const tipsTitle = css`
-  font-size: 1.2rem;
-`;
+export const tipsTitle = css``;
 
-export const tipsText = css`
-  font-size: 1rem;
-`;
+export const tipsText = css``;

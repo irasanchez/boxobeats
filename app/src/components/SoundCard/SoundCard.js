@@ -33,9 +33,16 @@ const SoundCard = props => {
   //Progress Bar Update
   //TODO:Update me with real data. set to random for now.
   const [progressStatus] = useState(Math.floor(Math.random() * 100 + 1));
-  const width = css`
-    width: ${progressStatus}%;
-  `;
+
+  const width =
+    progressStatus === 100
+      ? css`
+          width: ${progressStatus}%;
+          border-radius: 3px;
+        `
+      : css`
+          width: ${progressStatus}%;
+        `;
 
   // use props.location.pathname
   return (

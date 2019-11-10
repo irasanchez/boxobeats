@@ -11,7 +11,6 @@ const TipContainer = props => {
 
   return (
     <aside name="tipContainer" css={shouldIOpenCard}>
-      ks
       <div>
         <h3 css={tipsTitle}>User Tip:</h3>
         <p css={tipsText}>{randomUserTipData.tip}</p>

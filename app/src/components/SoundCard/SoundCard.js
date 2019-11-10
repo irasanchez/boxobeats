@@ -16,7 +16,7 @@ import {
   tipContainer
 } from "./soundCardStyles";
 
-import { hideThisElement } from "../../assets/cssVariables";
+import { hideThisElement, center } from "../../assets/cssVariables";
 import TipContainer from "./TipContainer";
 
 const SoundCard = props => {
@@ -45,12 +45,61 @@ const SoundCard = props => {
         `;
 
   // use props.location.pathname
+  //TODO: Hide elements that are not needed when on certain router paths
+  const { pathname } = props.location;
+  const hideInImprovView =
+    pathname === "/improv"
+      ? css`
+          /* hide the elements not needed in improvView */
+          ${center}
+          border-radius: 50%;
+          height: 250px;
+          width: 250px;
+          flex-direction: row;
+          padding: 0;
+          margin: 2%;
+          text-align: center;
+
+          .progressBar {
+            ${hideThisElement}
+          }
+          .soundContent {
+            height: 100%;
+            justify-content: space-evenly;
+          }
+          .soundContent div {
+            height: 80%;
+            flex-direction: column;
+            ${center}
+            justify-content: space-evenly;
+          }
+          h2 {
+            border: none;
+            text-align: center;
+            padding: 0;
+            ${center}
+            margin: 0;
+          }
+          p {
+            ${hideThisElement}
+          }
+        `
+      : null;
+  //TODO: make .moreInfo icon button link to expanded card in progressView
+
+  const hideInProgressView =
+    pathname === "/progress"
+      ? css`
+          /* hide the elements not needed in progressView */
+        `
+      : null;
+
   return (
-    <li css={soundCard}>
-      <div css={progressBarTotal}>
+    <li id="soundCard" css={[soundCard, hideInImprovView, hideInProgressView]}>
+      <div className="progressBar" css={progressBarTotal}>
         <div css={[progressBarCompleted, width]}></div>
       </div>
-      <section css={soundContent}>
+      <section className="soundContent" css={soundContent}>
         <div css={soundContentTitleContainer}>
           <h2 css={soundContentTitleText}>{sound.name}</h2>
           <FaPlayCircle css={playIcon} onClick={() => {}} />
@@ -64,6 +113,7 @@ const SoundCard = props => {
           size="2em"
           css={shouldIOpenCard === hideThisElement ? null : hideThisElement}
           onClick={cardToggler}
+          className="moreInfo"
         />
         {sound.tips ? (
           <TipContainer

@@ -10,6 +10,7 @@ import ProgressView from "./components/Progress/ProgressView";
 import CreateView from "./components/Create/CreateView";
 import FocusView from "./components/Focus/FocusView";
 import ImprovView from "./components/Improv/ImprovView";
+import BottomNav from "./components/BottomNav/BottomNav";
 
 //styles
 import { app, global } from "./AppStyles.js";
@@ -37,6 +38,8 @@ const App = props => {
 
       {/* FOCUS VIEW */}
       <Route path="/create" render={() => <FocusView beats={beats} />} />
+
+      <BottomNav />
     </div>
   );
 };

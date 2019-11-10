@@ -1,11 +1,11 @@
 /** @jsx jsx */
 import React from "react";
 import { css, jsx } from "@emotion/core";
-import BottomNav from "../BottomNav/BottomNav";
+
 const FocusView = () => {
   return (
     <div>
-      <BottomNav />
+      <h1>Display some text</h1>
     </div>
   );
 };

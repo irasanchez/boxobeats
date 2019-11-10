@@ -1,3 +1,4 @@
+/** @jsx jsx */
 /* TODOS
   //TODO: "Now try to combine"
   //TODO: Sound 1 and Sound 2 rendered
@@ -5,23 +6,26 @@
 */
 
 import React from "react";
+import { css, jsx } from "@emotion/core";
 import { FiRefreshCcw, FiPlusSquare } from "react-icons/fi";
-import BottomNav from "../BottomNav/BottomNav";
+
+//styles
+import { create, comboContainer, soundOption } from "./createViewStyles";
 
 const CreateView = props => {
   const { beats } = props;
 
   return (
-    <section>
+    <section css={create}>
       <p>Try to combine</p>
-      <div>
+      <div css={comboContainer}>
         <FiRefreshCcw />
-        <div>{beats[0].name}</div>
+        <h2 css={soundOption}>{beats[0].name}</h2>
         <FiPlusSquare />
-        <div>{beats[1].name}</div>
+        <h2 css={soundOption}>{beats[1].name}</h2>
         <FiRefreshCcw />
       </div>
-      <div>
+      <aside>
         <p>Information:</p>
         <p>
           Many of the more complex sounds one can make come from combining 2 or
@@ -31,7 +35,7 @@ const CreateView = props => {
           It takes a lot of practice to figure out your body positioning and
           timing sometimes. So, don't give up if you don't get it right away.
         </p>
-      </div>
+      </aside>
     </section>
   );
 };

@@ -32,11 +32,11 @@ export const global = css`
   }
 
   h1 {
-    font-size: 2.4rem;
+    font-size: 3.6rem;
   }
 
   h2 {
-    font-size: 1.8rem;
+    font-size: 2.4rem;
   }
 
   h3 {

@@ -3,6 +3,7 @@ import { css, jsx } from "@emotion/core";
 import {
   secondaryBg,
   highlight,
+  textColor,
   accentColor,
   center
 } from "../../assets/cssVariables.js";
@@ -33,7 +34,7 @@ export const soundCard = css`
 export const progressBarTotal = css`
   width: 90%;
   height: 8px;
-  background-color: ${highlight};
+  background-color: ${textColor};
   margin: 5px 0 20px 0;
   padding: 0;
   /* x, y, blur/spread, color */

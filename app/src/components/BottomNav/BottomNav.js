@@ -14,33 +14,29 @@ import {
   bottomNavContainer,
   bottomNav,
   iconContainer,
-  icon1,
-  icon2,
-  icon3,
-  icon4,
   metronomeIcon
 } from "./bottomNavStyles";
 
 const BottomNav = props => {
-  const sideIconSize = "3em";
+  const sideIconSize = "2em";
   return (
     <footer css={bottomNavContainer}>
       <nav css={bottomNav}>
         <div css={iconContainer}>
-          <FaRegMap size={sideIconSize} css={icon1} />
+          <FaRegMap size={sideIconSize} />
         </div>
         <div css={iconContainer}>
-          <FaRegLightbulb size={sideIconSize} css={icon2} />
+          <FaRegLightbulb size={sideIconSize} />
         </div>
 
-        <GiMetronome css={metronomeIcon} size="8em" />
+        <GiMetronome css={metronomeIcon} size="4em" />
 
         <div css={iconContainer}>
-          <FaHammer size={sideIconSize} css={icon3} />
+          <FaHammer size={sideIconSize} />
         </div>
 
         <div css={iconContainer}>
-          <FaRegEye size={sideIconSize} css={icon4} />
+          <FaRegEye size={sideIconSize} />
         </div>
       </nav>
     </footer>

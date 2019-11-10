@@ -3,6 +3,7 @@ import React from "react";
 
 import { css, jsx } from "@emotion/core";
 import { FaPlayCircle } from "react-icons/fa";
+import { MdExpandMore } from "react-icons/md";
 import {
   soundCard,
   progressBarTotal,
@@ -40,6 +41,7 @@ const SoundCard = props => {
           <p css={tipsText}>{sound.tips[0].tip} </p>
         </div>
       ) : null}
+      <MdExpandMore size="2em" />
     </li>
   );
 };

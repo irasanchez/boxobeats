@@ -5,7 +5,8 @@ import {
   secondaryBg,
   accentColorBlue,
   highlight,
-  center
+  center,
+  boxShadow
 } from "../../assets/cssVariables";
 
 export const bottomNavContainer = css`
@@ -16,6 +17,9 @@ export const bottomNavContainer = css`
   display: flex;
   align-items: center;
   background-color: ${secondaryBg};
+  -webkit-box-shadow: 0px -1px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px -1px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px -1px 5px 0px rgba(0, 0, 0, 0.75);
 `;
 
 export const bottomNav = css`

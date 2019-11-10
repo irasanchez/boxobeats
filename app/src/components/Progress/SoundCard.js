@@ -1,9 +1,9 @@
 /** @jsx jsx */
-import React from "react";
+import React, { useState } from "react";
 
 import { css, jsx } from "@emotion/core";
 import { FaPlayCircle } from "react-icons/fa";
-import { MdExpandMore } from "react-icons/md";
+import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
 import {
   soundCard,
   progressBarTotal,
@@ -20,9 +20,18 @@ import {
 } from "./progressStyles";
 
 import userData from "../../assets/userData.json";
+import { hideThisElement } from "../../assets/cssVariables";
 
 const SoundCard = props => {
   const { sound } = props;
+
+  const [shouldIOpenCard, toggleCard] = useState(hideThisElement);
+
+  const cardToggler = event => {
+    shouldIOpenCard === hideThisElement
+      ? toggleCard(tipsContainer)
+      : toggleCard(hideThisElement);
+  };
 
   return (
     <li css={soundCard}>
@@ -34,22 +43,34 @@ const SoundCard = props => {
           <h2 css={soundContentTitleText}>{sound.name}</h2>
           <FaPlayCircle css={playIcon} />
         </div>
-        <p css={soundContentText}>Sound description here</p>
-      </section>
+        <p css={soundContentText}>
+          Nasal humming is just like regular humming, except the sound only
+          comes out of your nose, not your mouth.
+        </p>
 
-      {sound.tips ? (
-        <aside name="tipsContainer" css={tipsContainer}>
-          <div>
-            <h3 css={tipsTitle}>User Tips:</h3>
-            <p css={tipsText}>{sound.tips[0].tip} </p>
-          </div>
-          <div>
-            <img src={userData.userData[0].avatar} />
-            <p>{userData.userData[0].username}</p>
-          </div>
-        </aside>
-      ) : null}
-      <MdExpandMore size="2em" />
+        <MdKeyboardArrowDown
+          size="2em"
+          css={shouldIOpenCard === hideThisElement ? null : hideThisElement}
+          onClick={cardToggler}
+        />
+        {sound.tips ? (
+          <aside name="tipsContainer" css={shouldIOpenCard}>
+            <div>
+              <h3 css={tipsTitle}>User Tip:</h3>
+              <p css={tipsText}>{sound.tips[0].tip} </p>
+            </div>
+            <div className="imageContainer">
+              <img src={userData.userData[0].avatar} />
+              <p>{userData.userData[0].username}</p>
+            </div>
+          </aside>
+        ) : null}
+        <MdKeyboardArrowUp
+          size="2em"
+          onClick={cardToggler}
+          css={shouldIOpenCard === hideThisElement ? hideThisElement : null}
+        />
+      </section>
     </li>
   );
 };

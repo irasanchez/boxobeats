@@ -1,17 +1,22 @@
 /** @jsx jsx */
+// TODO: Separate out soundCard styling to keep things clean
 import { css, jsx } from "@emotion/core";
 import {
+  mainBg,
   secondaryBg,
   highlight,
   textColor,
   accentColorBlue,
   accentColorGreen,
   center,
-  viewSize
+  viewSize,
+  boxShadow,
+  hideThisElement
 } from "../../assets/cssVariables.js";
 
 export const progressView = css`
   ${viewSize}
+  margin-bottom: 50px;
 `;
 export const progressViewTitle = css`
   display: flex;
@@ -29,6 +34,7 @@ export const soundCard = css`
   margin: 20px 0;
   padding: 20px 0;
   border-radius: 25px;
+  ${boxShadow};
 `;
 
 export const progressBarTotal = css`
@@ -38,15 +44,14 @@ export const progressBarTotal = css`
   margin: 5px 0 20px 0;
   padding: 0;
   /* x, y, blur/spread, color */
-  box-shadow: 5px 5px 5px black;
   border-radius: 3px;
+  ${boxShadow}
 `;
 
 export const progressBarCompleted = css`
   background-color: ${accentColorGreen};
   height: 8px;
   width: 30%;
-  box-shadow: none;
   border-radius: 3px 0px 0px 3px;
   padding: 0;
   margin: 0;
@@ -91,23 +96,53 @@ export const soundContentText = css`
   /* border: 2px dashed yellow; */
   width: 100%;
   flex-grow: 0;
+  margin-bottom: 20px;
 `;
 
 export const tipsContainer = css`
-  width: 100%;
-  margin-top: 20px;
+  display: flex;
+  align-self: flex-start;
+  align-items: flex-start;
+  height: 100px;
+
   padding: 10px 2.5%;
-  filter: opacity(25%);
-  background-color: black;
   border-radius: 5px;
+  margin: 20px 0;
+
+  filter: opacity(75%);
+  color: ${accentColorBlue};
+  background-color: ${mainBg};
+
+  ${boxShadow};
+
+  /* Tip content */
+  div p {
+    padding-top: 5px;
+  }
+  /* user who made the tip */
+  .imageContainer {
+    align-self: flex-end;
+    margin-right: 2%;
+
+    color: ${mainBg};
+    display: flex;
+    flex-direction: column;
+    ${center}
+    text-align: center;
+
+    img {
+      height: 100%;
+      width: 100%;
+      border-radius: 50%;
+      background-color: ${accentColorGreen};
+    }
+  }
 `;
 
 export const tipsTitle = css`
   font-size: 1.2rem;
-  color: white;
 `;
 
 export const tipsText = css`
   font-size: 1rem;
-  color: white;
 `;

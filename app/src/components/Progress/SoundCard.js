@@ -14,13 +14,11 @@ import {
   playIcon,
   soundContentTitle,
   soundContentText,
-  tipsContainer,
-  tipsTitle,
-  tipsText
+  tipContainer
 } from "./progressStyles";
 
-import userData from "../../assets/userData.json";
 import { hideThisElement } from "../../assets/cssVariables";
+import TipContainer from "./TipContainer";
 
 const SoundCard = props => {
   const { sound } = props;
@@ -29,7 +27,7 @@ const SoundCard = props => {
 
   const cardToggler = event => {
     shouldIOpenCard === hideThisElement
-      ? toggleCard(tipsContainer)
+      ? toggleCard(tipContainer)
       : toggleCard(hideThisElement);
   };
 
@@ -54,16 +52,7 @@ const SoundCard = props => {
           onClick={cardToggler}
         />
         {sound.tips ? (
-          <aside name="tipsContainer" css={shouldIOpenCard}>
-            <div>
-              <h3 css={tipsTitle}>User Tip:</h3>
-              <p css={tipsText}>{sound.tips[0].tip} </p>
-            </div>
-            <div className="imageContainer">
-              <img src={userData.userData[0].avatar} />
-              <p>{userData.userData[0].username}</p>
-            </div>
-          </aside>
+          <TipContainer sound={sound} shouldIOpenCard={shouldIOpenCard} />
         ) : null}
         <MdKeyboardArrowUp
           size="2em"

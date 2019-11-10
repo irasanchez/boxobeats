@@ -99,7 +99,7 @@ export const soundContentText = css`
   margin-bottom: 20px;
 `;
 
-export const tipsContainer = css`
+export const tipContainer = css`
   display: flex;
   align-self: flex-start;
   align-items: flex-start;

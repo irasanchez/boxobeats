@@ -5,7 +5,7 @@ import { mainBg, textColor, accentColorBlue } from "./assets/cssVariables";
 export const app = css`
   margin: 0 auto;
   padding: 4vh 0;
-  max-width: 100vh;
+  max-width: 100vw;
   width: 100%;
   display: flex;
   flex-direction: column;

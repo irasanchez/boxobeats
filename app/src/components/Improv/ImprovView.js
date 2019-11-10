@@ -11,6 +11,7 @@ const ImprovView = props => {
 
   return (
     <div css={improvView}>
+      <h1>IMPROV</h1>
       <p>
         Use these random sounds in your freestyle. If you're comfortable or
         bored, it's time for new sounds.

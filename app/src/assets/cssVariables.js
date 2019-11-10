@@ -1,12 +1,14 @@
 /** @jsx jsx */
 import { css, jsx } from "@emotion/core";
 
-/* Coolors Exported Palette - coolors.co/080001-f2e5cc-647282-5b2442-c3ddf7 */
-export const mainBg = `rgba(8, 0, 1, 1)`;
-export const textColor = `rgba(242, 229, 204, 1)`;
-export const secondaryBg = `rgba(100, 114, 130, 1)`;
+/* Coolors Exported Palette - coolors.co/462434-e41b21-14808a-e8e8e8-151515 */
+export const mainBg = `rgba(70, 36, 52, 1)`;
+export const textColor = `rgba(232, 232, 232, 1)`;
+export const secondaryBg = `rgba(21, 21, 21, 1)`;
 
-export const accentColor = `rgba(130, 36, 66, 1)`;
+export const accentColorBlue = `rgba(20, 128, 138, 1)`;
+
+export const accentColorGreen = `rgba(0, 158, 96, 1)`;
 
 export const highlight = `rgba(242, 229, 204, 1)`;
 

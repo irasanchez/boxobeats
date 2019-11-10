@@ -7,19 +7,18 @@
 import React from "react";
 import { FiRefreshCcw, FiPlusSquare } from "react-icons/fi";
 import BottomNav from "../BottomNav/BottomNav";
-import style from "./create.module.css";
 
 const CreateView = props => {
   const { beats } = props;
-  const { comboContainer, soundOption, create } = style;
+
   return (
-    <section className={create}>
+    <section>
       <p>Try to combine</p>
-      <div className={comboContainer}>
+      <div>
         <FiRefreshCcw />
-        <div className={soundOption}>{beats[0].name}</div>
+        <div>{beats[0].name}</div>
         <FiPlusSquare />
-        <div className={soundOption}>{beats[1].name}</div>
+        <div>{beats[1].name}</div>
         <FiRefreshCcw />
       </div>
       <div>

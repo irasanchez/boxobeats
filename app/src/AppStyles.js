@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { css, jsx } from "@emotion/core";
-import { mainBg, textColor, accentColor } from "./assets/cssVariables";
+import { mainBg, textColor, accentColorBlue } from "./assets/cssVariables";
 
 export const app = css`
   margin: 0 auto;
@@ -28,7 +28,7 @@ export const global = css`
   h2,
   h3 {
     font-family: "Sedgwick Ave Display", cursive;
-    color: ${accentColor};
+    color: ${accentColorBlue};
   }
 
   h1 {

@@ -4,7 +4,8 @@ import {
   secondaryBg,
   highlight,
   textColor,
-  accentColor,
+  accentColorBlue,
+  accentColorGreen,
   center,
   viewSize
 } from "../../assets/cssVariables.js";
@@ -42,7 +43,7 @@ export const progressBarTotal = css`
 `;
 
 export const progressBarCompleted = css`
-  background-color: ${accentColor};
+  background-color: ${accentColorGreen};
   height: 8px;
   width: 30%;
   box-shadow: none;

@@ -3,20 +3,19 @@ import { css, jsx } from "@emotion/core";
 import {
   mainBg,
   secondaryBg,
-  accentColor,
+  accentColorBlue,
   highlight,
   center
 } from "../../assets/cssVariables";
 
 export const bottomNavContainer = css`
-  border: 1px solid red;
   width: 100%;
   height: 5rem;
   position: fixed;
   bottom: 0;
   display: flex;
   align-items: center;
-  background-color: ${accentColor};
+  background-color: ${secondaryBg};
 `;
 
 export const bottomNav = css`

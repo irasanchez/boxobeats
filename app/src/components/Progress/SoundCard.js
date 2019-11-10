@@ -23,23 +23,31 @@ import TipContainer from "./TipContainer";
 const SoundCard = props => {
   const { sound } = props;
 
+  //Expand Card
   const [shouldIOpenCard, toggleCard] = useState(hideThisElement);
-
   const cardToggler = event => {
     shouldIOpenCard === hideThisElement
       ? toggleCard(tipContainer)
       : toggleCard(hideThisElement);
   };
 
+  //Progress Bar Update
+  //TODO:Update me with real data. set to random for now.
+  const [progressStatus, setProgressStatus] = useState(
+    Math.floor(Math.random() * 100 + 1)
+  );
+  const width = css`
+    width: ${progressStatus}%;
+  `;
   return (
     <li css={soundCard}>
       <div css={progressBarTotal}>
-        <div css={progressBarCompleted}></div>
+        <div css={[progressBarCompleted, width]}></div>
       </div>
       <section css={soundContent}>
         <div css={soundContentTitleContainer}>
           <h2 css={soundContentTitleText}>{sound.name}</h2>
-          <FaPlayCircle css={playIcon} />
+          <FaPlayCircle css={playIcon} onClick={() => {}} />
         </div>
         <p css={soundContentText}>
           Nasal humming is just like regular humming, except the sound only

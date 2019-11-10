@@ -63,7 +63,7 @@ const App = props => {
       />
 
       {/* FOCUS VIEW */}
-      <Route path="/create" render={() => <FocusView beats={beats} />} />
+      <Route path="/focus" render={() => <FocusView beats={beats} />} />
 
       <BottomNav />
     </div>

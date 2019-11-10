@@ -19,6 +19,8 @@ import {
   tipsText
 } from "./progressStyles";
 
+import userData from "../../assets/userData.json";
+
 const SoundCard = props => {
   const { sound } = props;
 
@@ -36,10 +38,16 @@ const SoundCard = props => {
       </section>
 
       {sound.tips ? (
-        <div css={tipsContainer}>
-          <h3 css={tipsTitle}>User Tips:</h3>
-          <p css={tipsText}>{sound.tips[0].tip} </p>
-        </div>
+        <aside name="tipsContainer" css={tipsContainer}>
+          <div>
+            <h3 css={tipsTitle}>User Tips:</h3>
+            <p css={tipsText}>{sound.tips[0].tip} </p>
+          </div>
+          <div>
+            <img src={userData.userData[0].avatar} />
+            <p>{userData.userData[0].username}</p>
+          </div>
+        </aside>
       ) : null}
       <MdExpandMore size="2em" />
     </li>

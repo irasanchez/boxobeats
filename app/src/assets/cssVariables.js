@@ -1,7 +1,9 @@
 /** @jsx jsx */
 import { css, jsx } from "@emotion/core";
 
-/* Coolors Exported Palette - coolors.co/462434-e41b21-14808a-e8e8e8-151515 */
+/* Coolors Exported Palette - coolors.co/462434-e41b21-14808a-e8e8e8-151515 
+inspired by https://dribbble.com/shots/3771065-Beatbox-Faces
+*/
 export const mainBg = `rgba(70, 36, 52, 1)`;
 export const textColor = `rgba(232, 232, 232, 1)`;
 export const secondaryBg = `rgba(21, 21, 21, 1)`;

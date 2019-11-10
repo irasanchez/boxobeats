@@ -1,12 +1,10 @@
 /** @jsx jsx */
-import { css, jsx } from "@emotion/core";
+import { css } from "@emotion/core";
 import {
   mainBg,
   secondaryBg,
-  accentColorBlue,
   highlight,
-  center,
-  boxShadow
+  center
 } from "../../assets/cssVariables";
 
 export const bottomNavContainer = css`

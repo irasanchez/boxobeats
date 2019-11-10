@@ -1,18 +1,11 @@
 /** @jsx jsx */
-import React from "react";
-import { css, jsx } from "@emotion/core";
+import { jsx } from "@emotion/core";
 //react router
 import { NavLink } from "react-router-dom";
 
 // icons
 // sizes have to be put on the size prop. default is 1em. rem doesn't appear to work.
-import {
-  FaRegMap,
-  FaRegLightbulb,
-  FaHammer,
-  FaRegEye,
-  FaCircle
-} from "react-icons/fa";
+import { FaRegMap, FaRegLightbulb, FaHammer, FaRegEye } from "react-icons/fa";
 import { GiMetronome } from "react-icons/gi";
 // styles
 import {

@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import React, { useState } from "react";
+import { useState } from "react";
 
 import { css, jsx } from "@emotion/core";
 import { FaPlayCircle } from "react-icons/fa";
@@ -12,7 +12,6 @@ import {
   soundContentTitleContainer,
   soundContentTitleText,
   playIcon,
-  soundContentTitle,
   soundContentText,
   tipContainer
 } from "./progressStyles";
@@ -33,9 +32,7 @@ const SoundCard = props => {
 
   //Progress Bar Update
   //TODO:Update me with real data. set to random for now.
-  const [progressStatus, setProgressStatus] = useState(
-    Math.floor(Math.random() * 100 + 1)
-  );
+  const [progressStatus] = useState(Math.floor(Math.random() * 100 + 1));
   const width = css`
     width: ${progressStatus}%;
   `;

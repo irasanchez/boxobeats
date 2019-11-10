@@ -1,14 +1,6 @@
 /** @jsx jsx */
-import { css, jsx } from "@emotion/core";
-import {
-  secondaryBg,
-  highlight,
-  textColor,
-  accentColorBlue,
-  accentColorGreen,
-  center,
-  viewSize
-} from "../../assets/cssVariables.js";
+import { css } from "@emotion/core";
+import { accentColorBlue, viewSize } from "../../assets/cssVariables.js";
 
 export const create = css`
   ${viewSize}

@@ -1,6 +1,6 @@
 /** @jsx jsx */
-import { Global, css, jsx } from "@emotion/core";
-import React, { useState } from "react";
+import { Global, jsx } from "@emotion/core";
+import { useState } from "react";
 import { Route } from "react-router-dom";
 //FIXME: hardcoded data to later be removed after I make some sort of backend
 import beatsData from "./assets/beatsData.json";
@@ -19,7 +19,7 @@ import { app, global } from "./AppStyles.js";
 
 const App = props => {
   //grab data from json file and set it to state
-  const [beats, setBeats] = useState(beatsData.beats);
+  const [beats] = useState(beatsData.beats);
 
   return (
     <div css={app}>
@@ -28,13 +28,29 @@ const App = props => {
       <Route exact path="/" render={() => <HomeView {...props} />} />
 
       {/* PROGRESS VIEW */}
-      <Route path="/progress" render={() => <ProgressView beats={beats} />} />
+      <Route
+        path="/progress"
+        render={() => (
+          <ProgressView
+            beats={beats}
+            onEnter={() => {
+              console.log("progress view");
+            }}
+          />
+        )}
+      />
 
       {/* CREATE VIEW */}
       <Route path="/create" render={() => <CreateView beats={beats} />} />
 
       {/* IMPROV VIEW */}
-      <Route path="/create" render={() => <ImprovView beats={beats} />} />
+      <Route
+        path="/improv"
+        render={() => <ImprovView beats={beats} />}
+        onEnter={() => {
+          console.log("progress view");
+        }}
+      />
 
       {/* FOCUS VIEW */}
       <Route path="/create" render={() => <FocusView beats={beats} />} />

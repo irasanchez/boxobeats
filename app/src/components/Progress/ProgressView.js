@@ -1,6 +1,5 @@
 /** @jsx jsx */
-import React from "react";
-import { css, jsx } from "@emotion/core";
+import { jsx } from "@emotion/core";
 import SoundCard from "./SoundCard";
 
 import { progressView, progressViewTitle } from "./progressStyles";
@@ -25,7 +24,7 @@ const ProgressView = props => {
         are with them, and additional information about each sound.
       </p>
       {beats.map(sound => {
-        return <SoundCard sound={sound} />;
+        return <SoundCard sound={sound} key={Math.random()} />;
       })}
     </ul>
   );

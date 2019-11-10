@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { css, jsx } from "@emotion/core";
+import { css } from "@emotion/core";
 
 /* Coolors Exported Palette - coolors.co/462434-e41b21-14808a-e8e8e8-151515 
 inspired by https://dribbble.com/shots/3771065-Beatbox-Faces

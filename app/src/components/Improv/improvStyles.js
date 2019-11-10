@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { css, jsx } from "@emotion/core";
+import { css } from "@emotion/core";
 import { viewSize } from "../../assets/cssVariables.js";
 
 export const improvView = css`

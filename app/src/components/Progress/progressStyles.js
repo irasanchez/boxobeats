@@ -1,17 +1,15 @@
 /** @jsx jsx */
 // TODO: Separate out soundCard styling to keep things clean
-import { css, jsx } from "@emotion/core";
+import { css } from "@emotion/core";
 import {
   mainBg,
   secondaryBg,
-  highlight,
   textColor,
   accentColorBlue,
   accentColorGreen,
   center,
   viewSize,
-  boxShadow,
-  hideThisElement
+  boxShadow
 } from "../../assets/cssVariables.js";
 
 export const progressView = css`

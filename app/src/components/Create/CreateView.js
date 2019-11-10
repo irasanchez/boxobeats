@@ -5,8 +5,7 @@
   //TODO: make each one refreshable for the user to be able to change things.
 */
 
-import React from "react";
-import { css, jsx } from "@emotion/core";
+import { jsx } from "@emotion/core";
 import { FiRefreshCcw, FiPlusSquare } from "react-icons/fi";
 
 //styles

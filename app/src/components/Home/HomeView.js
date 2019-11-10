@@ -1,8 +1,7 @@
 /** @jsx jsx */
 
-import React from "react";
 import { NavLink } from "react-router-dom";
-import { css, jsx } from "@emotion/core";
+import { jsx } from "@emotion/core";
 import { homeFooter, title, byline, nav, link } from "./homeStyles.js";
 /*
  //TODO: make video compilation of beatbox mouths for background

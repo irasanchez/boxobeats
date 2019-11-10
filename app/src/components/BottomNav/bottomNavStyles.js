@@ -1,11 +1,12 @@
 /** @jsx jsx */
 import { css, jsx } from "@emotion/core";
+import { mainBg } from "../../assets/cssVariables";
 
 export const bottomNavContainer = css`
   border: 2px solid red;
   width: 100%;
   height: 60px;
-  background-color: purple;
+  background-color: mainBg;
   position: fixed;
   bottom: 0;
   display: flex;

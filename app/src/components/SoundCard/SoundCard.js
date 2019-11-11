@@ -24,7 +24,7 @@ import { hideThisElement } from "../../assets/cssVariables";
 import TipContainer from "./TipContainer";
 
 const SoundCard = props => {
-  const { sound, currentStyle, tutorials } = props;
+  const { sound, tutorials } = props;
 
   //Expand Card
   const [shouldIOpenCard, toggleCard] = useState(hideThisElement);
@@ -50,8 +50,9 @@ const SoundCard = props => {
 
   const { pathname } = props.location;
 
-  //TODO: !!! make .moreInfo icon button link expanded card as an overlay Note: you can re-render the soundCard component with different settings in the css pro
-  const tut = tutorials[0] ? tutorials[0] : null;
+  //TODO: !!! make .moreInfo icon button link expanded card as an overlay Note: you can re-render the soundCard component with different settings in the css prop
+
+  const tut = tutorials ? tutorials[0] : null;
 
   return (
     <li

@@ -19,7 +19,7 @@ const FocusView = props => {
 
   return (
     <div>
-      <h1>Display some text</h1>
+      <h1>Focus</h1>
       <SoundCard
         sound={randomSound}
         history={props.history}

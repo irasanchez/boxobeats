@@ -46,6 +46,7 @@ const SoundCard = props => {
 
   // use props.location.pathname
   //TODO: Hide elements that are not needed when on certain router paths
+  //TODO: move this code out when it looks right
   const { pathname } = props.location;
   const hideInImprovView =
     pathname === "/improv"
@@ -53,8 +54,8 @@ const SoundCard = props => {
           /* hide the elements not needed in improvView */
           ${center}
           border-radius: 50%;
-          height: 250px;
-          width: 250px;
+          height: 175px;
+          width: 175px;
           flex-direction: row;
           padding: 0;
           margin: 2%;
@@ -64,6 +65,7 @@ const SoundCard = props => {
             ${hideThisElement}
           }
           .soundContent {
+            max-height: 100%;
             height: 100%;
             justify-content: space-evenly;
           }
@@ -72,13 +74,16 @@ const SoundCard = props => {
             flex-direction: column;
             ${center}
             justify-content: space-evenly;
+            align-self: stretch;
           }
           h2 {
             border: none;
             text-align: center;
             padding: 0;
-            ${center}
             margin: 0;
+            width: 98%;
+            overflow-y: hidden;
+            justify-content: center;
           }
           p {
             ${hideThisElement}

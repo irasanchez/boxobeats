@@ -21,7 +21,7 @@ export const soundCard = css`
   margin: 20px 0;
   padding: 20px 0;
   border-radius: 25px;
-  ${boxShadow};
+  box-shadow: 0 1.5px 7px ${textColor};
 `;
 
 export const progressBarTotal = css`

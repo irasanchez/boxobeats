@@ -4,7 +4,7 @@ import { viewSize, center } from "../../assets/cssVariables.js";
 
 export const improvView = css`
   ${viewSize}
-  height:100vh;
+  height: 100vh;
   margin: 0 auto;
   ul {
     margin: 0 auto;

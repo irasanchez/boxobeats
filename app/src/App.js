@@ -56,7 +56,17 @@ const App = props => {
       />
 
       {/* CREATE VIEW */}
-      <Route path="/create" render={() => <CreateView beats={beats} />} />
+      <Route
+        path="/create"
+        render={() => (
+          <CreateView
+            beats={beats}
+            match={props.match}
+            history={props.history}
+            location={props.location}
+          />
+        )}
+      />
 
       {/* IMPROV VIEW */}
       <Route

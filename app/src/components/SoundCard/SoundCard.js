@@ -49,7 +49,7 @@ const SoundCard = props => {
   //TODO: move this code out when it looks right
   const { pathname } = props.location;
   const hideInImprovView =
-    pathname === "/improv"
+    pathname === "/improv" || pathname === "/create"
       ? css`
           /* hide the elements not needed in improvView */
           ${center}

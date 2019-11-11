@@ -4,6 +4,8 @@ import { useState } from "react";
 import { jsx } from "@emotion/core";
 import { FiRefreshCcw, FiPlusSquare } from "react-icons/fi";
 
+import SoundCard from "../SoundCard/SoundCard";
+
 //styles
 import { create, comboContainer, soundOption } from "./createViewStyles";
 
@@ -33,9 +35,19 @@ const CreateView = props => {
       <p>Try to combine</p>
       <div css={comboContainer}>
         <FiRefreshCcw onClick={() => refresh("left")} />
-        <h2 css={soundOption}>{sound1.name}</h2>
+        <SoundCard
+          sound={sound1}
+          match={props.match}
+          history={props.history}
+          location={props.location}
+        />
         <FiPlusSquare />
-        <h2 css={soundOption}>{sound2.name}</h2>
+        <SoundCard
+          sound={sound2}
+          match={props.match}
+          history={props.history}
+          location={props.location}
+        />
         <FiRefreshCcw onClick={() => refresh("right")} />
       </div>
       <aside>

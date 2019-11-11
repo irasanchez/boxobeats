@@ -4,7 +4,10 @@ import {
   mainBg,
   secondaryBg,
   highlight,
-  center
+  center,
+  accentColorBlue,
+  textColor,
+  accentColorGreen
 } from "../../assets/cssVariables";
 
 export const bottomNavContainer = css`
@@ -14,10 +17,7 @@ export const bottomNavContainer = css`
   bottom: 0;
   display: flex;
   align-items: center;
-  background-color: ${mainBg};
-  -webkit-box-shadow: 0px -1px 5px 0px ${mainBg};
-  -moz-box-shadow: 0px -1px 5px 0px ${mainBg};
-  box-shadow: 0px -1px 5px 0px ${mainBg};
+  background-color: ${accentColorBlue};
 `;
 
 export const bottomNav = css`
@@ -31,7 +31,7 @@ export const bottomNav = css`
 
 export const iconContainer = css`
   display: flex;
-  color: ${highlight};
+  color: ${mainBg};
   ${center}
   height: 4em;
   width: 4em;
@@ -39,13 +39,11 @@ export const iconContainer = css`
 `;
 
 export const metronomeIcon = css`
-  color: ${highlight};
+  /* TODO: change the color and box-shadow color based on whether or not metronome is playing or paused */
+  color: ${accentColorGreen};
   background: ${mainBg};
   border-radius: 50%;
   padding: 2em;
   margin-bottom: 1rem;
-  -webkit-box-shadow: 0px -1px 5px 0px ${mainBg};
-  -moz-box-shadow: 0px -1px 5px 0px ${mainBg};
-  box-shadow: 0px -1px 5px 0px ${mainBg};
-  border: none;
+  box-shadow: 0 -1px 20px ${accentColorGreen};
 `;

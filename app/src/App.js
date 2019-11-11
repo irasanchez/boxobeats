@@ -82,7 +82,17 @@ const App = props => {
       />
 
       {/* FOCUS VIEW */}
-      <Route path="/focus" render={() => <FocusView beats={beats} />} />
+      <Route
+        path="/focus"
+        render={() => (
+          <FocusView
+            beats={beats}
+            match={props.match}
+            history={props.history}
+            location={props.location}
+          />
+        )}
+      />
 
       {props.location.pathname !== "/" && <BottomNav />}
     </div>

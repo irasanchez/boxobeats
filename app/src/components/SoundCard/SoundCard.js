@@ -13,10 +13,12 @@ import {
   soundContentTitleText,
   playIcon,
   soundContentText,
-  tipContainer
+  tipContainer,
+  improvAndCreateStyleChanges,
+  focusViewStyleChanges
 } from "./soundCardStyles";
 
-import { hideThisElement, center } from "../../assets/cssVariables";
+import { hideThisElement } from "../../assets/cssVariables";
 import TipContainer from "./TipContainer";
 
 const SoundCard = props => {
@@ -44,63 +46,47 @@ const SoundCard = props => {
           width: ${progressStatus}%;
         `;
 
-  // use props.location.pathname
-  //TODO: Hide elements that are not needed when on certain router paths
   //TODO: move this code out when it looks right
   const { pathname } = props.location;
-  const hideInImprovView =
+
+  const hideInImprovAndCreateViews =
     pathname === "/improv" || pathname === "/create"
       ? css`
-          /* hide the elements not needed in improvView */
-          ${center}
-          border-radius: 50%;
-          height: 175px;
-          width: 175px;
-          flex-direction: row;
-          padding: 0;
-          margin: 2%;
-          text-align: center;
-
-          .progressBar {
-            ${hideThisElement}
-          }
-          .soundContent {
-            max-height: 100%;
-            height: 100%;
-            justify-content: space-evenly;
-          }
-          .soundContent div {
-            height: 80%;
-            flex-direction: column;
-            ${center}
-            justify-content: space-evenly;
-            align-self: stretch;
-          }
-          h2 {
-            border: none;
-            text-align: center;
-            padding: 0;
-            margin: 0;
-            width: 98%;
-            overflow-y: hidden;
-            justify-content: center;
-          }
-          p {
-            ${hideThisElement}
-          }
+          ${improvAndCreateStyleChanges}
         `
       : null;
   //TODO: make .moreInfo icon button link to expanded card in progressView
 
-  const hideInProgressView =
-    pathname === "/progress"
-      ? css`
-          /* hide the elements not needed in progressView */
-        `
-      : null;
+  const determineCurrentStyling = () => {
+    const hideInProgressView =
+      pathname === "/progress"
+        ? css`
+            /* hide the elements not needed in progressView */
+          `
+        : null;
+
+    const hideInFocusView =
+      pathname === "/focus"
+        ? css`
+            ${focusViewStyleChanges}
+          `
+        : null;
+
+    if (pathname === "/focus") {
+      return hideInFocusView;
+    }
+
+    if (pathname === "/improv") {
+      return hideInImprovAndCreateViews;
+    }
+
+    if (pathname === "/progress") {
+      return hideInProgressView;
+    }
+  };
 
   return (
-    <li id="soundCard" css={[soundCard, hideInImprovView, hideInProgressView]}>
+    <li id="soundCard" css={[soundCard, determineCurrentStyling()]}>
       <div className="progressBar" css={progressBarTotal}>
         <div css={[progressBarCompleted, width]}></div>
       </div>

@@ -13,6 +13,7 @@ const CreateView = props => {
   const { beats } = props;
 
   //get 2 random sounds from list and set them to state
+
   const randomSound = beats[Math.floor(Math.random() * beats.length)];
   const [sound1, setSound1] = useState(
     beats[Math.floor(Math.random() * beats.length)]

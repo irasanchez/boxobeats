@@ -8,7 +8,8 @@ import {
   accentColorBlue,
   accentColorGreen,
   center,
-  boxShadow
+  boxShadow,
+  hideThisElement
 } from "../../assets/cssVariables.js";
 
 export const soundCard = css`
@@ -69,7 +70,7 @@ export const soundContentTitleText = css`
   display: flex;
   flex-wrap: wrap;
   /*TODO: update the color for this border to the reddish color */
-  border-bottom: 1px solid black;
+  border-bottom: 3px solid black;
   padding-bottom: 10px;
   margin-bottom: 20px;
 `;
@@ -125,6 +126,84 @@ export const tipContainer = css`
   }
 `;
 
+//TODO: remove these
 export const tipsTitle = css``;
-
 export const tipsText = css``;
+
+//CONDITIONAL STUFF
+export const improvAndCreateStyleChanges = `
+  ${center}
+  border-radius: 50%;
+  height: 175px;
+  width: 175px;
+  flex-direction: row;
+  padding: 0;
+  margin: 2%;
+  text-align: center;
+
+  .progressBar {
+    ${hideThisElement}
+  }
+  .soundContent {
+    max-height: 100%;
+    height: 100%;
+    justify-content: space-evenly;
+  }
+  .soundContent div {
+    height: 80%;
+    flex-direction: column;
+    ${center}
+    justify-content: space-evenly;
+    align-self: stretch;
+  }
+  h2 {
+    border: none;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    width: 98%;
+    overflow-y: hidden;
+    justify-content: center;
+  }
+  p {
+    ${hideThisElement}
+  }
+`;
+/* the variables are not working for some reason below. Need to manually put in value. */
+export const focusViewStyleChanges = `${center}
+border-radius: 50%;
+height: 300px;
+width: 300px;
+flex-direction: row;
+padding: 0;
+margin: 2%;
+text-align: center;
+
+.progressBar {
+  display: none;
+}
+.soundContent {
+  max-height: 100%;
+  height: 100%;
+  justify-content: space-evenly;
+}
+.soundContent div {
+  height: 80%;
+  flex-direction: column;
+  ${center}
+  justify-content: space-evenly;
+  align-self: stretch;
+}
+h2 {
+  border: none;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  width: 98%;
+  overflow-y: hidden;
+  justify-content: center;
+}
+p {
+  display: none;
+}
+`;

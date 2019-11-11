@@ -131,7 +131,8 @@ export const tipsTitle = css``;
 export const tipsText = css``;
 
 //CONDITIONAL STUFF
-export const improvAndCreateStyleChanges = `
+/* FIXME: need to make this more dry, rewrote manually to fix bugs*/
+export const improvAndCreateStyleChanges = css`
   ${center}
   border-radius: 50%;
   height: 175px;
@@ -141,7 +142,8 @@ export const improvAndCreateStyleChanges = `
   margin: 2%;
   text-align: center;
 
-  .progressBar {
+  .progressBar,
+  p {
     ${hideThisElement}
   }
   .soundContent {
@@ -165,45 +167,80 @@ export const improvAndCreateStyleChanges = `
     overflow-y: hidden;
     justify-content: center;
   }
+`;
+
+export const createStyleChanges = css`
+  ${center}
+  border-radius: 50%;
+  height: 175px;
+  width: 175px;
+  flex-direction: row;
+  padding: 0;
+  margin: 2%;
+  text-align: center;
+
+  .progressBar,
   p {
     ${hideThisElement}
   }
+  .soundContent {
+    max-height: 100%;
+    height: 100%;
+    justify-content: space-evenly;
+  }
+  .soundContent div {
+    height: 80%;
+    flex-direction: column;
+    ${center}
+    justify-content: space-evenly;
+    align-self: stretch;
+  }
+  h2 {
+    border: none;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    width: 98%;
+    overflow-y: hidden;
+    justify-content: center;
+  }
 `;
-/* the variables are not working for some reason below. Need to manually put in value. */
-export const focusViewStyleChanges = `${center}
-border-radius: 50%;
-height: 300px;
-width: 300px;
-flex-direction: row;
-padding: 0;
-margin: 2%;
-text-align: center;
 
-.progressBar {
-  display: none;
-}
-.soundContent {
-  max-height: 100%;
-  height: 100%;
-  justify-content: space-evenly;
-}
-.soundContent div {
-  height: 80%;
-  flex-direction: column;
+export const focusViewStyleChanges = css`
   ${center}
-  justify-content: space-evenly;
-  align-self: stretch;
-}
-h2 {
-  border: none;
-  text-align: center;
+  border-radius: 50%;
+  height: 300px;
+  width: 300px;
+  flex-direction: row;
   padding: 0;
-  margin: 0;
-  width: 98%;
-  overflow-y: hidden;
-  justify-content: center;
-}
-p {
-  display: none;
-}
+  margin: 2%;
+  text-align: center;
+
+  .progressBar {
+    display: none;
+  }
+  .soundContent {
+    max-height: 100%;
+    height: 100%;
+    justify-content: space-evenly;
+  }
+  .soundContent div {
+    height: 80%;
+    flex-direction: column;
+    ${center}
+    justify-content: space-evenly;
+    align-self: stretch;
+  }
+  h2 {
+    border: none;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    width: 98%;
+    overflow-y: hidden;
+    justify-content: center;
+  }
+  p {
+    display: none;
+  }
 `;

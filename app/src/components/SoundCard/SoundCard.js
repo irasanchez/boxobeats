@@ -22,7 +22,7 @@ import { hideThisElement } from "../../assets/cssVariables";
 import TipContainer from "./TipContainer";
 
 const SoundCard = props => {
-  const { sound } = props;
+  const { sound, currentStyle } = props;
 
   //Expand Card
   const [shouldIOpenCard, toggleCard] = useState(hideThisElement);
@@ -49,44 +49,16 @@ const SoundCard = props => {
   //TODO: move this code out when it looks right
   const { pathname } = props.location;
 
-  const hideInImprovAndCreateViews =
-    pathname === "/improv" || pathname === "/create"
-      ? css`
-          ${improvAndCreateStyleChanges}
-        `
-      : null;
   //TODO: make .moreInfo icon button link to expanded card in progressView
 
-  const determineCurrentStyling = () => {
-    const hideInProgressView =
-      pathname === "/progress"
-        ? css`
-            /* hide the elements not needed in progressView */
-          `
-        : null;
-
-    const hideInFocusView =
-      pathname === "/focus"
-        ? css`
-            ${focusViewStyleChanges}
-          `
-        : null;
-
-    if (pathname === "/focus") {
-      return hideInFocusView;
-    }
-
-    if (pathname === "/improv") {
-      return hideInImprovAndCreateViews;
-    }
-
-    if (pathname === "/progress") {
-      return hideInProgressView;
-    }
-  };
-
   return (
-    <li id="soundCard" css={[soundCard, determineCurrentStyling()]}>
+    <li
+      id="soundCard"
+      css={css`
+        ${soundCard}
+      `}
+      {...props}
+    >
       <div className="progressBar" css={progressBarTotal}>
         <div css={[progressBarCompleted, width]}></div>
       </div>

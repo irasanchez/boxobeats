@@ -1,13 +1,24 @@
 /** @jsx jsx */
 
-import { jsx } from "@emotion/core";
+import { jsx, css } from "@emotion/core";
 
 import { improvView } from "./improvStyles";
+
 import SoundCard from "../SoundCard/SoundCard";
+
+import { createStyleChanges } from "../SoundCard/soundCardStyles";
 
 const ImprovView = props => {
   const { beats } = props;
+  const { pathname } = props.location;
   const fiveRandomSounds = beats.sort(() => 0.5 - Math.random()).slice(0, 5);
+
+  const currentStyle =
+    pathname === "/improv"
+      ? css`
+          ${createStyleChanges}
+        `
+      : null;
 
   return (
     <div css={improvView}>
@@ -24,6 +35,7 @@ const ImprovView = props => {
             match={props.match}
             history={props.history}
             location={props.location}
+            css={currentStyle}
           />
         ))}
       </ul>

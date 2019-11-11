@@ -1,8 +1,6 @@
 /** @jsx jsx */
-/* TODOS
-  //TODO: make each one refreshable for the user to be able to change things.
-*/
 
+import { useState } from "react";
 import { jsx } from "@emotion/core";
 import { FiRefreshCcw, FiPlusSquare } from "react-icons/fi";
 
@@ -12,15 +10,33 @@ import { create, comboContainer, soundOption } from "./createViewStyles";
 const CreateView = props => {
   const { beats } = props;
 
+  //get 2 random sounds from list and set them to state
+  const randomSound = beats[Math.floor(Math.random() * beats.length)];
+  const [sound1, setSound1] = useState(
+    beats[Math.floor(Math.random() * beats.length)]
+  );
+  const [sound2, setSound2] = useState(
+    beats[Math.floor(Math.random() * beats.length)]
+  );
+
+  //get new sound when refresh button is clicked
+  const refresh = position => {
+    if (position === "left") {
+      setSound1(randomSound);
+    } else if (position === "right") {
+      setSound2(randomSound);
+    }
+  };
+
   return (
     <section css={create}>
       <p>Try to combine</p>
       <div css={comboContainer}>
-        <FiRefreshCcw />
-        <h2 css={soundOption}>{beats[0].name}</h2>
+        <FiRefreshCcw onClick={() => refresh("left")} />
+        <h2 css={soundOption}>{sound1.name}</h2>
         <FiPlusSquare />
-        <h2 css={soundOption}>{beats[1].name}</h2>
-        <FiRefreshCcw />
+        <h2 css={soundOption}>{sound2.name}</h2>
+        <FiRefreshCcw onClick={() => refresh("right")} />
       </div>
       <aside>
         <p>Information:</p>

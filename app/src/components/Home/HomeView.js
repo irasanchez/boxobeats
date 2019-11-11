@@ -10,7 +10,34 @@ const HomeView = () => {
   return (
     <>
       <h1 css={title}>Box-O-Beats</h1>
-      <p css={byline}>a beatbox training app</p>
+      <p css={byline}>
+        Welcome to Box-o-Beats, a beatbox training app! <br />
+        <br />I plan to use this app to help me hone my skills, but I also
+        needed a portfolio project. So why not feed two birds with one scone?
+        <br />
+        <br />
+        Ad of right now, there are 4 modes to assist you in your practice.
+        <br />
+        <br />
+        Get a birds eye view with progress.
+        <br />
+        <br />
+        Practice random sounds rather than relying on the same ones again and
+        again in Improv.
+        <br />
+        <br />
+        Focus is where you work on improving the details of one sound.
+        <br />
+        <br />
+        Create is when you play with uncharted territory and see if you can get
+        your body to do 2 random sounds at the same time.
+        <br />
+        <br />
+        I hope you enjoy.
+        <br />
+        <br />
+        Tois, Dus, Un, Beatbox!
+      </p>
       <nav css={nav}>
         <NavLink to="/progress" css={link}>
           Progress

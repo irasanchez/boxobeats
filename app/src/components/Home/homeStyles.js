@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { css } from "@emotion/core";
+import { accentColorGreen } from "../../assets/cssVariables";
 
 export const title = css`
   flex-grow: 0;
@@ -23,6 +24,7 @@ export const link = css`
   text-decoration: none;
   padding: 10px 0;
   flex-grow: 0;
+  color: ${accentColorGreen};
 `;
 
 export const homeFooter = css`

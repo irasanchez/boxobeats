@@ -1,9 +1,13 @@
 /** @jsx jsx */
+//Do not move this ^
+//dependency imports
 import { Global, jsx } from "@emotion/core";
 import { useState } from "react";
-import { Route } from "react-router-dom";
+import { Route, withRouter } from "react-router-dom";
+
 //FIXME: hardcoded data to later be removed after I make some sort of backend
 import beatsData from "./assets/beatsData.json";
+
 //component imports
 import HomeView from "./components/Home/HomeView";
 import ProgressView from "./components/Progress/ProgressView";
@@ -19,13 +23,24 @@ import { app, global } from "./AppStyles.js";
 
 const App = props => {
   //grab data from json file and set it to state
+  //FIXME: Must get data dynamically using axios
   const [beats] = useState(beatsData.beats);
 
   return (
     <div css={app}>
       <Global styles={global} />
       {/* HOME VIEW */}
-      <Route exact path="/" render={() => <HomeView {...props} />} />
+      <Route
+        exact
+        path="/"
+        render={props => (
+          <HomeView
+            match={props.match}
+            history={props.history}
+            location={props.location}
+          />
+        )}
+      />
 
       {/* PROGRESS VIEW */}
       <Route
@@ -33,9 +48,6 @@ const App = props => {
         render={props => (
           <ProgressView
             beats={beats}
-            onEnter={() => {
-              console.log("progress view");
-            }}
             match={props.match}
             history={props.history}
             location={props.location}
@@ -57,17 +69,14 @@ const App = props => {
             location={props.location}
           />
         )}
-        onEnter={() => {
-          console.log("progress view");
-        }}
       />
 
       {/* FOCUS VIEW */}
       <Route path="/focus" render={() => <FocusView beats={beats} />} />
 
-      <BottomNav />
+      {props.location.pathname !== "/" && <BottomNav />}
     </div>
   );
 };
 
-export default App;
+export default withRouter(App); //withRouter gives App access to location prop. if <Component /> is not inside of a <Route /> then it doesn't have access to location, match, etc.

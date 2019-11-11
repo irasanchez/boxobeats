@@ -7,7 +7,7 @@ import { focusViewStyleChanges } from "../SoundCard/soundCardStyles";
 const FocusView = props => {
   const { beats } = props;
   const { pathname } = props.location;
-  //TODO: create view has some very similar logic. figure out how to make it more dry
+  //TODO: !! create view has some very similar logic. figure out how to make it more dry
   const randomSound = beats[Math.floor(Math.random() * beats.length)];
 
   const currentStyle =
@@ -22,7 +22,6 @@ const FocusView = props => {
       <h1>Display some text</h1>
       <SoundCard
         sound={randomSound}
-        match={props.match}
         history={props.history}
         location={props.location}
         css={currentStyle}

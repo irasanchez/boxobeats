@@ -32,7 +32,6 @@ const ImprovView = props => {
           <SoundCard
             sound={sound}
             key={Math.random()}
-            match={props.match}
             history={props.history}
             location={props.location}
             css={currentStyle}

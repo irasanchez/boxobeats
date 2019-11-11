@@ -34,11 +34,7 @@ const App = props => {
         exact
         path="/"
         render={props => (
-          <HomeView
-            match={props.match}
-            history={props.history}
-            location={props.location}
-          />
+          <HomeView history={props.history} location={props.location} />
         )}
       />
 
@@ -48,7 +44,6 @@ const App = props => {
         render={props => (
           <ProgressView
             beats={beats}
-            match={props.match}
             history={props.history}
             location={props.location}
           />
@@ -61,7 +56,6 @@ const App = props => {
         render={() => (
           <CreateView
             beats={beats}
-            match={props.match}
             history={props.history}
             location={props.location}
           />
@@ -74,7 +68,6 @@ const App = props => {
         render={props => (
           <ImprovView
             beats={beats}
-            match={props.match}
             history={props.history}
             location={props.location}
           />
@@ -87,7 +80,6 @@ const App = props => {
         render={() => (
           <FocusView
             beats={beats}
-            match={props.match}
             history={props.history}
             location={props.location}
           />

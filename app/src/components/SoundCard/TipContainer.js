@@ -2,7 +2,6 @@
 
 import { jsx } from "@emotion/core";
 import userData from "../../assets/userData.json";
-import { tipsTitle, tipsText } from "./soundCardStyles";
 
 const TipContainer = props => {
   const { shouldIOpenCard, tips } = props;
@@ -12,8 +11,8 @@ const TipContainer = props => {
   return (
     <aside name="tipContainer" css={shouldIOpenCard}>
       <div>
-        <h3 css={tipsTitle}>User Tip:</h3>
-        <p css={tipsText}>{randomUserTipData.tip}</p>
+        <h3>User Tip:</h3>
+        <p>{randomUserTipData.tip}</p>
       </div>
       <div className="imageContainer">
         <img src={userData.userData[0].avatar} alt="avatar" />

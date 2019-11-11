@@ -4,6 +4,8 @@ import { useState } from "react";
 import { css, jsx } from "@emotion/core";
 import { FaPlayCircle } from "react-icons/fa";
 import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
+import YouTube from "react-youtube";
+
 import {
   soundCard,
   progressBarTotal,
@@ -22,7 +24,7 @@ import { hideThisElement } from "../../assets/cssVariables";
 import TipContainer from "./TipContainer";
 
 const SoundCard = props => {
-  const { sound, currentStyle } = props;
+  const { sound, currentStyle, tutorials } = props;
 
   //Expand Card
   const [shouldIOpenCard, toggleCard] = useState(hideThisElement);
@@ -33,7 +35,7 @@ const SoundCard = props => {
   };
 
   //Progress Bar Update
-  //TODO:Update me with real data. set to random for now.
+  //TODO: !! Update me with real data. set to random for now.
   const [progressStatus] = useState(Math.floor(Math.random() * 100 + 1));
 
   const width =
@@ -46,10 +48,10 @@ const SoundCard = props => {
           width: ${progressStatus}%;
         `;
 
-  //TODO: move this code out when it looks right
   const { pathname } = props.location;
 
-  //TODO: make .moreInfo icon button link to expanded card in progressView
+  //TODO: !!! make .moreInfo icon button link expanded card as an overlay Note: you can re-render the soundCard component with different settings in the css pro
+  const tut = tutorials[0] ? tutorials[0] : null;
 
   return (
     <li
@@ -78,6 +80,10 @@ const SoundCard = props => {
           onClick={cardToggler}
           className="moreInfo"
         />
+
+        {/* render YouTube when card is expanded */}
+        {shouldIOpenCard === hideThisElement ? null : <YouTube videoId={tut} />}
+
         {sound.tips ? (
           <TipContainer
             sound={sound}

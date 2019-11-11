@@ -69,7 +69,6 @@ export const soundContentTitleText = css`
   /* wrap sound title if too long */
   display: flex;
   flex-wrap: wrap;
-  /*TODO: update the color for this border to the reddish color */
   border-bottom: 3px solid black;
   padding-bottom: 10px;
   margin-bottom: 20px;
@@ -125,10 +124,6 @@ export const tipContainer = css`
     }
   }
 `;
-
-//TODO: remove these
-export const tipsTitle = css``;
-export const tipsText = css``;
 
 //CONDITIONAL STUFF
 /* FIXME: need to make this more dry, rewrote manually to fix bugs*/

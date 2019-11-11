@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import { jsx } from "@emotion/core";
 import { homeFooter, title, byline, nav, link } from "./homeStyles.js";
 /*
- //TODO: make video compilation of beatbox mouths for background
+ //TODO: ! make video compilation of beatbox mouths for background
 */
 const HomeView = () => {
   return (

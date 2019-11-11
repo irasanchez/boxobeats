@@ -39,7 +39,7 @@ export const iconContainer = css`
 `;
 
 export const metronomeIcon = css`
-  /* TODO: change the color and box-shadow color based on whether or not metronome is playing or paused */
+  /* TODO: ! change the color and box-shadow color based on whether or not metronome is playing or paused */
   color: ${accentColorGreen};
   background: ${mainBg};
   border-radius: 50%;

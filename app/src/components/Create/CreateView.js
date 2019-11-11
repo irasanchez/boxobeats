@@ -46,7 +46,6 @@ const CreateView = props => {
         <FiRefreshCcw onClick={() => refresh("left")} />
         <SoundCard
           sound={sound1}
-          match={props.match}
           history={props.history}
           location={props.location}
           css={currentStyle}
@@ -54,7 +53,6 @@ const CreateView = props => {
         <FiPlusSquare />
         <SoundCard
           sound={sound2}
-          match={props.match}
           history={props.history}
           location={props.location}
           css={currentStyle}

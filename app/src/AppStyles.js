@@ -37,6 +37,7 @@ export const global = css`
 
   h2 {
     font-size: 2.4rem;
+    color: ${textColor};
   }
 
   h3 {

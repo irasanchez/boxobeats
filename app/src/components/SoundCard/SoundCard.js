@@ -23,12 +23,14 @@ import {
 import { hideThisElement } from "../../assets/cssVariables";
 import TipContainer from "./TipContainer";
 
+//FIXME: Expanded card style does not work for mobile, works for tablet and desktop though
+
 const SoundCard = props => {
   const { sound, tutorials } = props;
 
   //Expand Card
   const [shouldIOpenCard, toggleCard] = useState(hideThisElement);
-  const cardToggler = event => {
+  const cardToggler = () => {
     shouldIOpenCard === hideThisElement
       ? toggleCard(tipContainer)
       : toggleCard(hideThisElement);

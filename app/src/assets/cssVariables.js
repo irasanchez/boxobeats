@@ -32,3 +32,13 @@ box-shadow: 0px 3px 5px 0px ${mainBg};`;
 export const hideThisElement = css`
   display: none;
 `;
+
+//FREQUENT STYLES
+//info at the top of each view
+export const info = css`
+  background-color: ${highlight};
+  opacity: 0.6;
+  color: ${mainBg};
+  border-radius: 5px;
+  padding: 1em 5%;
+`;

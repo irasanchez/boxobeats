@@ -6,7 +6,7 @@ import { FiRefreshCcw, FiPlusSquare } from "react-icons/fi";
 
 import SoundCard from "../SoundCard/SoundCard";
 import { createStyleChanges } from "../SoundCard/soundCardStyles";
-
+import { info } from "../../assets/cssVariables";
 //styles
 import { create, comboContainer } from "./createViewStyles";
 
@@ -41,7 +41,18 @@ const CreateView = props => {
 
   return (
     <section css={create}>
-      <p>Try to combine</p>
+      <h1>Create</h1>
+      <div css={info}>
+        <p>
+          Many of the more complex sounds one can make come from combining 2 or
+          more sounds and making them at the same time.
+        </p>
+        <br />
+        <p>
+          It takes a lot of practice to figure out your body positioning and
+          timing sometimes. So, don't give up if you don't get it right away.
+        </p>
+      </div>
       <div css={comboContainer}>
         <FiRefreshCcw onClick={() => refresh("left")} />
         <SoundCard
@@ -59,17 +70,6 @@ const CreateView = props => {
         />
         <FiRefreshCcw onClick={() => refresh("right")} />
       </div>
-      <aside>
-        <p>Information:</p>
-        <p>
-          Many of the more complex sounds one can make come from combining 2 or
-          more sounds and making them at the same time.{" "}
-        </p>
-        <p>
-          It takes a lot of practice to figure out your body positioning and
-          timing sometimes. So, don't give up if you don't get it right away.
-        </p>
-      </aside>
     </section>
   );
 };

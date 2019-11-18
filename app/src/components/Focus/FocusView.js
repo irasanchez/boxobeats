@@ -5,6 +5,7 @@ import React from "react";
 import { jsx, css } from "@emotion/core";
 import SoundCard from "../SoundCard/SoundCard";
 import { focusViewStyleChanges } from "../SoundCard/soundCardStyles";
+import { info } from "../../assets/cssVariables";
 
 const FocusView = props => {
   const { beats } = props;
@@ -22,6 +23,15 @@ const FocusView = props => {
   return (
     <div>
       <h1>Focus</h1>
+      <p css={info}>
+        Here, we will focus on honing the nuanced ways we can create the sound
+        shown below.
+        <br />
+        <br />
+        One way to practice is by slowly increasing the speed and seeing how
+        fast you can go while making the sound cleanly (e.g. as articulate as
+        you can when going slowly).
+      </p>
       <SoundCard
         sound={randomSound}
         history={props.history}

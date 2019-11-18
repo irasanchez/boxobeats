@@ -10,6 +10,7 @@ export const comboContainer = css`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-top: 15px;
 `;
 
 export const soundOption = css`

@@ -7,6 +7,7 @@ import { improvView } from "./improvStyles";
 import SoundCard from "../SoundCard/SoundCard";
 
 import { createStyleChanges } from "../SoundCard/soundCardStyles";
+import { info } from "../../assets/cssVariables";
 
 const ImprovView = props => {
   const { beats } = props;
@@ -23,7 +24,7 @@ const ImprovView = props => {
   return (
     <div css={improvView}>
       <h1>IMPROV</h1>
-      <p>
+      <p css={info}>
         Use these random sounds in your freestyle. If you're comfortable or
         bored, it's time for new sounds.
       </p>

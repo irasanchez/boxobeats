@@ -1,5 +1,7 @@
 /** @jsx jsx */
+
 import React from "react";
+
 import { jsx, css } from "@emotion/core";
 import SoundCard from "../SoundCard/SoundCard";
 import { focusViewStyleChanges } from "../SoundCard/soundCardStyles";

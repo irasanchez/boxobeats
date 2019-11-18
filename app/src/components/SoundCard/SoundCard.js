@@ -34,10 +34,10 @@ const SoundCard = props => {
       : toggleCard(hideThisElement);
   };
 
-  //Progress Bar Update
-  //TODO: !! Update me with real data. set to random for now.
+  //Progress Bar Completed Percentage
+  //TODO: !! Update me with real data. Set to random for now.
   const [progressStatus] = useState(Math.floor(Math.random() * 100 + 1));
-
+  //Progress Bar Completed Width
   const width =
     progressStatus === 100
       ? css`
@@ -48,10 +48,9 @@ const SoundCard = props => {
           width: ${progressStatus}%;
         `;
 
-  const { pathname } = props.location;
-
   //TODO: !!! make .moreInfo icon button link expanded card as an overlay Note: you can re-render the soundCard component with different settings in the css prop
 
+  //If there is a tutorial, show when card is expanded. If not, show nothing.
   const tut = tutorials ? tutorials[0] : null;
 
   return (
@@ -70,11 +69,14 @@ const SoundCard = props => {
           <h2 css={soundContentTitleText}>{sound.name}</h2>
           <FaPlayCircle css={playIcon} onClick={() => {}} />
         </div>
+
         <p css={soundContentText}>
+          {/* TODO: Make this data dynamic */}
           Nasal humming is just like regular humming, except the sound only
           comes out of your nose, not your mouth.
         </p>
 
+        {/* Expand the card */}
         <MdKeyboardArrowDown
           size="2em"
           css={shouldIOpenCard === hideThisElement ? null : hideThisElement}
@@ -85,6 +87,7 @@ const SoundCard = props => {
         {/* render YouTube when card is expanded */}
         {shouldIOpenCard === hideThisElement ? null : <YouTube videoId={tut} />}
 
+        {/* If there are tips, show TipContainer */}
         {sound.tips ? (
           <TipContainer
             sound={sound}
@@ -92,6 +95,8 @@ const SoundCard = props => {
             tips={sound.tips}
           />
         ) : null}
+
+        {/* Close the expanded section */}
         <MdKeyboardArrowUp
           size="2em"
           onClick={cardToggler}

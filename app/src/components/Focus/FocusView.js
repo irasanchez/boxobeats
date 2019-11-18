@@ -6,6 +6,7 @@ import { jsx, css } from "@emotion/core";
 import SoundCard from "../SoundCard/SoundCard";
 import { focusViewStyleChanges } from "../SoundCard/soundCardStyles";
 import { info } from "../../assets/cssVariables";
+import { focusView } from "./focusStyles";
 
 const FocusView = props => {
   const { beats } = props;
@@ -21,7 +22,7 @@ const FocusView = props => {
       : null;
 
   return (
-    <div>
+    <div css={focusView}>
       <h1>Focus</h1>
       <p css={info}>
         Here, we will focus on honing the nuanced ways we can create the sound

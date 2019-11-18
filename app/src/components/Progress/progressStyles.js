@@ -1,6 +1,11 @@
 /** @jsx jsx */
 import { css } from "@emotion/core";
-import { center, viewSize } from "../../assets/cssVariables.js";
+import {
+  center,
+  viewSize,
+  highlight,
+  mainBg
+} from "../../assets/cssVariables.js";
 
 export const progressView = css`
   ${viewSize}
@@ -10,4 +15,12 @@ export const progressViewTitle = css`
   display: flex;
   ${center}
   margin-bottom: 50px;
+`;
+
+export const info = css`
+  background-color: ${highlight};
+  opacity: 0.6;
+  color: ${mainBg};
+  border-radius: 5px;
+  padding: 1em 5%;
 `;

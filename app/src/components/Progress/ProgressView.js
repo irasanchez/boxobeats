@@ -2,7 +2,7 @@
 import { jsx } from "@emotion/core";
 import SoundCard from "../SoundCard/SoundCard";
 
-import { progressView, progressViewTitle } from "./progressStyles";
+import { progressView, progressViewTitle, info } from "./progressStyles";
 
 /* 
     //TODO: !! Add more data like "exit" and "origin" to data set to be able to render those notes here. Body part strings where the sound is created vs where it exists the body.
@@ -16,9 +16,10 @@ const ProgressView = props => {
   return (
     <ul css={progressView}>
       <h1 css={progressViewTitle}>PROGRESS</h1>
-      <p>
+      <p css={info}>
         Here is a list of all of the sounds you could master, how familiar you
-        are with them, and additional information about each sound.
+        are with them, and additional information about each sound. I am working
+        on better ways to filter, sort, search, and add sounds.
       </p>
       {beats.map(sound => {
         return (

@@ -20,8 +20,15 @@ export const highlight = `rgba(232, 232, 232, 1)`;
 
 //POSITIONING AND ALIGNMENT
 export const center = `justify-content: center; align-items: center;`;
-export const viewSize = `width: 90%;
-margin: 0 auto;`;
+export const viewSize = `
+  width: 90%;
+  margin: 0 auto;
+  h1 {
+    display: flex;
+    ${center}
+    margin-bottom: 50px;
+  }
+`;
 
 //DETAILS
 export const boxShadow = `-webkit-box-shadow: 0px 3px 5px 0px ${mainBg};

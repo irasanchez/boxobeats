@@ -4,9 +4,8 @@ import { center, viewSize } from "../../assets/cssVariables";
 
 export const focusView = css`
   ${viewSize}
-  height: 60vh;
+  height: 80vh;
   display: flex;
   flex-direction: column;
   ${center}
-  justify-content:space-around;
 `;

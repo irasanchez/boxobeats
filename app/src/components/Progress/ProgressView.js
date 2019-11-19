@@ -2,7 +2,9 @@
 import { jsx } from "@emotion/core";
 import SoundCard from "../SoundCard/SoundCard";
 
-import { progressView, progressViewTitle, info } from "./progressStyles";
+import { progressView, progressViewTitle } from "./progressStyles";
+
+import { info } from "../../assets/cssVariables";
 
 /* 
     //TODO: !! Add more data like "exit" and "origin" to data set to be able to render those notes here. Body part strings where the sound is created vs where it exists the body.

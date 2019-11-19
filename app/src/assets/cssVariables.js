@@ -48,4 +48,5 @@ export const info = css`
   color: ${mainBg};
   border-radius: 5px;
   padding: 1em 5%;
+  margin-bottom: 50px;
 `;

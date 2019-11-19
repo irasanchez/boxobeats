@@ -15,13 +15,9 @@ import {
   soundContentTitleText,
   playIcon,
   soundContentText,
-  tipContainer,
-  improvAndCreateStyleChanges,
-  focusViewStyleChanges,
   expansion
 } from "./soundCardStyles";
 
-import { hideThisElement } from "../../assets/cssVariables";
 import TipContainer from "./TipContainer";
 
 //FIXME: Expanded card style does not work for mobile, works for tablet and desktop though

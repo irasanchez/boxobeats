@@ -27,7 +27,6 @@ const SoundCard = props => {
 
   //Expand Card
   const [showExpansion, showExpansionUpdate] = useState(false);
-
   const cardToggler = () => {
     showExpansionUpdate(!showExpansion);
   };
@@ -48,8 +47,8 @@ const SoundCard = props => {
 
   //TODO: !!! make .moreInfo icon button link expanded card as an overlay Note: you can re-render the soundCard component with different settings in the css prop
 
-  //If there is a tutorial, show when card is expanded. If not, show nothing.
-  const tut = tutorials ? tutorials[0] : null;
+  //If there is a tutorial url, store it in tutUrl so that I can pass it to YouTube below
+  const tutUrl = tutorials ? tutorials[0] : null;
 
   return (
     <li
@@ -59,9 +58,11 @@ const SoundCard = props => {
       `}
       {...props}
     >
+      {/* TODO: Make Progress Bar its own component */}
       <div className="progressBar" css={progressBarTotal}>
         <div css={[progressBarCompleted, width]}></div>
       </div>
+      {/* TODO:Make SoundCardContent its own component */}
       <section className="soundContent" css={soundContent}>
         <div css={soundContentTitleContainer}>
           <h2 css={soundContentTitleText}>{sound.name}</h2>
@@ -84,7 +85,7 @@ const SoundCard = props => {
         {showExpansion && (
           <section className="expanded-section" css={expansion}>
             {/* render YouTube when card is expanded */}
-            <YouTube videoId={tut} />
+            <YouTube videoId={tutUrl} />
 
             {/* If there are tips, show TipContainer */}
             {sound.tips ? (

@@ -44,6 +44,8 @@ const CreateView = props => {
       <h1>Create</h1>
       <div css={info}>
         <p>
+          Try to make the two sounds listed below at the same time.<br></br>
+          <br></br>
           Many of the more complex sounds one can make come from combining 2 or
           more sounds and making them at the same time.
         </p>
@@ -55,21 +57,21 @@ const CreateView = props => {
       </div>
       {/* TODO: Make icons larger and more readable */}
       <div css={comboContainer}>
-        <FiRefreshCcw onClick={() => refresh("left")} />
+        <FiRefreshCcw onClick={() => refresh("left")} size="1.75em" />
         <SoundCard
           sound={sound1}
           history={props.history}
           location={props.location}
           css={currentStyle}
         />
-        <FiPlusSquare />
+        <FiPlusSquare size="3em" />
         <SoundCard
           sound={sound2}
           history={props.history}
           location={props.location}
           css={currentStyle}
         />
-        <FiRefreshCcw onClick={() => refresh("right")} />
+        <FiRefreshCcw onClick={() => refresh("right")} size="1.75em" />
       </div>
     </section>
   );

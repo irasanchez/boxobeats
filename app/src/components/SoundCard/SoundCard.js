@@ -17,7 +17,8 @@ import {
   soundContentText,
   tipContainer,
   improvAndCreateStyleChanges,
-  focusViewStyleChanges
+  focusViewStyleChanges,
+  expansion
 } from "./soundCardStyles";
 
 import { hideThisElement } from "../../assets/cssVariables";
@@ -29,11 +30,10 @@ const SoundCard = props => {
   const { sound, tutorials } = props;
 
   //Expand Card
-  const [shouldIOpenCard, toggleCard] = useState(hideThisElement);
+  const [showExpansion, showExpansionUpdate] = useState(false);
+
   const cardToggler = () => {
-    shouldIOpenCard === hideThisElement
-      ? toggleCard(tipContainer)
-      : toggleCard(hideThisElement);
+    showExpansionUpdate(!showExpansion);
   };
 
   //Progress Bar Completed Percentage
@@ -81,29 +81,28 @@ const SoundCard = props => {
         {/* Expand the card */}
         <MdKeyboardArrowDown
           size="2em"
-          css={shouldIOpenCard === hideThisElement ? null : hideThisElement}
           onClick={cardToggler}
           className="moreInfo"
         />
 
-        {/* render YouTube when card is expanded */}
-        {shouldIOpenCard === hideThisElement ? null : <YouTube videoId={tut} />}
+        {showExpansion && (
+          <section className="expanded-section" css={expansion}>
+            {/* render YouTube when card is expanded */}
+            <YouTube videoId={tut} />
 
-        {/* If there are tips, show TipContainer */}
-        {sound.tips ? (
-          <TipContainer
-            sound={sound}
-            shouldIOpenCard={shouldIOpenCard}
-            tips={sound.tips}
-          />
-        ) : null}
+            {/* If there are tips, show TipContainer */}
+            {sound.tips ? (
+              <TipContainer sound={sound} tips={sound.tips} />
+            ) : null}
 
-        {/* Close the expanded section */}
-        <MdKeyboardArrowUp
-          size="2em"
-          onClick={cardToggler}
-          css={shouldIOpenCard === hideThisElement ? hideThisElement : null}
-        />
+            {/* Close the expanded section */}
+            <MdKeyboardArrowUp
+              size="2em"
+              onClick={cardToggler}
+              className="icon"
+            />
+          </section>
+        )}
       </section>
     </li>
   );

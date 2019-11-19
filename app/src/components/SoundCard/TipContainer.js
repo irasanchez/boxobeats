@@ -2,14 +2,13 @@
 
 import { jsx } from "@emotion/core";
 import userData from "../../assets/userData.json";
+import { tipContainer } from "./soundCardStyles";
 
-const TipContainer = props => {
-  const { shouldIOpenCard, tips } = props;
-
+const TipContainer = ({ tips }) => {
   const randomUserTipData = tips[Math.floor(Math.random() * tips.length)];
 
   return (
-    <aside name="tipContainer" css={shouldIOpenCard}>
+    <aside name="tipContainer" css={tipContainer}>
       <div>
         <h3>User Tip:</h3>
         <p>{randomUserTipData.tip}</p>

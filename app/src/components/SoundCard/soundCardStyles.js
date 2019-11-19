@@ -128,6 +128,12 @@ export const tipContainer = css`
   }
 `;
 
+export const expansion = css`
+  display: flex;
+  flex-direction: column;
+  ${center}
+`;
+
 //CONDITIONAL STUFF
 /* FIXME: need to make this more dry, rewrote manually to fix bugs*/
 export const improvAndCreateStyleChanges = css`

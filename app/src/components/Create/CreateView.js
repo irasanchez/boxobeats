@@ -55,7 +55,6 @@ const CreateView = props => {
           timing sometimes. So, don't give up if you don't get it right away.
         </p>
       </div>
-      {/* TODO: Make icons larger and more readable */}
       <div css={comboContainer}>
         <FiRefreshCcw onClick={() => refresh("left")} size="1.75em" />
         <SoundCard

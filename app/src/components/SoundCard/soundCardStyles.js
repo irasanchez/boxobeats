@@ -75,8 +75,6 @@ export const soundContentTitleText = css`
 `;
 
 export const playIcon = css`
-  width: 1.6rem;
-  height: 1.6rem;
   color: ${accentColorBlue};
   border-radius: 50%;
   ${boxShadow}

@@ -60,14 +60,14 @@ const CreateView = props => {
         <SoundCard
           sound={sound1}
           history={props.history}
-          location={props.location}
+          pathname={props.location.pathname}
           css={currentStyle}
         />
         <FiPlusSquare size="3em" />
         <SoundCard
           sound={sound2}
           history={props.history}
-          location={props.location}
+          pathname={props.location.pathname}
           css={currentStyle}
         />
         <FiRefreshCcw onClick={() => refresh("right")} size="1.75em" />

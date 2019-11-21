@@ -28,7 +28,7 @@ const ProgressView = props => {
           <SoundCard
             sound={sound}
             key={Math.random()}
-            location={props.location}
+            pathname={props.location.pathname}
             tutorials={sound.tutorials}
           />
         );

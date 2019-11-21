@@ -38,6 +38,7 @@ const FocusView = props => {
         history={props.history}
         location={props.location}
         css={currentStyle}
+        pathname={pathname}
       />
     </div>
   );

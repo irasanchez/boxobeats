@@ -9,7 +9,7 @@ import ProgressBar from "./ProgressBar";
 //FIXME: Expanded card style does not work for mobile, works for tablet and desktop though
 
 const SoundCard = props => {
-  const { sound } = props;
+  const { sound, pathname } = props; //using this syntax so I can style the li component properly with {...props}.
 
   //TODO: !!! make .moreInfo icon button link expanded card as an overlay Note: you can re-render the soundCard component with different settings in the css prop
 
@@ -22,7 +22,7 @@ const SoundCard = props => {
       {...props}
     >
       <ProgressBar sound={sound} />
-      <SoundCardContent sound={sound} />
+      <SoundCardContent sound={sound} pathname={pathname} />
     </li>
   );
 };

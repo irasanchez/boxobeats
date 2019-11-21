@@ -34,7 +34,7 @@ const ImprovView = props => {
             sound={sound}
             key={Math.random()}
             history={props.history}
-            location={props.location}
+            pathname={props.location.pathname}
             css={currentStyle}
           />
         ))}

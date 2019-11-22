@@ -153,10 +153,11 @@ export const improvAndCreateStyleChanges = css`
     height: 100%;
     justify-content: space-evenly;
   }
+  /* soundContentTitleContainer 👇🏽 */
   .soundContent div {
     height: 80%;
     flex-direction: column;
-    ${center}
+    align-items: center;
     justify-content: space-evenly;
     align-self: stretch;
   }

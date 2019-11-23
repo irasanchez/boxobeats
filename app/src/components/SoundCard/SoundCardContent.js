@@ -1,6 +1,7 @@
 /** @jsx jsx */
+//TODO: Finish moving styles into corresponding files. Being able to see css when working is easier than constantly searching.
 import { useState, useEffect } from "react";
-import { jsx } from "@emotion/core";
+import { css, jsx } from "@emotion/core";
 import ExpandedSection from "./ExpandedSection";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { FaPlayCircle } from "react-icons/fa";
@@ -11,7 +12,7 @@ import {
   playIcon,
   soundContentText
 } from "./soundCardStyles";
-
+import { accentColorGreen } from "../../assets/cssVariables";
 const SoundCardContent = ({ sound, pathname }) => {
   //Expand Content
   const [showExpansion, showExpansionUpdate] = useState(false);
@@ -39,7 +40,18 @@ const SoundCardContent = ({ sound, pathname }) => {
   useEffect(determinePlayIconSize, [pathname]);
 
   return (
-    <section className="soundContent" css={soundContent}>
+    <section
+      className="soundContent"
+      css={css`
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: 15px;
+      `}
+    >
       <div css={soundContentTitleContainer}>
         <h2 css={soundContentTitleText}>{sound.name}</h2>
         <FaPlayCircle

@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { useState } from "react";
 import { css, jsx } from "@emotion/core";
-import { progressBarTotal, progressBarCompleted } from "./soundCardStyles";
+import { accentColorGreen, accentColorBlue } from "../../assets/cssVariables";
 
 const ProgressBar = ({ sound }) => {
   //Progress Bar Completed Percentage
@@ -19,8 +19,28 @@ const ProgressBar = ({ sound }) => {
         `;
 
   return (
-    <div className="progressBar" css={progressBarTotal}>
-      <div css={[progressBarCompleted, width]}></div>
+    <div
+      className="progressBar"
+      css={css`
+        background-color: ${accentColorGreen};
+        height: 8px;
+        border-radius: 3px 0px 0px 3px;
+        padding: 0;
+        margin: 0;
+      `}
+    >
+      <div
+        css={[
+          css`
+            background-color: ${accentColorGreen};
+            height: 8px;
+            border-radius: 3px 0px 0px 3px;
+            padding: 0;
+            margin: 0;
+          `,
+          width
+        ]}
+      ></div>
     </div>
   );
 };

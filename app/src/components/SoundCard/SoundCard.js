@@ -1,11 +1,10 @@
 /** @jsx jsx */
 import { css, jsx } from "@emotion/core";
 
-import { soundCard } from "./soundCardStyles";
-
 import SoundCardContent from "./SoundCardContent";
 import ProgressBar from "./ProgressBar";
 
+import { secondaryBg, textColor } from "../../assets/cssVariables";
 //FIXME: Expanded card style does not work for mobile, works for tablet and desktop though
 
 const SoundCard = props => {
@@ -17,7 +16,16 @@ const SoundCard = props => {
     <li
       id="soundCard"
       css={css`
-        ${soundCard}
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        background-color: ${secondaryBg};
+        margin: 20px 0;
+        padding: 20px 0;
+        border-radius: 25px;
+        box-shadow: 0 1.5px 7px ${textColor};
       `}
       {...props}
     >

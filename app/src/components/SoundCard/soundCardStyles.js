@@ -12,38 +12,6 @@ import {
   hideThisElement
 } from "../../assets/cssVariables.js";
 
-export const soundCard = css`
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  background-color: ${secondaryBg};
-  margin: 20px 0;
-  padding: 20px 0;
-  border-radius: 25px;
-  box-shadow: 0 1.5px 7px ${textColor};
-`;
-
-export const progressBarTotal = css`
-  width: 90%;
-  height: 8px;
-  background-color: ${textColor};
-  margin: 5px 0 20px 0;
-  padding: 0;
-  /* x, y, blur/spread, color */
-  border-radius: 3px;
-  ${boxShadow}
-`;
-
-export const progressBarCompleted = css`
-  background-color: ${accentColorGreen};
-  height: 8px;
-  border-radius: 3px 0px 0px 3px;
-  padding: 0;
-  margin: 0;
-`;
-
 /* content section below progress bar */
 export const soundContent = css`
   width: 90%;
@@ -84,6 +52,7 @@ export const soundContentText = css`
   width: 100%;
   flex-grow: 0;
   margin-bottom: 20px;
+  display: flex;
 `;
 
 export const tipContainer = css`

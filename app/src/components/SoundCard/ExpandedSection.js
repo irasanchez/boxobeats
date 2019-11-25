@@ -1,6 +1,5 @@
 /** @jsx jsx */
-import React from "react";
-import { jsx } from "@emotion/core";
+import { jsx, css } from "@emotion/core";
 import { MdKeyboardArrowUp } from "react-icons/md";
 import YouTube from "react-youtube";
 
@@ -15,7 +14,12 @@ const ExpandedSection = ({ sound, cardToggler, tutorials }) => {
   return (
     <section className="expanded-section" css={expansion}>
       {/* render YouTube when card is expanded */}
-      <YouTube videoId={tutUrl} />
+      <YouTube
+        css={css`
+          width: 100%;
+        `}
+        videoId={tutUrl}
+      />
 
       {/* If there are tips, show TipContainer */}
       {sound.tips && <TipContainer sound={sound} tips={sound.tips} />}

@@ -14,12 +14,8 @@ const ExpandedSection = ({ sound, cardToggler, tutorials }) => {
   return (
     <section className="expanded-section" css={expansion}>
       {/* render YouTube when card is expanded */}
-      <YouTube
-        css={css`
-          width: 100%;
-        `}
-        videoId={tutUrl}
-      />
+      {/* TODO:replace this with something responsive. you can try this: https://www.npmjs.com/package/react-responsive-embed */}
+      <YouTube className="youtube" videoId={tutUrl} opts= />
 
       {/* If there are tips, show TipContainer */}
       {sound.tips && <TipContainer sound={sound} tips={sound.tips} />}

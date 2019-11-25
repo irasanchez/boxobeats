@@ -97,6 +97,7 @@ export const tipContainer = css`
 
 export const expansion = css`
   display: flex;
+  width: 90%;
   flex-direction: column;
   ${center}
 `;

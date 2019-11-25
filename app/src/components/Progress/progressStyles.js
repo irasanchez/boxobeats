@@ -16,11 +16,3 @@ export const progressViewTitle = css`
   ${center}
   margin-bottom: 50px;
 `;
-
-// export const info = css`
-//   background-color: ${highlight};
-//   opacity: 0.6;
-//   color: ${mainBg};
-//   border-radius: 5px;
-//   padding: 1em 5%;
-// `;

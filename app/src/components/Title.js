@@ -5,9 +5,7 @@ const Title = props => {
   const [title, setTitle] = useState("");
 
   const determineTitle = () => {
-    console.log("determining title");
     if (props.location.pathname === "/progress") {
-      console.log("setTitle");
       setTitle("Progress");
     }
     if (props.location.pathname === "/improv") {

@@ -7,6 +7,7 @@ import { Route, withRouter } from "react-router";
 
 import Progress from "./components/Views/Progress";
 import Header from "./components/Header";
+import Nav from "./components/Nav";
 
 const App = props => {
   const beatsURL = process.env.REACT_APP_BEATS_URL;
@@ -36,7 +37,7 @@ const App = props => {
         exact
         path="/improv"
         render={props => {
-          <ImprovView beats={beats} />;
+          <Improv beats={beats} />;
         }}
       />
       
@@ -44,7 +45,7 @@ const App = props => {
         exact
         path="/create"
         render={props => {
-          <CreateView beats={beats} />;
+          <Create beats={beats} />;
         }}
       />
       
@@ -52,10 +53,11 @@ const App = props => {
         exact
         path="/focus"
         render={props => {
-          <FocusView beats={beats} />;
+          <Focus beats={beats} />;
         }}
       />
-    <Nav /> */}
+    */}
+      <Nav />
     </div>
   );
 };

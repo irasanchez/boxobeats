@@ -19,8 +19,6 @@ const App = props => {
   //beatsData
   const beats = useFetchBeats();
 
-  //GET request to get all the beats from the backend
-
   return (
     <div>
       <Header {...props} />

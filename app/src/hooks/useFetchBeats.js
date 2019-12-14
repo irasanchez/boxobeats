@@ -5,7 +5,7 @@ const useFetchBeats = () => {
   const [beats, setBeats] = useState([]);
   useEffect(() => {
     axios
-      .get(`http://${process.env.REACT_APP_BEATS_URL}`)
+      .get(`${process.env.REACT_APP_BEATS_URL}`)
       .then(res => {
         setBeats(res.data.beats);
       })

@@ -1,10 +1,12 @@
 // this comment tells babel to convert jsx to calls to a function called jsx instead of React.createElement
 /** @jsx jsx */
+//import dependencies and hooks
 import { useState, useEffect } from "react";
 import { css, jsx } from "@emotion/core";
 import axios from "axios";
 import { Route, withRouter } from "react-router";
 
+//import components
 import Progress from "./components/Views/Progress";
 import Header from "./components/Header";
 import Nav from "./components/Nav";
@@ -54,6 +56,22 @@ const App = props => {
         path="/focus"
         render={props => {
           <Focus beats={beats} />;
+        }}
+      />
+
+      <Route
+        exact
+        path="/focus"
+        render={props => {
+          <Focus beats={beats} />;
+        }}
+      />
+
+      <Route
+        exact
+        path="/settings"
+        render={props => {
+          <Settings />;
         }}
       />
     */}

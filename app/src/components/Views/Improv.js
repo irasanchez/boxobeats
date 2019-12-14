@@ -1,7 +1,7 @@
 import React from "react";
 
-const Progress = () => {
+const Improv = () => {
   return <main></main>;
 };
 
-export default Progress;
+export default Improv;

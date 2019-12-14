@@ -1,7 +1,7 @@
 import React from "react";
 
-const Progress = () => {
+const Create = () => {
   return <main></main>;
 };
 
-export default Progress;
+export default Create;

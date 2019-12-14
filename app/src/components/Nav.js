@@ -9,7 +9,6 @@ import { FaRegMap, FaRegLightbulb, FaHammer, FaRegEye } from "react-icons/fa";
 import { GiMetronome } from "react-icons/gi";
 
 const Nav = props => {
-  const sideIconSize = "2em";
   return (
     <footer>
       <nav>

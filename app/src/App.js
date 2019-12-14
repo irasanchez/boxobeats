@@ -69,9 +69,9 @@ const App = props => {
 
       <Route
         exact
-        path="/settings"
+        path="/account"
         render={props => {
-          <Settings />;
+          <Account />;
         }}
       />
     */}

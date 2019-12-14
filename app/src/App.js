@@ -25,27 +25,19 @@ const App = props => {
 
       <Route exact path="/" render={props => <Progress beats={beats} />} />
 
-      {/* <Route
+      <Route
         exact
         path="/improv"
         render={props => {
           <Improv beats={beats} />;
         }}
       />
-      
+
       <Route
         exact
         path="/create"
         render={props => {
           <Create beats={beats} />;
-        }}
-      />
-      
-      <Route
-        exact
-        path="/focus"
-        render={props => {
-          <Focus beats={beats} />;
         }}
       />
 
@@ -64,7 +56,7 @@ const App = props => {
           <Account />;
         }}
       />
-    */}
+
       <Nav />
     </div>
   );

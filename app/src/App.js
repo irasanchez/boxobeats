@@ -10,24 +10,16 @@ import { Route, withRouter } from "react-router";
 import Progress from "./components/Views/Progress";
 import Header from "./components/Header";
 import Nav from "./components/Nav";
-
+//hooks
+import useFetchBeats from "./hooks/useFetchBeats";
 const App = props => {
-  const beatsURL = process.env.REACT_APP_BEATS_URL;
   //current BPM
   const [BPM, setBPM] = useState(0);
 
   //beatsData
-  const [beats, setBeats] = useState([]);
+  const beats = useFetchBeats();
 
   //GET request to get all the beats from the backend
-  const getData = () => {
-    axios
-      .get(beatsURL)
-      .then(response => setBeats(response)) //make response more specific
-      .catch(error => console.log(error));
-  };
-
-  useEffect(getData, []);
 
   return (
     <div>

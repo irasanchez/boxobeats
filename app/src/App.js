@@ -7,7 +7,12 @@ import axios from "axios";
 import { Route, withRouter } from "react-router";
 
 //import components
-import Progress from "./components/Views/Progress";
+import Progress from "./components/
+Views/Progress";
+import Improv from "./components/Views/Improv";
+import Create from "./components/Views/Create";
+import Focus from "./components/Views/Focus";
+import Account from "./components/Views/Account";
 import Header from "./components/Header";
 import Nav from "./components/Nav";
 //hooks

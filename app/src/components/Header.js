@@ -1,10 +1,12 @@
 import React from "react";
 import Title from "./Title";
 
-export default Header = props => {
+const Header = props => {
   return (
     <header>
-      <Title />
+      <Title {...props} />
     </header>
   );
 };
+
+export default Header;

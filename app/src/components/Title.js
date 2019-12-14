@@ -1,10 +1,13 @@
+import React from "react";
 import { useState, useEffect } from "react";
-import { Router } from "react-router-dom";
 
-export default Title = props => {
+const Title = props => {
   const [title, setTitle] = useState("");
+
   const determineTitle = () => {
+    console.log("determining title");
     if (props.location.pathname === "/progress") {
+      console.log("setTitle");
       setTitle("Progress");
     }
     if (props.location.pathname === "/improv") {
@@ -13,12 +16,12 @@ export default Title = props => {
       setTitle("Create");
     } else if (props.location.pathname === "/focus") {
       setTitle("Focus");
-    } else {
-      setTitle(null);
     }
   };
 
-  useEffect(determineTitle, []);
+  useEffect(determineTitle, [props.location.pathname]); //only run the determineTitle fuction if props.location.pathname changes
 
   return <h1>{title}</h1>;
 };
+
+export default Title;

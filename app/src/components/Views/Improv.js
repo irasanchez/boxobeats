@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import SoundCard from "../SoundCard";
 
 const Improv = ({ beats }) => {
   //isolate 5 random beats from the beats prop
@@ -20,7 +21,7 @@ const Improv = ({ beats }) => {
   return (
     <main>
       {fiveRandomBeats.map(beat => {
-        return <p>{beat.name}</p>;
+        return <SoundCard beat={beat} />;
       })}
       <span onClick={getNewRandomBeats}>🔃</span>
     </main>

@@ -1,11 +1,12 @@
 import React from "react";
+import SoundCard from "../SoundCard";
 
 const Progress = ({ beats }) => {
   return (
     <main>
       {beats.map(beat => (
         <section>
-          <p>{beat.name}</p>
+          <SoundCard beat={beat} />
         </section>
       ))}
     </main>

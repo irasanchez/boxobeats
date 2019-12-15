@@ -33,7 +33,7 @@ const App = props => {
     <div>
       <Header {...props} />
 
-      <Route to="/" component={Landing} />
+      <Route exact path="/" component={Landing} />
 
       <Route
         path="/progress"

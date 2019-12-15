@@ -8,7 +8,7 @@ import { NavLink } from "react-router-dom";
 import { FaRegMap, FaRegLightbulb, FaHammer, FaRegEye } from "react-icons/fa";
 import { GiMetronome } from "react-icons/gi";
 
-const Nav = ({ toggleModal, ...props }) => {
+const Nav = ({ toggleModal }) => {
   return (
     <footer>
       <nav>

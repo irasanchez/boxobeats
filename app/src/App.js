@@ -7,6 +7,7 @@ import axios from "axios";
 import { Route, withRouter } from "react-router";
 
 //import components
+import Landing from "./components/Views/Landing";
 import Progress from "./components/Views/Progress";
 import Improv from "./components/Views/Improv";
 import Create from "./components/Views/Create";
@@ -32,14 +33,14 @@ const App = props => {
     <div>
       <Header {...props} />
 
+      <Route to="/" component={Landing} />
+
       <Route
-        exact
         path="/progress"
         render={props => <Progress beats={beats} {...props} />}
       />
 
       <Route
-        exact
         path="/improv"
         render={props => {
           return <Improv beats={beats} {...props} />;
@@ -47,7 +48,6 @@ const App = props => {
       />
 
       <Route
-        exact
         path="/create"
         render={props => {
           return <Create beats={beats} {...props} />;

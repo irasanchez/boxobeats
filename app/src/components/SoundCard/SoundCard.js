@@ -4,6 +4,7 @@ import {
   FlippingCardFront,
   FlippingCardBack
 } from "react-ui-cards";
+import SoundCardBack from "./SoundCardBack";
 
 const SoundCard = ({ beat }) => {
   return (
@@ -13,8 +14,7 @@ const SoundCard = ({ beat }) => {
         {/* <SoundCardFront /> */}
       </FlippingCardFront>
       <FlippingCardBack>
-        {/* <SoundCardBack /> */}
-        <p>{beat.symbol}</p>
+        <SoundCardBack beat={beat} />
       </FlippingCardBack>
     </FlippingCard>
   );

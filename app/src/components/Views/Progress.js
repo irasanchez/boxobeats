@@ -1,5 +1,5 @@
 import React from "react";
-import SoundCard from "../SoundCard";
+import SoundCard from "../SoundCard/SoundCard";
 import Info from "../Info";
 const Progress = props => {
   const { beats } = props;

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import SoundCard from "../SoundCard";
+import SoundCard from "../SoundCard/SoundCard";
 
 const Improv = ({ beats }) => {
   //isolate 5 random beats from the beats prop

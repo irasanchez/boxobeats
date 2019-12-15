@@ -7,8 +7,7 @@ import axios from "axios";
 import { Route, withRouter } from "react-router";
 
 //import components
-import Progress from "./components/
-Views/Progress";
+import Progress from "./components/Views/Progress";
 import Improv from "./components/Views/Improv";
 import Create from "./components/Views/Create";
 import Focus from "./components/Views/Focus";
@@ -28,13 +27,17 @@ const App = props => {
     <div>
       <Header {...props} />
 
-      <Route exact path="/" render={props => <Progress beats={beats} />} />
+      <Route
+        exact
+        path="/progress"
+        render={props => <Progress beats={beats} {...props} />}
+      />
 
       <Route
         exact
         path="/improv"
         render={props => {
-          <Improv beats={beats} />;
+          return <Improv beats={beats} {...props} />;
         }}
       />
 
@@ -42,7 +45,7 @@ const App = props => {
         exact
         path="/create"
         render={props => {
-          <Create beats={beats} />;
+          return <Create beats={beats} {...props} />;
         }}
       />
 
@@ -50,7 +53,7 @@ const App = props => {
         exact
         path="/focus"
         render={props => {
-          <Focus beats={beats} />;
+          return <Focus beats={beats} {...props} />;
         }}
       />
 
@@ -58,7 +61,7 @@ const App = props => {
         exact
         path="/account"
         render={props => {
-          <Account />;
+          return <Account {...props} />;
         }}
       />
 

@@ -13,15 +13,20 @@ import Create from "./components/Views/Create";
 import Focus from "./components/Views/Focus";
 import Account from "./components/Views/Account";
 import Header from "./components/Header";
+import Metronome from "./components/Metronome";
 import Nav from "./components/Nav";
 //hooks
 import useFetchBeats from "./hooks/useFetchBeats";
+
 const App = props => {
   //current BPM
   const [BPM, setBPM] = useState(0);
 
   //beatsData
   const beats = useFetchBeats();
+
+  const [modalState, setModalState] = useState(false);
+  const toggleModal = () => setModalState(!modalState);
 
   return (
     <div>
@@ -65,7 +70,9 @@ const App = props => {
         }}
       />
 
-      <Nav />
+      <Metronome toggleModal={toggleModal} modalState={modalState} />
+
+      <Nav toggleModal={toggleModal} />
     </div>
   );
 };

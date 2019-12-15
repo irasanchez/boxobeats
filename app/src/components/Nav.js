@@ -8,7 +8,7 @@ import { NavLink } from "react-router-dom";
 import { FaRegMap, FaRegLightbulb, FaHammer, FaRegEye } from "react-icons/fa";
 import { GiMetronome } from "react-icons/gi";
 
-const Nav = props => {
+const Nav = ({ toggleModal, ...props }) => {
   return (
     <footer>
       <nav>
@@ -19,7 +19,7 @@ const Nav = props => {
           <FaRegLightbulb />
         </NavLink>
 
-        <GiMetronome />
+        <GiMetronome onClick={toggleModal} />
 
         <NavLink to="/create">
           <FaHammer />

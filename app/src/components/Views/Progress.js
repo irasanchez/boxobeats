@@ -1,14 +1,16 @@
 import React from "react";
 import SoundCard from "../SoundCard";
-
-const Progress = ({ beats }) => {
+import Info from "../Info";
+const Progress = props => {
+  const { beats } = props;
   return (
     <main>
-      {beats.map(beat => (
-        <section>
+      <Info {...props} />
+      <section>
+        {beats.map(beat => (
           <SoundCard beat={beat} />
-        </section>
-      ))}
+        ))}
+      </section>
     </main>
   );
 };

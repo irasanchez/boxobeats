@@ -5,13 +5,12 @@ import {
   FlippingCardBack
 } from "react-ui-cards";
 import SoundCardBack from "./SoundCardBack";
-
+import SoundCardFront from "./SoundCardFront";
 const SoundCard = ({ beat }) => {
   return (
     <FlippingCard>
       <FlippingCardFront>
-        <p>{beat.name}</p>
-        {/* <SoundCardFront /> */}
+        <SoundCardFront beat={beat} />
       </FlippingCardFront>
       <FlippingCardBack>
         <SoundCardBack beat={beat} />

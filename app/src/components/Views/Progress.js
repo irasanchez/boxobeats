@@ -5,6 +5,7 @@ const Progress = props => {
   const { beats } = props;
   return (
     <main>
+      <h1>Progress</h1>
       <Info {...props} />
       <section>
         {beats.map(beat => (

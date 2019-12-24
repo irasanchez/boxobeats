@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 
+//this component uses the current path to display some basic tutorial information at the top of the app
 const Info = props => {
   const [info, setInfo] = useState([]);
 

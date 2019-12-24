@@ -1,6 +1,6 @@
 import React from "react";
 
-const Focus = () => {
+const Focus = ({ beats }) => {
   return <main></main>;
 };
 

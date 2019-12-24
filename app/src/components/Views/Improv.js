@@ -20,7 +20,6 @@ const Improv = ({ beats }) => {
 
   return (
     <main>
-      <h1>Improv</h1>
       {fiveRandomBeats.map(beat => {
         return <SoundCard beat={beat} />;
       })}

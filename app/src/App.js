@@ -7,6 +7,7 @@ import axios from "axios";
 import { Route, withRouter } from "react-router";
 
 //import components
+import PrivateRoute from "./components/Auth/PrivateRoute";
 import Landing from "./components/Views/Landing";
 import Progress from "./components/Views/Progress";
 import Improv from "./components/Views/Improv";
@@ -33,7 +34,7 @@ const App = props => {
     <div>
       <Header {...props} />
 
-      <Route exact path="/" component={Landing} />
+      <PrivateRoute exact path="/" component={Landing} />
       <Route exact path="/login" component={Login} />
       <Route exact path="signup" component={SignUp} />
 

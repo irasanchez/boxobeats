@@ -5,7 +5,8 @@ import fbConfig from "../firebase";
 const Header = props => {
   return (
     <header>
-      <Title onClick={() => fbConfig.auth().signOut()}>Logout</button>
+      <Title />
+      <button onClick={() => fbConfig.auth().signOut()}>Logout</button>
     </header>
   );
 };

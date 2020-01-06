@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-
+import { withRouter } from "react-router-dom";
 const Title = props => {
   const [title, setTitle] = useState("");
 
@@ -22,4 +22,4 @@ const Title = props => {
   return <h1>{title}</h1>;
 };
 
-export default Title;
+export default withRouter(Title);

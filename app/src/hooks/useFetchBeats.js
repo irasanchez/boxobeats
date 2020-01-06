@@ -8,6 +8,7 @@ const useFetchBeats = () => {
     axios
       .get(`${process.env.REACT_APP_BEATS_URL}`)
       .then(res => {
+        console.log(res.data);
         setBeats(res.data.beats);
       })
       .catch(err => console.log(err));

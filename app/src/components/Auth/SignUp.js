@@ -1,9 +1,9 @@
 import React, { useCallback } from "react";
-import { withRouter } from "react-router";
+import { withRouter } from "react-router-dom";
 import fbConfig from "../../firebase";
 
 const SignUp = ({ history }) => {
-  const handleSignUp = useCallback(
+  const handleSubmit = useCallback(
     async event => {
       event.preventDefault();
       //grab email and password from the target

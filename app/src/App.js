@@ -17,6 +17,10 @@ import Account from "./components/Views/Account";
 import Header from "./components/Header";
 import Metronome from "./components/Metronome";
 import Nav from "./components/Nav";
+
+import Login from "./components/Auth/Login";
+import SignUp from "./components/Auth/SignUp";
+
 //hooks
 import useFetchBeats from "./hooks/useFetchBeats";
 

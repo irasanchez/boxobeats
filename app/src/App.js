@@ -17,9 +17,7 @@ import Account from "./components/Views/Account";
 import Header from "./components/Header";
 import Metronome from "./components/Metronome";
 import Nav from "./components/Nav";
-
-import Login from "./components/Auth/Login";
-import SignUp from "./components/Auth/SignUp";
+import Auth from "./components/Auth/Auth";
 
 //hooks
 import useFetchBeats from "./hooks/useFetchBeats";
@@ -39,8 +37,7 @@ const App = props => {
       <Header {...props} />
 
       <PrivateRoute exact path="/" component={Landing} />
-      <Route exact path="/login" component={Login} />
-      <Route exact path="signup" component={SignUp} />
+      <Route exact path="/auth" component={Auth} />
 
       <Route
         path="/progress"

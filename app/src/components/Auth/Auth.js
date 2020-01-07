@@ -1,17 +1,14 @@
-import React, { useEffect, useState } from "react";
-import fbConfig from "../../firebase";
+import React from "react";
+import Login from "./Login";
+import SignUp from "./SignUp";
 
-export const AuthContext = React.createContext();
-
-export const Auth = ({ children }) => {
-  const [currentUser, setCurrentUser] = useState(null);
-
-  useEffect(() => {
-    fbConfig.auth().onAuthStateChanged(setCurrentUser);
-  }, []);
+const Auth = () => {
   return (
-    <AuthContext.Provider value={{ currentUser }}>
-      {children}
-    </AuthContext.Provider>
+    <div>
+      <Login />
+      <SignUp />
+    </div>
   );
 };
+
+export default Auth;

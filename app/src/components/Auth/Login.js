@@ -1,7 +1,7 @@
 import React, { useCallback, useContext } from "react";
 import { withRouter, Redirect } from "react-router-dom";
 import fbConfig from "../../firebase";
-import { AuthContext } from "./Auth";
+import { AuthContext } from "./AuthProvider";
 const Login = ({ history }) => {
   const handleSubmit = useCallback(async event => {
     event.preventDefault();
@@ -42,4 +42,4 @@ const Login = ({ history }) => {
   );
 };
 
-export default Login;
+export default withRouter(Login);

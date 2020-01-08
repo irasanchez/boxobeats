@@ -1,12 +1,12 @@
 import React from "react";
 import Title from "./Title";
-import fbConfig from "../firebase";
+import firebase from "../firebase";
 
 const Header = props => {
   return (
     <header>
       <Title />
-      <button onClick={() => fbConfig.auth().signOut()}>Logout</button>
+      <button onClick={() => firebase.auth().signOut()}>Logout</button>
     </header>
   );
 };

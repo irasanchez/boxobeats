@@ -1,6 +1,6 @@
 import React, { useCallback } from "react";
 import { withRouter } from "react-router-dom";
-import fbConfig from "../../firebase";
+import firebase from "../../firebase";
 
 const SignUp = ({ history }) => {
   const handleSubmit = useCallback(
@@ -10,7 +10,7 @@ const SignUp = ({ history }) => {
       const { email, password } = event.target.elements; //target form and the label and input elements inside of it
 
       try {
-        await fbConfig
+        await firebase
           .auth()
           .createUserWithEmailAndPassword(email.value, password.value);
         history.push("/");

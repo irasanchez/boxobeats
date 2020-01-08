@@ -1,6 +1,6 @@
 import React, { useCallback, useContext } from "react";
 import { withRouter, Redirect } from "react-router-dom";
-import fbConfig from "../../firebase";
+import firebase from "../../firebase";
 import { AuthContext } from "./AuthProvider";
 const Login = ({ history }) => {
   const handleSubmit = useCallback(async event => {
@@ -9,7 +9,7 @@ const Login = ({ history }) => {
     const { email, password } = event.target.elements;
 
     try {
-      await fbConfig
+      await firebase
         .auth()
         .signInWithEmailAndPassword(email.value, password.value);
       history.push("/");

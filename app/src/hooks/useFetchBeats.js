@@ -1,17 +1,19 @@
 import { useState, useEffect } from "react";
-import axios from "axios";
-
+// import axios from "axios";
+import firebase from "../firebase";
+import "firebase/firestore";
 const useFetchBeats = () => {
   const [beats, setBeats] = useState([]);
 
   useEffect(() => {
-    axios
-      .get(`${process.env.REACT_APP_BEATS_URL}`)
-      .then(res => {
-        console.log(res.data);
-        setBeats(res.data.beats);
-      })
-      .catch(err => console.log(err));
+    const fetchBeats = async () => {
+      const db = firebase.firestore();
+      console.log("db: ", db);
+      const data = await db.collection("beats");
+      console.log(data);
+      setBeats(data.map(doc => doc.data()));
+    };
+    fetchBeats();
   }, []);
 
   return beats;

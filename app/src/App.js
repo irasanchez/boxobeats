@@ -3,7 +3,6 @@
 //import dependencies and hooks
 import { useState, useEffect } from "react";
 import { css, jsx } from "@emotion/core";
-import axios from "axios";
 import { Route, withRouter } from "react-router";
 
 //import components
@@ -23,9 +22,6 @@ import Auth from "./components/Auth/Auth";
 import useFetchBeats from "./hooks/useFetchBeats";
 
 const App = props => {
-  //current BPM
-  const [BPM, setBPM] = useState(0);
-
   //beatsData
   const beats = useFetchBeats();
 

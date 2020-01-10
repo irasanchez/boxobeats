@@ -20,7 +20,6 @@ import Auth from "./components/Auth/Auth";
 
 //hooks
 import useFetchBeats from "./hooks/useFetchBeats";
-import firebase from "./firebase";
 
 const App = props => {
   const beats = useFetchBeats();
@@ -32,8 +31,8 @@ const App = props => {
     <div>
       <Header {...props} />
 
-      <Route exact path="/" component={Landing} />
-      {/* <Route exact path="/auth" component={Auth} /> */}
+      <PrivateRoute exact path="/" component={Landing} />
+      <Route exact path="/auth" component={Auth} />
 
       <Route
         path="/progress"

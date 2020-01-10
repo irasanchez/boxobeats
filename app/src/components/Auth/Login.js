@@ -3,20 +3,23 @@ import { withRouter, Redirect } from "react-router-dom";
 import firebase from "../../firebase";
 import { AuthContext } from "./AuthProvider";
 const Login = ({ history }) => {
-  const handleSubmit = useCallback(async event => {
-    event.preventDefault();
+  const handleSubmit = useCallback(
+    async event => {
+      event.preventDefault();
 
-    const { email, password } = event.target.elements;
+      const { email, password } = event.target.elements;
 
-    try {
-      await firebase
-        .auth()
-        .signInWithEmailAndPassword(email.value, password.value);
-      history.push("/");
-    } catch (error) {
-      console.log(error);
-    }
-  });
+      try {
+        await firebase
+          .auth()
+          .signInWithEmailAndPassword(email.value, password.value);
+        history.push("/");
+      } catch (error) {
+        console.log(error);
+      }
+    },
+    [history]
+  );
 
   const { currentUser } = useContext(AuthContext); //grabs current user from global this.state.
 

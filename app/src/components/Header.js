@@ -6,7 +6,14 @@ const Header = props => {
   return (
     <header>
       <Title />
-      <button onClick={() => firebase.auth().signOut()}>Logout</button>
+      <button
+        onClick={() => {
+          firebase.auth().signOut();
+          console.log("sign out");
+        }}
+      >
+        Logout
+      </button>
     </header>
   );
 };

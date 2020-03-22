@@ -1,94 +1,46 @@
-/** @jsx jsx */
-//Do not move this ^
-//dependency imports
-import { Global, jsx } from "@emotion/core";
-import { useState } from "react";
-import { Route, withRouter } from "react-router-dom";
-
-//FIXME: hardcoded data to later be removed after I make some sort of backend
+import React, { useState } from "react";
 import beatsData from "./assets/beatsData.json";
-
-//component imports
-import HomeView from "./components/Home/HomeView";
-import ProgressView from "./components/Progress/ProgressView";
-import CreateView from "./components/Create/CreateView";
-import FocusView from "./components/Focus/FocusView";
-import ImprovView from "./components/Improv/ImprovView";
-import BottomNav from "./components/BottomNav/BottomNav";
-
-//styles
-import { app, global } from "./AppStyles.js";
-
-//NOTE: beatBud is the mascot for the app
+import { useMetronome } from "react-metronome-hook";
+import click from "./assets/click.wav";
+import Test from "./components/test";
 
 const App = props => {
   //grab data from json file and set it to state
   //FIXME: Must get data dynamically using axios
   const [beats] = useState(beatsData.beats);
+  const {
+    startMetronome,
+    isTicking,
+    stopMetronome,
+    bpm,
+    setBpm,
+    setBeatsPerMeasure,
+    setSounds
+  } = useMetronome(120, 4, [click, click]);
 
   return (
-    <div css={app}>
-      <Global styles={global} />
-      {/* HOME VIEW */}
-      <Route
-        exact
-        path="/"
-        render={props => (
-          <HomeView history={props.history} location={props.location} />
-        )}
-      />
-
-      {/* PROGRESS VIEW */}
-      <Route
-        path="/progress"
-        render={props => (
-          <ProgressView
-            beats={beats}
-            history={props.history}
-            location={props.location}
-          />
-        )}
-      />
-
-      {/* CREATE VIEW */}
-      <Route
-        path="/create"
-        render={() => (
-          <CreateView
-            beats={beats}
-            history={props.history}
-            location={props.location}
-          />
-        )}
-      />
-
-      {/* IMPROV VIEW */}
-      <Route
-        path="/improv"
-        render={props => (
-          <ImprovView
-            beats={beats}
-            history={props.history}
-            location={props.location}
-          />
-        )}
-      />
-
-      {/* FOCUS VIEW */}
-      <Route
-        path="/focus"
-        render={() => (
-          <FocusView
-            beats={beats}
-            history={props.history}
-            location={props.location}
-          />
-        )}
-      />
-
-      {props.location.pathname !== "/" && <BottomNav />}
+    <div>
+      <Test>
+        <p>anything inside of this will be props.children in Test.js</p>
+        <p>Test</p>
+      </Test>
+      <div>
+        <button onClick={isTicking ? stopMetronome : startMetronome}>
+          {isTicking ? "Stop" : "Start"}
+        </button>
+        <div>{bpm}</div>
+        <input
+          placeholder="Change BPM"
+          onChange={e => setBpm(e.target.value)}
+        />
+        <input
+          placeholder="Change beats per measure"
+          onChange={e => setBeatsPerMeasure(e.target.value)}
+        />
+        <button onClick={() => setSounds([click, click])}>Change sounds</button>
+      </div>
     </div>
   );
 };
 
-export default withRouter(App); //withRouter gives App access to location prop. if <Component /> is not inside of a <Route /> then it doesn't have access to location, match, etc.
+export default App;

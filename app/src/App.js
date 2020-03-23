@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import beatsData from "./assets/beatsData.json";
 
 import Metronome from "./components/Metronome";
+import SoundList from "./components/SoundList";
 
 const App = props => {
   //grab data from json file and set it to state
@@ -12,6 +13,7 @@ const App = props => {
     <div>
       <div>
         <Metronome />
+        <SoundList beats={beats} />
       </div>
     </div>
   );

@@ -5,7 +5,7 @@ const SoundList = props => {
     <div>
       {props.beats.map(beat => {
         return (
-          <Sound>
+          <Sound key={beat.name}>
             <p>{beat.name}</p>
           </Sound>
         );
@@ -15,3 +15,5 @@ const SoundList = props => {
 };
 
 export default SoundList;
+
+//test that the component renders with props

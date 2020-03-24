@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 import { AppBar, Fab } from "@material-ui/core";
 import {
   GiMetronome,
@@ -11,13 +12,21 @@ import {
 const Nav = props => {
   return (
     <AppBar style={{ display: "flex", flexDirection: "row" }} position="sticky">
-      <GiMountaintop />
-      <GiBullseye />
+      <NavLink to="/progress">
+        <GiMountaintop />
+      </NavLink>
+      <NavLink to="focus">
+        <GiBullseye />
+      </NavLink>
       <Fab>
         <GiMetronome />
       </Fab>
-      <GiPerspectiveDiceSixFacesRandom />
-      <GiGroundSprout />
+      <NavLink to="freestyle">
+        <GiPerspectiveDiceSixFacesRandom />
+      </NavLink>
+      <NavLink to="create">
+        <GiGroundSprout />
+      </NavLink>
     </AppBar>
   );
 };

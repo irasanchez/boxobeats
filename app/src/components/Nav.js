@@ -1,9 +1,5 @@
 import React, { useState } from "react";
-import {
-  BottomNavigation,
-  BottomNavigationAction,
-  Fab
-} from "@material-ui/core";
+import { AppBar, Fab } from "@material-ui/core";
 import {
   GiMetronome,
   GiBullseye,
@@ -14,37 +10,15 @@ import {
 
 const Nav = props => {
   return (
-    <BottomNavigation
-      value={props.value}
-      onChange={(event, newValue) => {
-        props.setValue(newValue);
-      }}
-      showLabels
-    >
-      <BottomNavigationAction
-        label="Progress"
-        value="progress"
-        icon={<GiMountaintop />}
-      />
-      <BottomNavigationAction
-        label="Focus"
-        value="focus"
-        icon={<GiBullseye />}
-      />
-      <Fab color="primary" aria-label="add">
+    <AppBar style={{ display: "flex", flexDirection: "row" }} position="sticky">
+      <GiMountaintop />
+      <GiBullseye />
+      <Fab>
         <GiMetronome />
       </Fab>
-      <BottomNavigationAction
-        label="Freestyle"
-        value="freestyle"
-        icon={<GiPerspectiveDiceSixFacesRandom />}
-      />
-      <BottomNavigationAction
-        label="Create"
-        value="create"
-        icon={<GiGroundSprout />}
-      />
-    </BottomNavigation>
+      <GiPerspectiveDiceSixFacesRandom />
+      <GiGroundSprout />
+    </AppBar>
   );
 };
 

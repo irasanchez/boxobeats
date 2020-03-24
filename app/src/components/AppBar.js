@@ -8,7 +8,7 @@ import { IoMdSearch as SearchIcon } from "react-icons/io";
 
 export default function SearchAppBar() {
   return (
-    <AppBar position="static">
+    <AppBar position="sticky">
       <Toolbar>
         <Typography variant="h6" noWrap>
           Progress

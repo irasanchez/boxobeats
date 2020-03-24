@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Route } from "react-router";
 import beatsData from "./assets/beatsData.json";
 
 import Metronome from "./components/Metronome";
@@ -13,7 +14,18 @@ const App = props => {
   return (
     <div className="App">
       <Metronome />
-      <SoundList beats={beats} />
+      <Route path="/progress">
+        <SoundList beats={beats} />
+      </Route>
+      <Route path="/focus">
+        <SoundList beats={beats} />
+      </Route>
+      <Route path="/freestyle">
+        <SoundList beats={beats} />
+      </Route>
+      <Route path="/create">
+        <SoundList beats={beats} />
+      </Route>
       <Nav />
     </div>
   );

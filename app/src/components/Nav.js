@@ -12,14 +12,12 @@ import {
   GiGroundSprout
 } from "react-icons/gi";
 
-const Nav = () => {
-  const [value, setValue] = useState(""); //idk what this is for but it's used in BottomNavigation
-
+const Nav = props => {
   return (
     <BottomNavigation
-      value={value}
+      value={props.value}
       onChange={(event, newValue) => {
-        setValue(newValue);
+        props.setValue(newValue);
       }}
       showLabels
     >

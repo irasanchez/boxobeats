@@ -1,9 +1,10 @@
 import React from "react";
 import Sound from "./Sound";
+import { Container } from "@material-ui/core";
 
 const SoundList = props => {
   return (
-    <div>
+    <Container>
       {props.beats.map(beat => {
         return (
           <Sound key={beat.name}>
@@ -11,7 +12,7 @@ const SoundList = props => {
           </Sound>
         );
       })}
-    </div>
+    </Container>
   );
 };
 

@@ -1,12 +1,16 @@
 import React, { useState } from "react";
 import { Route } from "react-router";
-import { Popper } from "@material-ui/core";
 import beatsData from "./assets/beatsData.json";
 
+import Create from "./components/Create";
+import Focus from "./components/Focus";
+import Freestyle from "./components/Freestyle";
+import Progress from "./components/Progress";
 import Metronome from "./components/Metronome";
 import SoundList from "./components/SoundList";
 import Nav from "./components/Nav";
 import SearchAppBar from "./components/AppBar";
+import { GiMatchHead } from "react-icons/gi";
 
 const App = props => {
   //grab data from json file and set it to state
@@ -17,20 +21,28 @@ const App = props => {
   return (
     <div className="App">
       <SearchAppBar />
-      <Popper>
-        <Metronome />
-      </Popper>
+
+      <Metronome />
+
       <Route path="/progress">
-        <SoundList beats={beats} />
+        <Progress>
+          <SoundList beats={beats} soundsNeeded={beats.length} />
+        </Progress>
       </Route>
       <Route path="/focus">
-        <SoundList beats={beats} />
+        <Focus>
+          <SoundList beats={beats} soundsNeeded={1} />
+        </Focus>
       </Route>
       <Route path="/freestyle">
-        <SoundList beats={beats} />
+        <Freestyle>
+          <SoundList beats={beats} soundsNeeded={5} />
+        </Freestyle>
       </Route>
       <Route path="/create">
-        <SoundList beats={beats} />
+        <Create>
+          <SoundList beats={beats} soundsNeeded={2} />
+        </Create>
       </Route>
       <Nav value={navValue} setValue={setNavValue} />
     </div>

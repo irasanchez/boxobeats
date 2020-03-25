@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import YouTube from "@u-wave/react-youtube";
 
-const Video = props => {
+const Video = ({ youtubeID }) => {
   const [state, setState] = useState({
     suggestedQuality: "auto",
     volume: 1,
@@ -20,17 +20,17 @@ const Video = props => {
     setState({ volume: value });
   };
 
-  const { isPlaying, volume } = state;
+  const { volume, suggestedQuality, paused } = state;
 
   return (
     <YouTube
-      video={props.youtubeID}
-      width="50%"
-      height={400}
+      video={youtubeID}
+      width="90%"
+      height={200}
       controls={true}
-      suggestedQuality={state.suggestedQuality}
-      volume={state.volume}
-      paused={state.paused}
+      suggestedQuality={suggestedQuality}
+      volume={volume}
+      paused={paused}
       onPause={handlePause}
       onPlaying={handlePlay}
     />

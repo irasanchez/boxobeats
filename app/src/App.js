@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Route } from "react-router";
+
 import beatsData from "./assets/beatsData.json";
 
 import Create from "./components/Create";
@@ -13,6 +14,14 @@ import SearchAppBar from "./components/AppBar";
 
 import { CssBaseline, Container } from "@material-ui/core";
 
+const styles = {
+  Container: {
+    height: "100vh",
+    maxHeight: "100vh",
+    overflowY: "auto"
+  }
+};
+
 const App = props => {
   //grab data from json file and set it to state
   //FIXME: Must get data dynamically using axios
@@ -22,12 +31,10 @@ const App = props => {
   return (
     <>
       <CssBaseline />
-      <Container className="App">
+      <Container className="App" style={styles.Container}>
         <Route path="/progress">
-          <SearchAppBar {...props} />
-          <Progress>
-            <SoundList beats={beats} soundsNeeded={beats.length} />
-          </Progress>
+          <SearchAppBar />
+          <Progress beats={beats} />
         </Route>
         <Route path="/focus">
           <SearchAppBar {...props} />

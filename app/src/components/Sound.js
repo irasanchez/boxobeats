@@ -1,19 +1,23 @@
 import React from "react";
-import { Card, CardHeader, CardContent, CardMedia } from "@material-ui/core";
+import {
+  Typography,
+  CardHeader,
+  CardContent,
+  CardMedia
+} from "@material-ui/core";
 import Video from "./Video";
 import { useLocation } from "react-router-dom";
 
 const Sound = props => {
   const { pathname } = useLocation();
   return (
-    <Card>
-      <CardHeader
-        title={props.name}
-        subheader={
-          props.creator ? `Popularized by ${props.creator}` : `¯\\_(ツ)_/¯`
-        }
-      />
-      {pathname === "/progress" && (
+    <>
+      <Typography primary={props.name} variant="subtitle1" />
+      <Typography variant="subtitle2">
+        {props.creator ? `Popularized by ${props.creator}` : `¯\\_(ツ)_/¯`}
+      </Typography>
+
+      {/* {pathname === "/progress" && (
         <CardMedia>
           <Video
             youtubeID={
@@ -23,10 +27,19 @@ const Sound = props => {
             }
           />
         </CardMedia>
-      )}
-
-      <CardContent>{props.children}</CardContent>
-    </Card>
+      )} */}
+      <CardContent>
+        {props.children}
+        {/* {beat.tips.length ? (
+                <p>
+                  <span>💡</span>
+                  {` Tip: ${
+                    beat.tips[Math.floor(Math.random() * beat.tips.length)]
+                  }`}
+                </p>
+              ) : null} */}
+      </CardContent>
+    </>
   );
 };
 

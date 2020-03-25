@@ -1,6 +1,12 @@
 import React, { useState, useEffect } from "react";
 import Sound from "./Sound";
-import { Grid } from "@material-ui/core";
+import {
+  Grid,
+  Typography,
+  List,
+  ListItem,
+  ListItemText
+} from "@material-ui/core";
 
 const SoundList = props => {
   const getRandomNSounds = (list, amountNeeded) => {
@@ -18,21 +24,19 @@ const SoundList = props => {
   };
 
   return (
-    <Grid container direction="row" justify="space-around" alignItems="center">
-      {getRandomNSounds(props.beats, props.soundsNeeded).map(beat => {
-        return (
-          <Sound key={beat.name} {...beat}>
-            {beat.tips.length ? (
-              <p>
-                <span>💡</span>
-                {` Tip: ${
-                  beat.tips[Math.floor(Math.random() * beat.tips.length)]
-                }`}
-              </p>
-            ) : null}
-          </Sound>
-        );
-      })}
+    <Grid container spacing={24} style={{ maxHeight: "100%" }}>
+      <List>
+        {getRandomNSounds(props.beats, props.soundsNeeded).map(beat => {
+          return (
+            <ListItem button>
+              <ListItemText
+                style={{ textTransform: "uppercase" }}
+                primary={beat.name}
+              ></ListItemText>
+            </ListItem>
+          );
+        })}
+      </List>
     </Grid>
   );
 };

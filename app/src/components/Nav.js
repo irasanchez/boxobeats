@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { AppBar } from "@material-ui/core";
+import { BottomNavigation, BottomNavigationAction } from "@material-ui/core";
 import {
   GiBullseye,
   GiMountaintop,
@@ -8,22 +8,30 @@ import {
   GiGroundSprout
 } from "react-icons/gi";
 
-const Nav = props => {
+const Nav = ({ value, setValue }) => {
   return (
-    <AppBar style={{ display: "flex", flexDirection: "row" }} position="sticky">
+    <BottomNavigation
+      value={value}
+      onChange={(event, newValue) => {
+        setValue(newValue);
+      }}
+    >
       <NavLink to="/progress">
-        <GiMountaintop />
+        <BottomNavigationAction icon={<GiMountaintop />} />
       </NavLink>
-      <NavLink to="focus">
-        <GiBullseye />
+
+      <NavLink to="/focus">
+        <BottomNavigationAction icon={<GiBullseye />} />
       </NavLink>
-      <NavLink to="freestyle">
-        <GiPerspectiveDiceSixFacesRandom />
+
+      <NavLink to="/freestyle">
+        <BottomNavigationAction icon={<GiPerspectiveDiceSixFacesRandom />} />
       </NavLink>
-      <NavLink to="create">
-        <GiGroundSprout />
+
+      <NavLink to="/create">
+        <BottomNavigationAction icon={<GiGroundSprout />} />
       </NavLink>
-    </AppBar>
+    </BottomNavigation>
   );
 };
 

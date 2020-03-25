@@ -17,8 +17,10 @@ import { CssBaseline, Container } from "@material-ui/core";
 const styles = {
   Container: {
     height: "100vh",
+    width: "100vw",
     maxHeight: "100vh",
-    overflowY: "auto"
+    overflowY: "auto",
+    margin: 0
   }
 };
 

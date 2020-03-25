@@ -17,8 +17,15 @@ const SoundList = props => {
     <Container>
       {getRandomNSounds(props.beats, props.soundsNeeded).map(beat => {
         return (
-          <Sound key={beat.name}>
-            <p>{beat.name}</p>
+          <Sound key={beat.name} {...beat}>
+            {beat.tips.length ? (
+              <p>
+                <span>💡</span>
+                {` Tip: ${
+                  beat.tips[Math.floor(Math.random() * beat.tips.length)]
+                }`}
+              </p>
+            ) : null}
           </Sound>
         );
       })}

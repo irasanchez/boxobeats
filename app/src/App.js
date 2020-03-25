@@ -22,7 +22,6 @@ const App = props => {
   return (
     <div className="App">
       <CssBaseline />
-      <Metronome />
 
       <Route path="/progress">
         <SearchAppBar {...props} />
@@ -48,6 +47,7 @@ const App = props => {
           <SoundList beats={beats} soundsNeeded={2} />
         </Create>
       </Route>
+      <Metronome />
       <Nav value={navValue} setValue={setNavValue} />
     </div>
   );

@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import { NavLink } from "react-router-dom";
-import { AppBar, Fab } from "@material-ui/core";
+import { AppBar } from "@material-ui/core";
 import {
-  GiMetronome,
   GiBullseye,
   GiMountaintop,
   GiPerspectiveDiceSixFacesRandom,
@@ -18,9 +17,6 @@ const Nav = props => {
       <NavLink to="focus">
         <GiBullseye />
       </NavLink>
-      <Fab>
-        <GiMetronome />
-      </Fab>
       <NavLink to="freestyle">
         <GiPerspectiveDiceSixFacesRandom />
       </NavLink>

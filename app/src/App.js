@@ -10,7 +10,8 @@ import Metronome from "./components/Metronome";
 import SoundList from "./components/SoundList";
 import Nav from "./components/Nav";
 import SearchAppBar from "./components/AppBar";
-import { GiMatchHead } from "react-icons/gi";
+
+import { CssBaseline } from "@material-ui/core";
 
 const App = props => {
   //grab data from json file and set it to state
@@ -20,26 +21,29 @@ const App = props => {
 
   return (
     <div className="App">
-      <SearchAppBar />
-
+      <CssBaseline />
       <Metronome />
 
       <Route path="/progress">
+        <SearchAppBar {...props} />
         <Progress>
           <SoundList beats={beats} soundsNeeded={beats.length} />
         </Progress>
       </Route>
       <Route path="/focus">
+        <SearchAppBar {...props} />
         <Focus>
           <SoundList beats={beats} soundsNeeded={1} />
         </Focus>
       </Route>
       <Route path="/freestyle">
+        <SearchAppBar {...props} />
         <Freestyle>
           <SoundList beats={beats} soundsNeeded={5} />
         </Freestyle>
       </Route>
       <Route path="/create">
+        <SearchAppBar {...props} />
         <Create>
           <SoundList beats={beats} soundsNeeded={2} />
         </Create>

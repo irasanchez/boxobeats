@@ -7,6 +7,7 @@ const styles = {
     height: "10vh",
     maxHeight: "10vh"
   },
+  h1: { fontSize: "4rem" },
   Toolbar: {
     width: "100%",
     height: "100%",
@@ -48,7 +49,7 @@ export default function SearchAppBar(props) {
   return (
     <AppBar position="sticky" style={styles.Header}>
       <Toolbar style={styles.Toolbar}>
-        <Typography variant="h1" primary="boxobeats">
+        <Typography variant="h1" primary="boxobeats" style={styles.h1}>
           boxobeats
         </Typography>
         <form style={styles.form}>
@@ -58,7 +59,7 @@ export default function SearchAppBar(props) {
             type="text"
             onChange={changeHandler}
             placeholder="Search…"
-            inputProps={{ "aria-label": "search" }}
+            inputProps={{ "aria-label": "search", style: styles.color }}
             value={searchQuery}
           />
         </form>

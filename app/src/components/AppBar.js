@@ -7,6 +7,19 @@ const styles = {
     height: "10vh",
     maxHeight: "10vh"
   },
+  Toolbar: {
+    width: "100%",
+    height: "100%",
+    display: "flex",
+    justifyContent: "space-between",
+    padding: "0 5%"
+  },
+  form: {
+    width: "20%",
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center"
+  },
   color: { color: "white" }
 };
 
@@ -34,11 +47,11 @@ export default function SearchAppBar(props) {
 
   return (
     <AppBar position="sticky" style={styles.Header}>
-      <Toolbar>
+      <Toolbar style={styles.Toolbar}>
         <Typography variant="h1" primary="boxobeats">
           boxobeats
         </Typography>
-        <form>
+        <form style={styles.form}>
           <SearchIcon />
           <TextField
             style={styles.color}

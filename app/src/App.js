@@ -18,9 +18,11 @@ const styles = {
   Container: {
     height: "100vh",
     width: "100vw",
+    minWidth: "100vw",
     maxHeight: "100vh",
     overflowY: "hidden",
-    margin: "0 auto"
+    margin: "0 auto",
+    padding: "0"
   }
 };
 

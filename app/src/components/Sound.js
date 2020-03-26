@@ -34,7 +34,11 @@ const Sound = props => {
 
   return sound ? (
     <div style={styles.SoundCard}>
-      <Typography primary={sound.name} variant="h2">
+      <Typography
+        primary={sound.name}
+        variant="h2"
+        style={{ textTransform: "capitalize" }}
+      >
         {sound.name}
       </Typography>
       <Typography variant="subtitle2">

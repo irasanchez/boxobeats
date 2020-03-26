@@ -7,7 +7,6 @@ import {
 } from "@material-ui/core";
 import Video from "./Video";
 import { useParams } from "react-router-dom";
-import { processdata } from "../assets/processdata";
 
 const Sound = props => {
   const [sound, setSound] = useState([]);
@@ -16,7 +15,6 @@ const Sound = props => {
     let foundSound = props.beats.find(sound => id === sound.id);
     setSound(foundSound);
   }, []);
-  console.log(processdata());
 
   return (
     true && (

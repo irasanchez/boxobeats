@@ -2,551 +2,683 @@
   "beats": [
     {
       "name": "kick drum",
-      "included": true,
       "tutorials": ["g703Y7xtyo8"],
       "prerequisites": [],
-      "tips": ["Try saying 'be' without the 'e' sound in English."],
-      "creator": ""
+      "tips": [
+        "Try humming while brushing your teeth/holding water in your mouth to learn how to hum through your nose.",
+        "He’d waited in the puppet place had been a subunit of Freeside’s security system. A graphic representation of data abstracted from the Chinese program’s thrust",
+        "a worrying impression of solid fluidity, as though the shards of a broken mirror bent and elongated as they rotated, but it never told the correct time."
+      ],
+      "creator": "",
+      "learned": false,
+      "id": "90422e5b-ce87-5172-a592-9c88d5003378"
     },
     {
       "name": "hi-hat",
-      "included": true,
       "tutorials": ["hR-OwR2cFv8"],
       "prerequisites": [],
-      "tips": ["This is a crisp 't' sound in English."],
-      "creator": ""
+      "tips": [
+        "Try humming while brushing your teeth/holding water in your mouth to learn how to hum through your nose.",
+        "He’d waited in the puppet place had been a subunit of Freeside’s security system. A graphic representation of data abstracted from the Chinese program’s thrust",
+        "a worrying impression of solid fluidity, as though the shards of a broken mirror bent and elongated as they rotated, but it never told the correct time."
+      ],
+      "creator": "",
+      "learned": false,
+      "id": "2a7b649b-cccf-6e69-9d4f-62a774e61239"
     },
     {
       "name": "k snare",
-      "included": true,
       "tutorials": ["zem4mFhLhCg"],
       "prerequisites": [],
       "tips": [
-        "This is the same as the 'k' sound in English. Keep your teeth close together (not closed) to make the sound more breathy."
+        "Try humming while brushing your teeth/holding water in your mouth to learn how to hum through your nose.",
+        "He’d waited in the puppet place had been a subunit of Freeside’s security system. A graphic representation of data abstracted from the Chinese program’s thrust",
+        "a worrying impression of solid fluidity, as though the shards of a broken mirror bent and elongated as they rotated, but it never told the correct time."
       ],
-      "creator": ""
+      "creator": "",
+      "learned": false,
+      "id": "1e9afce0-75af-8cdd-dcec-b06efda936ab"
     },
     {
-      "name": "cough snare",
-      "included": false,
+      "name": "cough snare ",
       "tutorials": ["8u_Yf1OPvSU"],
       "prerequisites": [],
-      "tips": [],
-      "creator": ""
+      "tips": [
+        "Try humming while brushing your teeth/holding water in your mouth to learn how to hum through your nose.",
+        "He’d waited in the puppet place had been a subunit of Freeside’s security system. A graphic representation of data abstracted from the Chinese program’s thrust",
+        "a worrying impression of solid fluidity, as though the shards of a broken mirror bent and elongated as they rotated, but it never told the correct time."
+      ],
+      "creator": "",
+      "learned": false,
+      "id": "4016bbbd-61d6-1154-23ee-aab0d88ea57e"
     },
     {
       "name": "pf snare",
-      "included": false,
       "tutorials": ["vfvhihyGCnk"],
       "prerequisites": [],
-      "tips": [],
-      "creator": ""
+      "tips": [
+        "Try humming while brushing your teeth/holding water in your mouth to learn how to hum through your nose.",
+        "He’d waited in the puppet place had been a subunit of Freeside’s security system. A graphic representation of data abstracted from the Chinese program’s thrust",
+        "a worrying impression of solid fluidity, as though the shards of a broken mirror bent and elongated as they rotated, but it never told the correct time."
+      ],
+      "creator": "",
+      "learned": false,
+      "id": "1faaacbd-53d2-f449-3fd8-1e6bfb2fecf2"
     },
     {
       "name": "psh snare ",
-      "included": false,
       "tutorials": ["bATBrXbRt0w"],
       "prerequisites": [],
-      "tips": [],
-      "creator": ""
+      "tips": [
+        "Try humming while brushing your teeth/holding water in your mouth to learn how to hum through your nose.",
+        "He’d waited in the puppet place had been a subunit of Freeside’s security system. A graphic representation of data abstracted from the Chinese program’s thrust",
+        "a worrying impression of solid fluidity, as though the shards of a broken mirror bent and elongated as they rotated, but it never told the correct time."
+      ],
+      "creator": "",
+      "learned": false,
+      "id": "6bf5ffc1-4b7c-232b-e50b-cb85c7170fe4"
     },
     {
       "name": "tongue click",
-      "included": false,
       "tutorials": ["W50-NSZUnJQ"],
       "prerequisites": [],
-      "tips": [],
-      "creator": ""
+      "tips": [
+        "Try humming while brushing your teeth/holding water in your mouth to learn how to hum through your nose.",
+        "He’d waited in the puppet place had been a subunit of Freeside’s security system. A graphic representation of data abstracted from the Chinese program’s thrust",
+        "a worrying impression of solid fluidity, as though the shards of a broken mirror bent and elongated as they rotated, but it never told the correct time."
+      ],
+      "creator": "",
+      "learned": false,
+      "id": "8bb561d3-2ed8-426f-8f60-c0e46680f0ac"
     },
     {
       "name": "throat kick",
-      "included": false,
       "tutorials": ["x0zIFZQZtsE"],
       "prerequisites": [],
-      "tips": [],
-      "creator": ""
+      "tips": [
+        "Try humming while brushing your teeth/holding water in your mouth to learn how to hum through your nose.",
+        "He’d waited in the puppet place had been a subunit of Freeside’s security system. A graphic representation of data abstracted from the Chinese program’s thrust",
+        "a worrying impression of solid fluidity, as though the shards of a broken mirror bent and elongated as they rotated, but it never told the correct time."
+      ],
+      "creator": "",
+      "learned": false,
+      "id": "b9b74e4a-9f74-ff39-03f7-49b78e6c926d"
     },
     {
       "name": "trumpet",
-      "included": false,
       "tutorials": ["2hNEs5VCQR8"],
       "prerequisites": [],
-      "tips": [],
-      "creator": ""
+      "tips": [
+        "Try humming while brushing your teeth/holding water in your mouth to learn how to hum through your nose.",
+        "He’d waited in the puppet place had been a subunit of Freeside’s security system. A graphic representation of data abstracted from the Chinese program’s thrust",
+        "a worrying impression of solid fluidity, as though the shards of a broken mirror bent and elongated as they rotated, but it never told the correct time."
+      ],
+      "creator": "",
+      "learned": false,
+      "id": "1a0d6380-0c74-ed3e-5677-7b6b12e514b2"
     },
     {
-      "name": "lip roll",
-      "included": false,
+      "name": "lip roll 1 , lip roll 2",
       "tutorials": ["-50nUNHjo8E"],
       "prerequisites": [],
-      "tips": [],
-      "creator": ""
+      "tips": [
+        "Try humming while brushing your teeth/holding water in your mouth to learn how to hum through your nose.",
+        "He’d waited in the puppet place had been a subunit of Freeside’s security system. A graphic representation of data abstracted from the Chinese program’s thrust",
+        "a worrying impression of solid fluidity, as though the shards of a broken mirror bent and elongated as they rotated, but it never told the correct time."
+      ],
+      "creator": "",
+      "learned": false,
+      "id": "f9dad7a7-e8fd-7227-d59c-84c38cce5225"
     },
     {
       "name": "lip bass",
-      "included": false,
       "tutorials": ["b1-6SyiViYs"],
       "prerequisites": [],
-      "tips": [],
-      "creator": ""
+      "tips": [
+        "Try humming while brushing your teeth/holding water in your mouth to learn how to hum through your nose.",
+        "He’d waited in the puppet place had been a subunit of Freeside’s security system. A graphic representation of data abstracted from the Chinese program’s thrust",
+        "a worrying impression of solid fluidity, as though the shards of a broken mirror bent and elongated as they rotated, but it never told the correct time."
+      ],
+      "creator": "",
+      "learned": false,
+      "id": "6c6b2d49-a14b-a79b-c728-de58a1026f8f"
     },
     {
       "name": "fart bass",
-      "included": false,
       "tutorials": ["_HziA_wdgWc"],
       "prerequisites": [],
-      "tips": [],
-      "creator": ""
+      "tips": [
+        "Try humming while brushing your teeth/holding water in your mouth to learn how to hum through your nose.",
+        "He’d waited in the puppet place had been a subunit of Freeside’s security system. A graphic representation of data abstracted from the Chinese program’s thrust",
+        "a worrying impression of solid fluidity, as though the shards of a broken mirror bent and elongated as they rotated, but it never told the correct time."
+      ],
+      "creator": "",
+      "learned": false,
+      "id": "d4e28dac-b2d7-5a92-ff6e-0e334bd5f6ed"
     },
     {
       "name": "starsky bass ",
-      "included": false,
       "tutorials": ["_HziA_wdgWc?"],
       "prerequisites": [],
       "creator": "",
-      "tips": []
+      "tips": [],
+      "learned": false,
+      "id": "422eeacf-c344-e300-21a0-5df5e201516c"
     },
     {
       "name": "rimshot ",
-      "included": false,
       "tutorials": ["1vh-dno27Dw"],
       "prerequisites": [],
-      "tips": [],
-      "creator": ""
+      "tips": [
+        "Try humming while brushing your teeth/holding water in your mouth to learn how to hum through your nose.",
+        "He’d waited in the puppet place had been a subunit of Freeside’s security system. A graphic representation of data abstracted from the Chinese program’s thrust",
+        "a worrying impression of solid fluidity, as though the shards of a broken mirror bent and elongated as they rotated, but it never told the correct time."
+      ],
+      "creator": "",
+      "learned": false,
+      "id": "b81f03a8-0721-e4ec-2682-1f4c9f7ceded"
     },
     {
-      "name": "dry kick",
-      "included": false,
+      "name": "dry kick ",
       "tutorials": ["A-lBiy0yr64"],
       "prerequisites": [],
-      "tips": [],
-      "creator": ""
+      "tips": [
+        "Try humming while brushing your teeth/holding water in your mouth to learn how to hum through your nose.",
+        "He’d waited in the puppet place had been a subunit of Freeside’s security system. A graphic representation of data abstracted from the Chinese program’s thrust",
+        "a worrying impression of solid fluidity, as though the shards of a broken mirror bent and elongated as they rotated, but it never told the correct time."
+      ],
+      "creator": "",
+      "learned": false,
+      "id": "4900ec6c-58b8-94a8-6434-52acd43ce0f5"
     },
     {
       "name": "sucker punch",
-      "included": false,
       "tutorials": ["l3c6UcIkZ4o"],
       "prerequisites": [],
       "creator": "",
-      "tips": []
+      "tips": [],
+      "learned": false,
+      "id": "ce37d908-f23a-21f3-ffb5-d6caea38ca40"
     },
     {
       "name": "pop/tennis ball sound",
-      "included": false,
       "tutorials": ["3q6npU-fPtU"],
       "prerequisites": [],
       "creator": "",
-      "tips": []
+      "tips": [],
+      "learned": false,
+      "id": "875b5773-dd64-7c03-8cf9-a70285cb1652"
     },
     {
       "name": "snore bass",
-      "included": false,
       "tutorials": ["lZvLQmDwPC8"],
       "prerequisites": [],
       "creator": "",
-      "tips": []
+      "tips": [],
+      "learned": false,
+      "id": "547bf811-898b-9750-9257-f84b6e9e4a5d"
     },
     {
       "name": "siren ",
-      "included": false,
       "tutorials": ["asHG9d3aDLs"],
       "prerequisites": [],
       "creator": "",
-      "tips": []
+      "tips": [],
+      "learned": false,
+      "id": "c4fc97e1-f605-97f1-5615-3a7360b3583f"
     },
     {
       "name": "lip oscillation",
-      "included": false,
       "tutorials": ["gcaaYS1xUIs"],
       "prerequisites": [],
       "creator": "",
-      "tips": []
+      "tips": [],
+      "learned": false,
+      "id": "8f026392-27a6-68f5-0089-ddb91cbce75f"
     },
     {
-      "name": "lip oscillation (on the side)",
-      "included": false,
+      "name": "lip oscillation (on the side) ",
       "tutorials": [],
       "prerequisites": [],
       "creator": "",
-      "tips": []
+      "tips": [],
+      "learned": false,
+      "id": "bf51de19-3c03-4fbd-d345-69705b0f26db"
     },
     {
-      "name": "hollow clop",
-      "included": false,
+      "name": "hollow clop ",
       "tutorials": ["CEG7oUnULA0"],
       "prerequisites": [],
       "creator": "",
-      "tips": []
+      "tips": [],
+      "learned": false,
+      "id": "8a96ce7d-3be4-ce3f-1471-82646745e5c1"
     },
     {
-      "name": "reverse liproll",
-      "included": false,
+      "name": "reverse liproll ",
       "tutorials": ["xrp5lPmdSYA"],
       "prerequisites": [],
       "creator": "",
-      "tips": []
+      "tips": [],
+      "learned": false,
+      "id": "3ee9bfff-db14-69d4-9406-117f2fa07d54"
     },
     {
-      "name": "click roll",
-      "included": false,
+      "name": "click roll ",
       "tutorials": ["gqRZ_cmE6-o"],
       "prerequisites": [],
       "creator": "",
-      "tips": []
+      "tips": [],
+      "learned": false,
+      "id": "b02955d4-5e82-28da-4a45-faa922c3f133"
     },
     {
       "name": "throat bass",
-      "included": false,
       "tutorials": ["wxh4Nvi6S-M"],
       "prerequisites": [],
       "creator": "",
-      "tips": []
+      "tips": [],
+      "learned": false,
+      "id": "71bc2434-f211-e0f0-da32-72c58af0e670"
     },
     {
       "name": "OD bass",
-      "included": false,
       "tutorials": ["y8Gxke_Ph8k"],
       "prerequisites": [],
       "creator": "",
-      "tips": []
+      "tips": [],
+      "learned": false,
+      "id": "9dfaa435-5974-6f1f-0018-96e47eaf8356"
     },
     {
       "name": "synth sound",
-      "included": false,
       "tutorials": ["2MFi5sl5jjI"],
       "prerequisites": [],
       "creator": "",
-      "tips": []
+      "tips": [],
+      "learned": false,
+      "id": "c6abfdd3-8ded-60ad-c369-31f9887aa5be"
     },
     {
-      "name": "zipper",
-      "included": false,
+      "name": "zipper ",
       "tutorials": ["90Uw02w2RvI"],
       "prerequisites": [],
       "creator": "",
-      "tips": []
+      "tips": [],
+      "learned": false,
+      "id": "93f60a78-8c98-c56d-1173-2ce2e0ed8a8d"
     },
     {
       "name": "meow squeak",
-      "included": false,
       "tutorials": ["6RA4HVoAevY"],
       "prerequisites": [],
       "creator": "",
-      "tips": []
+      "tips": [],
+      "learned": false,
+      "id": "58583acc-d1b3-f035-a50a-d4cf19915482"
     },
     {
       "name": "water drop",
-      "included": false,
       "tutorials": ["PFOxDvpKl6M"],
       "prerequisites": [],
       "creator": "",
-      "tips": []
+      "tips": [],
+      "learned": false,
+      "id": "f0465409-0b3b-4525-dc3b-9275a49ebc6c"
     },
     {
       "name": "crab scratch",
-      "included": false,
       "tutorials": ["cE-oPz7zK60"],
       "prerequisites": [],
       "creator": "",
-      "tips": []
+      "tips": [],
+      "learned": false,
+      "id": "040a12dc-d71c-b201-dad3-686018a35a31"
     },
     {
       "name": "vocal scratch",
-      "included": false,
       "tutorials": ["8DM3H7mOgTk"],
       "prerequisites": [],
       "creator": "",
-      "tips": []
+      "tips": [],
+      "learned": false,
+      "id": "ac69d601-6fcb-a547-71c4-745841391b4a"
     },
     {
       "name": "cricket whistle",
-      "included": false,
       "tutorials": ["MaB3b25Lsf8"],
       "prerequisites": [],
       "creator": "",
-      "tips": []
+      "tips": [],
+      "learned": false,
+      "id": "678b74d8-773d-763e-bb6b-1c9c6f928c5f"
     },
     {
       "name": "outward sub bass",
-      "included": false,
       "tutorials": ["KdYl0dvOApc"],
       "prerequisites": [],
       "creator": "",
-      "tips": []
+      "tips": [],
+      "learned": false,
+      "id": "a77828d3-7a67-faeb-8cd4-631d5231b6e2"
     },
     {
       "name": "tkK",
-      "included": false,
       "tutorials": ["UWPj0Bq3Fco"],
       "prerequisites": [],
       "creator": "",
-      "tips": []
+      "tips": [],
+      "learned": false,
+      "id": "987a374a-5610-48fe-de3a-715be8a57544"
     },
     {
       "name": "inward bass",
-      "included": false,
       "tutorials": ["V6k66FVQCE0"],
       "prerequisites": [],
       "creator": "",
-      "tips": []
+      "tips": [],
+      "learned": false,
+      "id": "263a0812-154e-e63d-ff1f-2bc2e6b87b28"
     },
     {
-      "name": "polyphonic voice/double voice",
-      "included": false,
+      "name": "polyphonic voice/double voice ",
       "tutorials": ["_HziA_wdgWc"],
       "prerequisites": [],
       "creator": "",
-      "tips": []
+      "tips": [],
+      "learned": false,
+      "id": "f353ec58-71b7-181e-d9be-0590c216ba89"
     },
     {
       "name": "sega sound",
-      "included": false,
       "tutorials": ["T0phy1yrnaA"],
       "prerequisites": [],
       "creator": "",
-      "tips": []
+      "tips": [],
+      "learned": false,
+      "id": "56dcf41f-2125-da17-63fa-01325cacce7f"
     },
     {
       "name": "Calexy whistle",
-      "included": false,
       "tutorials": ["5Ki40-b0kRI"],
       "prerequisites": [],
       "creator": "",
-      "tips": []
+      "tips": [],
+      "learned": false,
+      "id": "14533b83-8e38-c584-c339-ba6e71e95154"
     },
     {
       "name": "vortex whistle",
-      "included": false,
       "tutorials": ["ITXh8EIWVSg"],
       "prerequisites": [],
       "creator": "",
-      "tips": []
+      "tips": [],
+      "learned": false,
+      "id": "35560d8e-c6f5-d0bd-90cf-f25e99b35646"
     },
     {
-      "name": "vibration bass",
-      "included": false,
+      "name": "vibration bass ",
       "tutorials": ["emcV-PaIozM"],
       "prerequisites": [],
       "creator": "",
-      "tips": []
+      "tips": [],
+      "learned": false,
+      "id": "eb759946-a5e6-d9d6-a1d0-01497fc1dc57"
     },
     {
       "name": "vocalized chest bass",
-      "included": false,
       "tutorials": ["SBGwm8j-lc0"],
       "prerequisites": [],
       "creator": "",
-      "tips": []
+      "tips": [],
+      "learned": false,
+      "id": "6493a5f2-8667-3ff4-14c2-0d39463dc97c"
     },
     {
       "name": "D-low scratch",
-      "included": false,
       "tutorials": ["Y6c-yIzqUuQ"],
       "prerequisites": [],
       "creator": "",
-      "tips": []
+      "tips": [],
+      "learned": false,
+      "id": "8d239748-af46-d75b-a76e-c36c33fcb27b"
     },
     {
-      "name": "D-low click",
-      "included": false,
+      "name": "D-low click ",
       "tutorials": ["04Gs21FES7w"],
       "prerequisites": [],
       "creator": "",
-      "tips": []
+      "tips": [],
+      "learned": false,
+      "id": "a70b70de-9abf-83f6-f055-a3d1042db2aa"
     },
     {
       "name": "Contrix/Babeli combo",
-      "included": false,
       "tutorials": ["qhmdpNNMMSM"],
       "prerequisites": [],
       "creator": "",
-      "tips": []
+      "tips": [],
+      "learned": false,
+      "id": "afc9fbc1-86f4-6dc5-9ab1-bbe68a90f907"
     },
     {
-      "name": "Colaps click",
-      "included": false,
+      "name": "Colaps click ",
       "tutorials": ["oKh7P3EiDUw"],
       "prerequisites": [],
       "creator": "",
-      "tips": []
+      "tips": [],
+      "learned": false,
+      "id": "3ff33857-c7f1-d9fb-b008-affdbef8b512"
     },
     {
       "name": "Beat Rhino snare",
-      "included": false,
       "tutorials": ["CSXJv4TnZ60"],
       "prerequisites": [],
       "creator": "",
-      "tips": []
+      "tips": [],
+      "learned": false,
+      "id": "2ee8691f-f369-5063-13eb-c09f99d5115e"
     },
     {
       "name": "ESH snare",
-      "included": false,
       "tutorials": ["zpFNqPUohA4"],
       "prerequisites": [],
       "creator": "",
-      "tips": []
+      "tips": [],
+      "learned": false,
+      "id": "6a29b8fe-cd8f-af0f-4c82-47d0a7471ad7"
     },
     {
       "name": "Two.h snare (outward sub bass snare) ",
-      "included": false,
       "tutorials": ["A5iGjf4AbuI"],
       "prerequisites": [],
       "creator": "",
-      "tips": []
+      "tips": [],
+      "learned": false,
+      "id": "7e5bb445-c615-0fff-3209-ce4777401dcb"
     },
     {
-      "name": "ZeDe scratch",
-      "included": false,
+      "name": "ZeDe scratch ",
       "tutorials": ["5_wR4oKoZsg"],
       "prerequisites": [],
       "creator": "",
-      "tips": []
+      "tips": [],
+      "learned": false,
+      "id": "09c6f399-144f-8552-8ed8-506f3f1af940"
     },
     {
-      "name": "Trung Bao Đ",
-      "included": false,
+      "name": "Trung Bao Đ ",
       "tutorials": ["ID7AC5kv0Po"],
       "prerequisites": [],
       "creator": "",
-      "tips": []
+      "tips": [],
+      "learned": false,
+      "id": "501247c8-f14e-a37b-2a74-929d2d4e4f90"
     },
     {
       "name": "Trung Bao cannon bass",
-      "included": false,
       "tutorials": ["mp14wMmnCmc"],
       "prerequisites": [],
       "creator": "",
-      "tips": []
+      "tips": [],
+      "learned": false,
+      "id": "d3ca2d84-9195-6909-cdb7-20eb32b24459"
     },
     {
       "name": "Gene lip bass ",
-      "included": false,
       "tutorials": ["gcaaYS1xUIs"],
       "prerequisites": [],
       "creator": "",
-      "tips": []
+      "tips": [],
+      "learned": false,
+      "id": "004f16f7-ed7b-7421-df05-4851e3bd5e07"
     },
     {
       "name": "D-low zipper",
-      "included": false,
       "tutorials": ["hPlHOHHjaBc"],
       "prerequisites": [],
       "creator": "",
-      "tips": []
+      "tips": [],
+      "learned": false,
+      "id": "da9f001a-d2cd-0b4b-6cde-8321d8698d21"
     },
     {
-      "name": "K.I.M. squeak",
-      "included": false,
+      "name": "K.I.M. squeak ",
       "tutorials": ["RkNrI5RtEhE"],
       "prerequisites": [],
       "creator": "",
-      "tips": []
+      "tips": [],
+      "learned": false,
+      "id": "ba1242e5-2018-ff0b-eb37-a611f8d208f5"
     },
     {
-      "name": "MB14/Dharni's gauteng",
-      "included": false,
+      "name": "MB14/Dharni's gauteng (chinese instrument)",
       "tutorials": ["NXNBrSU12Qo"],
       "prerequisites": [],
       "creator": "",
-      "tips": []
+      "tips": [],
+      "learned": false,
+      "id": "0f18637c-dbb1-040b-f98a-77048578e564"
     },
     {
       "name": "Skiller roll ",
-      "included": false,
       "tutorials": ["D8zQhJmJ-kE"],
       "prerequisites": [],
       "creator": "",
-      "tips": []
+      "tips": [],
+      "learned": false,
+      "id": "74d31634-e4bb-2dbf-5937-9e9c9468d1d1"
     },
     {
       "name": "Effaybee/Colaps/Inertia's reverse sound",
-      "included": false,
       "tutorials": ["fw-tWYz0G8w"],
       "prerequisites": [],
-      "creator": "Effaybee, Colaps, Inertia",
-      "tips": []
+      "creator": "",
+      "tips": [],
+      "learned": false,
+      "id": "f5931022-d6ab-6a99-2728-bac75123d03e"
     },
     {
       "name": "ShowGo double voice",
-      "included": false,
       "tutorials": ["CsnCEQnC6CE"],
       "prerequisites": [],
       "creator": "",
-      "tips": []
+      "tips": [],
+      "learned": false,
+      "id": "011f6a14-0792-37c4-c72b-bcea74b43329"
     },
     {
-      "name": "Slizzer roll",
-      "included": false,
+      "name": "Slizzer roll ",
       "tutorials": ["d7FR9YTpxd0"],
       "prerequisites": [],
-      "creator": "Slizzer",
-      "tips": []
+      "creator": "",
+      "tips": [],
+      "learned": false,
+      "id": "32967602-c876-14d7-16aa-7d6f15533a3d"
     },
     {
-      "name": "Pash shimmer",
-      "included": false,
+      "name": "Pash shimmer ",
       "tutorials": ["ZcsB7G9ZoZo"],
       "prerequisites": [],
       "creator": "",
-      "tips": []
+      "tips": [],
+      "learned": false,
+      "id": "eec67675-091b-ca89-439a-3ad120031520"
     },
     {
       "name": "Pash double voice ",
-      "included": false,
-      "tutorials": [""],
+      "tutorials": ["Qgx2Y74emR0"],
       "prerequisites": [],
       "creator": "",
-      "tips": []
+      "tips": [],
+      "learned": false,
+      "id": "b521acff-6e97-5c9b-0e90-44ac0373af4c"
     },
     {
-      "name": "BMG/Spit Snare",
-      "included": false,
+      "name": "pitch snare 1 , pitch snare 2 ",
       "tutorials": ["tPgMx69lw9A"],
       "prerequisites": [],
       "creator": "",
-      "tips": []
+      "tips": [],
+      "learned": false,
+      "id": "556d7276-d021-15d4-7166-ff3c38d00000"
     },
     {
       "name": "Helium tongue zipper",
-      "included": false,
       "tutorials": [],
       "prerequisites": [],
       "creator": "",
-      "tips": []
+      "tips": [],
+      "learned": false,
+      "id": "df07247c-fee4-d37b-8a04-a1942d647a75"
     },
     {
-      "name": "Helium k snare",
-      "included": false,
+      "name": "Helium k snare ",
       "tutorials": [],
       "prerequisites": [],
       "creator": "",
-      "tips": []
+      "tips": [],
+      "learned": false,
+      "id": "9911fbf2-28e3-73c2-57c9-5cec717fe314"
     },
     {
       "name": "Ralik whistle",
-      "included": false,
       "tutorials": ["o8llTTI8B5I"],
       "prerequisites": [],
-      "tips": [],
-      "creator": ""
+      "tips": [
+        "Try humming while brushing your teeth/holding water in your mouth to learn how to hum through your nose.",
+        "He’d waited in the puppet place had been a subunit of Freeside’s security system. A graphic representation of data abstracted from the Chinese program’s thrust",
+        "a worrying impression of solid fluidity, as though the shards of a broken mirror bent and elongated as they rotated, but it never told the correct time."
+      ],
+      "creator": "",
+      "learned": false,
+      "id": "646833b6-498a-2eaa-571d-fdcd662283d4"
     },
     {
-      "name": "Frosty special sound1, Frost special sound2",
-      "included": false,
-      "tutorials": [],
-      "prerequisites": [],
-      "tips": [],
-      "creator": ""
-    },
-    {
-      "name": "nasal humming",
-      "included": true,
+      "name": "Frosty special sound1 , Frost special sound2 ",
       "tutorials": [],
       "prerequisites": [],
       "tips": [
-        "Try humming while brushing your teeth/holding water in your mouth to learn how to hum through your nose."
+        "Try humming while brushing your teeth/holding water in your mouth to learn how to hum through your nose.",
+        "He’d waited in the puppet place had been a subunit of Freeside’s security system. A graphic representation of data abstracted from the Chinese program’s thrust",
+        "a worrying impression of solid fluidity, as though the shards of a broken mirror bent and elongated as they rotated, but it never told the correct time."
       ],
-      "creator": ""
+      "creator": "",
+      "learned": false,
+      "id": "86522977-1148-7265-5364-876ffe9e50e5"
+    },
+    {
+      "name": "nasal humming",
+      "tutorials": [],
+      "prerequisites": [],
+      "tips": [
+        "Try humming while brushing your teeth/holding water in your mouth to learn how to hum through your nose.",
+        "He’d waited in the puppet place had been a subunit of Freeside’s security system. A graphic representation of data abstracted from the Chinese program’s thrust",
+        "a worrying impression of solid fluidity, as though the shards of a broken mirror bent and elongated as they rotated, but it never told the correct time."
+      ],
+      "creator": "",
+      "learned": false,
+      "id": "abec7433-0ad6-5dae-085e-fe7e60ec1811"
     }
   ]
 }

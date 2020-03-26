@@ -30,14 +30,14 @@ const SoundList = props => {
       <List style={{ width: "100%" }}>
         {props.beats.map(beat => {
           return (
-            <ListItem button style={{ width: "100%" }}>
-              <Link to={`/progress/${beat.id}`}>
+            <Link to={`/progress/${beat.id}`}>
+              <ListItem button style={{ width: "100%" }}>
                 <ListItemText
                   style={{ textTransform: "uppercase" }}
                   primary={beat.name}
                 ></ListItemText>
-              </Link>
-            </ListItem>
+              </ListItem>
+            </Link>
           );
         })}
       </List>

@@ -4,20 +4,20 @@ import YouTube from "@u-wave/react-youtube";
 const Video = ({ youtubeID }) => {
   const [state, setState] = useState({
     suggestedQuality: "auto",
-    volume: 1,
+    volume: 100,
     paused: false
   });
 
   const handlePlay = () => {
-    setState({ isPlaying: true });
+    setState({ ...state, isPlaying: true });
   };
 
   const handlePause = () => {
-    setState({ isPlaying: false });
+    setState({ ...state, isPlaying: false });
   };
 
   const handleVolume = value => {
-    setState({ volume: value });
+    setState({ ...state, volume: value });
   };
 
   const { volume, suggestedQuality, paused } = state;

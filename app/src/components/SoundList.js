@@ -45,7 +45,9 @@ const SoundList = props => {
                   ></ListItemText>
                 </ListItem>
               </Link>
-              <Divider />
+
+              {//if this is not the last one in the list, show a divider after
+              props.beats[props.beats.length - 1] !== beat ? <Divider /> : null}
             </>
           );
         })}

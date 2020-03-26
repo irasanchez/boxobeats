@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Typography, Paper } from "@material-ui/core";
+import { Typography } from "@material-ui/core";
 import Video from "./Video";
 import { useParams, useLocation } from "react-router-dom";
 
@@ -7,10 +7,10 @@ const styles = {
   SoundCard: {
     display: "flex",
     flexDirection: "column",
-    alignItems: "center",
-    padding: "0 2%",
+    justifyContent: "space-evenly",
+    padding: "0 5%",
     width: "100%",
-    minWidth: "100%"
+    height: "100%"
   }
 };
 

@@ -8,7 +8,6 @@ import {
   ListItemText
 } from "@material-ui/core";
 import { Link } from "react-router-dom";
-import uuid from "uuid";
 
 const SoundList = props => {
   const getRandomNSounds = (list, amountNeeded) => {
@@ -26,12 +25,12 @@ const SoundList = props => {
   };
 
   return (
-    <Grid container spacing={24} style={{ maxHeight: "100%" }}>
+    <Grid container spacing={24}>
       <List>
         {getRandomNSounds(props.beats, props.soundsNeeded).map(beat => {
           return (
             <ListItem button>
-              <Link to={`/progress/${uuid()}`}>
+              <Link to={`/progress/${beat.id}`}>
                 <ListItemText
                   style={{ textTransform: "uppercase" }}
                   primary={beat.name}

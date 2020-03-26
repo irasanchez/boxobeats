@@ -1,45 +1,39 @@
 import React, { useState, useEffect } from "react";
-import {
-  Typography,
-  CardHeader,
-  CardContent,
-  CardMedia
-} from "@material-ui/core";
+import { Typography, Paper } from "@material-ui/core";
 import Video from "./Video";
-import { useParams } from "react-router-dom";
+import { useParams, useLocation } from "react-router-dom";
 
 const Sound = props => {
   const [sound, setSound] = useState([]);
   const { id } = useParams();
+  const { pathname } = useLocation();
+
   useEffect(() => {
     let foundSound = props.beats.find(sound => id === sound.id);
     setSound(foundSound);
-  }, []);
+  }, [id]);
 
-  return (
-    true && (
-      <div>
-        <Typography primary={sound.name} variant="h2">
-          {sound.name}
-        </Typography>
-        <Typography variant="subtitle2">
-          {sound.creator ? `Popularized by ${sound.creator}` : `¯\\_(ツ)_/¯`}
-        </Typography>
+  return sound ? (
+    <>
+      <Typography primary={sound.name} variant="h2">
+        {sound.name}
+      </Typography>
+      <Typography variant="subtitle2">
+        {sound.creator
+          ? `Popularized by ${sound.creator}`
+          : `¯\\_(ツ)_/¯ No idea who 'invented' this`}
+      </Typography>
 
-        {/* {pathname === "/progress" && (
-        <CardMedia>
-          <Video
-            youtubeID={
-              props.tutorials[
-                Math.floor(Math.random() * props.tutorials.length)
-              ]
-            }
-          />
-        </CardMedia>
-      )} */}
-        <Typography>
-          {props.children}
-          {/* {beat.tips.length ? (
+      {pathname.includes("/progress") && sound.tutorials ? (
+        <Video
+          youtubeID={
+            sound.tutorials[Math.floor(Math.random() * sound.tutorials.length)]
+          }
+        />
+      ) : null}
+      <Typography>
+        {props.children}
+        {/* {beat.tips.length ? (
                 <p>
                   <span>💡</span>
                   {` Tip: ${
@@ -47,10 +41,9 @@ const Sound = props => {
                   }`}
                 </p>
               ) : null} */}
-        </Typography>
-      </div>
-    )
-  );
+      </Typography>
+    </>
+  ) : null;
 };
 
 export default Sound;

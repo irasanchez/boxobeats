@@ -10,21 +10,24 @@ const Progress = props => {
       maxHeight: "80vh",
       width: "100%"
     },
-    LeftPanel: {
+    Panels: {
       height: "100%",
       maxHeight: "100%",
       overflowY: "auto"
+    },
+    Paper: {
+      height: "100%"
     }
   };
 
   return (
     <Grid container style={styles.View}>
-      <Grid item sm style={styles.LeftPanel}>
+      <Grid item sm={5} style={styles.Panels}>
         <Paper>
           <SoundList beats={props.beats} soundsNeeded={props.beats.length} />
         </Paper>
       </Grid>
-      <Grid item sm>
+      <Grid item sm={7} style={styles.Panels}>
         <Route exact path="/progress">
           <Typography variant="h3">Welcome</Typography>
           <Typography variant="subtitle1">
@@ -33,7 +36,7 @@ const Progress = props => {
         </Route>
         <Route path="/progress/:id">
           <Paper style={styles.Paper}>
-            <Sound beats={props.beats}>{props.beats[1].name}</Sound>
+            <Sound beats={props.beats} />
           </Paper>
         </Route>
       </Grid>

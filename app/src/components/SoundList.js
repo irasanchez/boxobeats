@@ -5,7 +5,8 @@ import {
   Typography,
   List,
   ListItem,
-  ListItemText
+  ListItemText,
+  Divider
 } from "@material-ui/core";
 import { Link } from "react-router-dom";
 
@@ -30,14 +31,22 @@ const SoundList = props => {
       <List style={{ width: "100%" }}>
         {props.beats.map(beat => {
           return (
-            <Link to={`/progress/${beat.id}`}>
-              <ListItem button style={{ width: "100%" }}>
-                <ListItemText
-                  style={{ textTransform: "uppercase" }}
-                  primary={beat.name}
-                ></ListItemText>
-              </ListItem>
-            </Link>
+            <>
+              <Link
+                to={`/progress/${beat.id}`}
+                style={{ textDecoration: "none" }}
+              >
+                <ListItem button style={{ width: "100%" }}>
+                  <ListItemText
+                    style={{
+                      textTransform: "uppercase"
+                    }}
+                    primary={beat.name}
+                  ></ListItemText>
+                </ListItem>
+              </Link>
+              <Divider />
+            </>
           );
         })}
       </List>

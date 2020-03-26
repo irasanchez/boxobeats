@@ -10,24 +10,25 @@ import {
 import { Link } from "react-router-dom";
 
 const SoundList = props => {
-  const getRandomNSounds = (list, amountNeeded) => {
-    if (amountNeeded === list.length) {
-      return list;
-    } else {
-      const randomSounds = [];
-      while (amountNeeded > 0) {
-        const randomIndex = Math.floor(Math.random() * list.length);
-        randomSounds.push(list[randomIndex]);
-        amountNeeded--;
-      }
-      return randomSounds;
-    }
-  };
+  //save this for the other views
+  //const getRandomNSounds = (list, amountNeeded) => {
+  //   if (amountNeeded === list.length) {
+  //     return list;
+  //   } else {
+  //     const randomSounds = [];
+  //     while (amountNeeded > 0) {
+  //       const randomIndex = Math.floor(Math.random() * list.length);
+  //       randomSounds.push(list[randomIndex]);
+  //       amountNeeded--;
+  //     }
+  //     return randomSounds;
+  //   }
+  // };
 
   return (
     <Grid container spacing={24}>
       <List>
-        {getRandomNSounds(props.beats, props.soundsNeeded).map(beat => {
+        {props.beats.map(beat => {
           return (
             <ListItem button>
               <Link to={`/progress/${beat.id}`}>

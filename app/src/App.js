@@ -27,7 +27,8 @@ const styles = {
 const App = props => {
   //grab data from json file and set it to state
   //FIXME: Must get data dynamically using axios
-  const [beats] = useState(beatsData.beats);
+  const [beats, setBeats] = useState(beatsData.beats);
+  const [filtered, setFilter] = useState(beatsData.beats);
   const [navValue, setNavValue] = useState(""); //idk what this is for but it's used in BottomNavigation
 
   return (
@@ -35,8 +36,8 @@ const App = props => {
       <CssBaseline />
       <Container className="App" style={styles.Container}>
         <Route path="/progress">
-          <SearchAppBar />
-          <Progress beats={beats} />
+          <SearchAppBar beats={beats} setFilter={setFilter} />
+          <Progress beats={filtered} />
         </Route>
         {/* <Route path="/focus">
           <SearchAppBar {...props} />

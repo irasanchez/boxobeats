@@ -13,7 +13,9 @@ const Progress = props => {
     Panels: {
       height: "100%",
       maxHeight: "100%",
-      overflowY: "auto"
+      overflowY: "auto",
+      display: "flex",
+      flexDirection: "column"
     },
     Paper: {
       height: "100%",

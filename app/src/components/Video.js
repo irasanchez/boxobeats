@@ -25,8 +25,8 @@ const Video = ({ youtubeID }) => {
   return (
     <YouTube
       video={youtubeID}
-      width="90%"
-      height={200}
+      width="95%"
+      height={300}
       controls={true}
       suggestedQuality={suggestedQuality}
       volume={volume}

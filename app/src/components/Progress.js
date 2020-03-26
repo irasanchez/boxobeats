@@ -16,7 +16,9 @@ const Progress = props => {
       overflowY: "auto"
     },
     Paper: {
-      height: "100%"
+      height: "100%",
+      width: "100%"
+      // padding: "0 5%",
     }
   };
 
@@ -27,7 +29,7 @@ const Progress = props => {
           <SoundList beats={props.beats} soundsNeeded={props.beats.length} />
         </Paper>
       </Grid>
-      <Grid item sm={7} style={styles.Panels}>
+      <Grid item container sm={7} style={styles.Panels}>
         <Route exact path="/progress">
           <Typography variant="h3">Welcome</Typography>
           <Typography variant="subtitle1">

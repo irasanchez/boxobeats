@@ -3,8 +3,27 @@ import { Typography, Paper } from "@material-ui/core";
 import Video from "./Video";
 import { useParams, useLocation } from "react-router-dom";
 
+const styles = {
+  SoundCard: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    padding: "0 2%",
+    width: "100%",
+    minWidth: "100%"
+  }
+};
+
 const Sound = props => {
-  const [sound, setSound] = useState([]);
+  const [sound, setSound] = useState({
+    name: "",
+    tips: [],
+    creator: "",
+    tutorials: [],
+    id: "",
+    prerequisites: [],
+    learned: false
+  });
   const { id } = useParams();
   const { pathname } = useLocation();
 
@@ -14,7 +33,7 @@ const Sound = props => {
   }, [id]);
 
   return sound ? (
-    <>
+    <div style={styles.SoundCard}>
       <Typography primary={sound.name} variant="h2">
         {sound.name}
       </Typography>
@@ -31,18 +50,18 @@ const Sound = props => {
           }
         />
       ) : null}
+
       <Typography>
-        {props.children}
-        {/* {beat.tips.length ? (
-                <p>
-                  <span>💡</span>
-                  {` Tip: ${
-                    beat.tips[Math.floor(Math.random() * beat.tips.length)]
-                  }`}
-                </p>
-              ) : null} */}
+        {sound.tips.length ? (
+          <p>
+            <span>💡</span>
+            {` Tip: ${
+              sound.tips[Math.floor(Math.random() * sound.tips.length)]
+            }`}
+          </p>
+        ) : null}
       </Typography>
-    </>
+    </div>
   ) : null;
 };
 

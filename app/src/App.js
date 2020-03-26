@@ -19,8 +19,8 @@ const styles = {
     height: "100vh",
     width: "100vw",
     maxHeight: "100vh",
-    overflowY: "auto",
-    margin: 0
+    overflowY: "hidden",
+    margin: "0 auto"
   }
 };
 
@@ -38,7 +38,7 @@ const App = props => {
           <SearchAppBar />
           <Progress beats={beats} />
         </Route>
-        <Route path="/focus">
+        {/* <Route path="/focus">
           <SearchAppBar {...props} />
           <Focus>
             <SoundList beats={beats} soundsNeeded={1} />
@@ -55,8 +55,8 @@ const App = props => {
           <Create>
             <SoundList beats={beats} soundsNeeded={2} />
           </Create>
-        </Route>
-        <Metronome />
+        </Route> */}
+        {/* <Metronome /> */}
         <Nav value={navValue} setValue={setNavValue} />
       </Container>
     </>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
   Typography,
   CardHeader,
@@ -6,18 +6,29 @@ import {
   CardMedia
 } from "@material-ui/core";
 import Video from "./Video";
-import { useLocation } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import { processdata } from "../assets/processdata";
 
 const Sound = props => {
-  const { pathname } = useLocation();
-  return (
-    <>
-      <Typography primary={props.name} variant="subtitle1" />
-      <Typography variant="subtitle2">
-        {props.creator ? `Popularized by ${props.creator}` : `¯\\_(ツ)_/¯`}
-      </Typography>
+  const [sound, setSound] = useState([]);
+  const { id } = useParams();
+  useEffect(() => {
+    let foundSound = props.beats.find(sound => id === sound.id);
+    setSound(foundSound);
+  }, []);
+  console.log(processdata());
 
-      {/* {pathname === "/progress" && (
+  return (
+    true && (
+      <div>
+        <Typography primary={sound.name} variant="h2">
+          {sound.name}
+        </Typography>
+        <Typography variant="subtitle2">
+          {sound.creator ? `Popularized by ${sound.creator}` : `¯\\_(ツ)_/¯`}
+        </Typography>
+
+        {/* {pathname === "/progress" && (
         <CardMedia>
           <Video
             youtubeID={
@@ -28,9 +39,9 @@ const Sound = props => {
           />
         </CardMedia>
       )} */}
-      <CardContent>
-        {props.children}
-        {/* {beat.tips.length ? (
+        <Typography>
+          {props.children}
+          {/* {beat.tips.length ? (
                 <p>
                   <span>💡</span>
                   {` Tip: ${
@@ -38,8 +49,9 @@ const Sound = props => {
                   }`}
                 </p>
               ) : null} */}
-      </CardContent>
-    </>
+        </Typography>
+      </div>
+    )
   );
 };
 

@@ -9,17 +9,24 @@ import {
 } from "react-icons/gi";
 
 const Nav = ({ value, setValue }) => {
+  const styles = {
+    Footer: {
+      height: "10vh",
+      maxHeight: "10vh"
+    }
+  };
   return (
     <BottomNavigation
       value={value}
       onChange={(event, newValue) => {
         setValue(newValue);
       }}
+      style={styles.Footer}
     >
       <NavLink to="/progress">
         <BottomNavigationAction icon={<GiMountaintop />} />
       </NavLink>
-
+      {/* 
       <NavLink to="/focus">
         <BottomNavigationAction icon={<GiBullseye />} />
       </NavLink>
@@ -30,7 +37,7 @@ const Nav = ({ value, setValue }) => {
 
       <NavLink to="/create">
         <BottomNavigationAction icon={<GiGroundSprout />} />
-      </NavLink>
+      </NavLink> */}
     </BottomNavigation>
   );
 };

@@ -4,24 +4,19 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import InputBase from "@material-ui/core/InputBase";
 import { IoMdSearch as SearchIcon } from "react-icons/io";
-import { useLocation } from "react-router-dom";
 
 export default function SearchAppBar(props) {
-  const { pathname } = useLocation();
-
+  const styles = {
+    Header: {
+      height: "10vh",
+      maxHeight: "10vh"
+    }
+  };
   return (
-    <AppBar position="sticky">
+    <AppBar position="sticky" style={styles.Header}>
       <Toolbar>
-        <Typography variant="h3">
-          {pathname === "/progress"
-            ? "Progress"
-            : pathname === "/focus"
-            ? "Focus"
-            : pathname === "/create"
-            ? "Create"
-            : pathname === "/freestyle"
-            ? "Freestyle"
-            : null}
+        <Typography variant="h1" primary="boxobeats">
+          boxobeats
         </Typography>
         <div>
           <SearchIcon />

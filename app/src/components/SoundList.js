@@ -26,11 +26,11 @@ const SoundList = props => {
   // };
 
   return (
-    <Grid container spacing={24}>
-      <List>
+    <Grid container spacing={24} style={{ width: "100%" }}>
+      <List style={{ width: "100%" }}>
         {props.beats.map(beat => {
           return (
-            <ListItem button>
+            <ListItem button style={{ width: "100%" }}>
               <Link to={`/progress/${beat.id}`}>
                 <ListItemText
                   style={{ textTransform: "uppercase" }}

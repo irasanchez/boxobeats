@@ -1,12 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { BottomNavigation, BottomNavigationAction } from "@material-ui/core";
-import {
-  GiBullseye,
-  GiMountaintop,
-  GiPerspectiveDiceSixFacesRandom,
-  GiGroundSprout
-} from "react-icons/gi";
+import { GiStairsGoal, GiMicrophone } from "react-icons/gi";
 
 const Nav = ({ value, setValue }) => {
   const styles = {
@@ -24,20 +19,12 @@ const Nav = ({ value, setValue }) => {
       style={styles.Footer}
     >
       <NavLink to="/progress">
-        <BottomNavigationAction icon={<GiMountaintop />} />
-      </NavLink>
-      {/* 
-      <NavLink to="/focus">
-        <BottomNavigationAction icon={<GiBullseye />} />
+        <BottomNavigationAction icon={<GiStairsGoal />} />
       </NavLink>
 
-      <NavLink to="/freestyle">
-        <BottomNavigationAction icon={<GiPerspectiveDiceSixFacesRandom />} />
+      <NavLink to="/practice">
+        <BottomNavigationAction icon={<GiMicrophone />} />
       </NavLink>
-
-      <NavLink to="/create">
-        <BottomNavigationAction icon={<GiGroundSprout />} />
-      </NavLink> */}
     </BottomNavigation>
   );
 };

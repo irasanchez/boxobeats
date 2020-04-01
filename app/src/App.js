@@ -3,12 +3,9 @@ import { Route } from "react-router";
 
 import beatsData from "./assets/beatsData.json";
 
-import Create from "./components/Create";
-import Focus from "./components/Focus";
-import Freestyle from "./components/Freestyle";
 import Progress from "./components/Progress";
 import Metronome from "./components/Metronome";
-import SoundList from "./components/SoundList";
+import Practice from "./components/Practice";
 import Nav from "./components/Nav";
 import SearchAppBar from "./components/AppBar";
 
@@ -37,28 +34,14 @@ const App = props => {
     <>
       <CssBaseline />
       <Container className="App" style={styles.Container}>
+        <SearchAppBar beats={beats} setFilter={setFilter} />
         <Route path="/progress">
-          <SearchAppBar beats={beats} setFilter={setFilter} />
           <Progress beats={filtered} />
         </Route>
-        {/* <Route path="/focus">
-          <SearchAppBar {...props} />
-          <Focus>
-            <SoundList beats={beats} soundsNeeded={1} />
-          </Focus>
+        <Route path="/practice">
+          <Practice beats={filtered} />
         </Route>
-        <Route path="/freestyle">
-          <SearchAppBar {...props} />
-          <Freestyle>
-            <SoundList beats={beats} soundsNeeded={5} />
-          </Freestyle>
-        </Route>
-        <Route path="/create">
-          <SearchAppBar {...props} />
-          <Create>
-            <SoundList beats={beats} soundsNeeded={2} />
-          </Create>
-        </Route> */}
+
         {/* <Metronome /> */}
         <Nav value={navValue} setValue={setNavValue} />
       </Container>

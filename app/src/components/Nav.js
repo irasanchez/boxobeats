@@ -6,8 +6,24 @@ import { GiStairsGoal, GiMicrophone } from "react-icons/gi";
 const Nav = ({ value, setValue }) => {
   const styles = {
     Footer: {
+      display: "flex",
+      justifyContent: "space-evenly",
+      alignItems: "center",
       height: "10vh",
-      maxHeight: "10vh"
+      maxHeight: "10vh",
+      backgroundColor: "#3F51B5"
+    },
+    NavLinks: {
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      width: "40%"
+    },
+    Icons: {
+      color: "white",
+      width: "3.6rem",
+      height: "3.6rem",
+      padding: "5%"
     }
   };
   return (
@@ -18,12 +34,12 @@ const Nav = ({ value, setValue }) => {
       }}
       style={styles.Footer}
     >
-      <NavLink to="/progress">
-        <BottomNavigationAction icon={<GiStairsGoal />} />
+      <NavLink style={styles.NavLinks} to="/progress">
+        <BottomNavigationAction icon={<GiStairsGoal style={styles.Icons} />} />
       </NavLink>
 
-      <NavLink to="/practice">
-        <BottomNavigationAction icon={<GiMicrophone />} />
+      <NavLink style={styles.NavLinks} to="/practice">
+        <BottomNavigationAction icon={<GiMicrophone style={styles.Icons} />} />
       </NavLink>
     </BottomNavigation>
   );

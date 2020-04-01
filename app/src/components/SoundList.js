@@ -34,22 +34,31 @@ const SoundList = props => {
         {props.beats.map(beat => {
           return (
             <>
-              <Link
-                to={`/progress/${beat.id}`}
-                style={{ textDecoration: "none" }}
+              <ListItem
+                style={{
+                  width: "100%",
+                  display: "flex",
+                  justifyContent: "space-between"
+                }}
               >
-                <ListItem button style={{ width: "100%" }}>
+                <Link
+                  to={`/progress/${beat.id}`}
+                  style={{ textDecoration: "none" }}
+                >
                   <ListItemText
                     style={{
                       textTransform: "uppercase"
                     }}
                     primary={beat.name}
                   ></ListItemText>
-                  <ListItemIcon>
-                    <TiPlus />
-                  </ListItemIcon>
-                </ListItem>
-              </Link>
+                </Link>
+                <ListItemIcon
+                  style={{ cursor: "pointer" }}
+                  onClick={() => props.setCurrent(beat)}
+                >
+                  <TiPlus />
+                </ListItemIcon>
+              </ListItem>
 
               {//if this is not the last one in the list, show a divider after
               props.beats[props.beats.length - 1] !== beat ? <Divider /> : null}

@@ -1,9 +1,13 @@
-import React, { Component } from "react";
+import React from "react";
 
-class Practice extends Component {
-  render() {
-    return <div></div>;
-  }
-}
+const Practice = props => {
+  return (
+    <div>
+      {props.current.map(sound => (
+        <p>{sound.name}</p>
+      ))}
+    </div>
+  );
+};
 
 export default Practice;

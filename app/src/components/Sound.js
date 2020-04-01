@@ -43,7 +43,7 @@ const Sound = props => {
         >
           {sound.name}
         </Typography>
-        <TiPlus />
+        <TiPlus onClick={() => props.setCurrent(sound)} />
       </header>
       <section>
         <Typography variant="h3">Creator:</Typography>

@@ -29,6 +29,12 @@ const App = props => {
   const [beats, setBeats] = useState(beatsData.beats);
   const [filtered, setFilter] = useState(beatsData.beats);
   const [navValue, setNavValue] = useState(""); //idk what this is for but it's used in BottomNavigation
+  const [current, setCurrent] = useState([]); //sounds to send to practice page
+
+  const addToCurrentSet = sound => {
+    alert(`Adding ${sound.name} to the practice list.`);
+    setCurrent([...current, sound]);
+  };
 
   return (
     <>
@@ -36,10 +42,10 @@ const App = props => {
       <Container className="App" style={styles.Container}>
         <SearchAppBar beats={beats} setFilter={setFilter} />
         <Route path="/progress">
-          <Progress beats={filtered} />
+          <Progress beats={filtered} setCurrent={addToCurrentSet} />
         </Route>
         <Route path="/practice">
-          <Practice beats={filtered} />
+          <Practice beats={beats} current={current} />
         </Route>
 
         {/* <Metronome /> */}

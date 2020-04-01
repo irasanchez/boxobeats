@@ -28,7 +28,7 @@ const Progress = props => {
     <Grid container style={styles.View}>
       <Grid item sm={5} style={styles.Panels}>
         <Paper>
-          <SoundList beats={props.beats} soundsNeeded={props.beats.length} />
+          <SoundList beats={props.beats} setCurrent={props.setCurrent} />
         </Paper>
       </Grid>
       <Grid item container sm={7} style={styles.Panels}>
@@ -43,7 +43,7 @@ const Progress = props => {
         </Route>
         <Route path="/progress/:id">
           <Paper style={styles.Paper}>
-            <Sound beats={props.beats} />
+            <Sound beats={props.beats} setCurrent={props.setCurrent} />
           </Paper>
         </Route>
       </Grid>

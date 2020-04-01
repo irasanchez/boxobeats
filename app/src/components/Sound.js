@@ -45,28 +45,39 @@ const Sound = props => {
         </Typography>
         <TiPlus />
       </header>
-      <Typography variant="subtitle2">
-        {sound.creator
-          ? `Popularized by ${sound.creator}`
-          : `¯\\_(ツ)_/¯ No idea who 'invented' this`}
-      </Typography>
-
+      <section>
+        <Typography variant="h3">Creator:</Typography>
+        <Typography variant="subtitle2">
+          {sound.creator
+            ? `Popularized by ${sound.creator}`
+            : `¯\\_(ツ)_/¯ No idea who 'invented' this`}
+        </Typography>
+      </section>
       {pathname.includes("/progress") && sound.tutorials ? (
-        <Video
-          youtubeID={
-            sound.tutorials[Math.floor(Math.random() * sound.tutorials.length)]
-          }
-        />
+        <section>
+          <Typography variant="h3">Tutorial:</Typography>
+          <Video
+            youtubeID={
+              sound.tutorials[
+                Math.floor(Math.random() * sound.tutorials.length)
+              ]
+            }
+          />
+        </section>
       ) : null}
 
       <Typography>
         {sound.tips.length ? (
-          <p>
-            <span>💡</span>
-            {` Tip: ${
-              sound.tips[Math.floor(Math.random() * sound.tips.length)]
-            }`}
-          </p>
+          <section>
+            <Typography variant="h3">Tips:</Typography>
+
+            <Typography>
+              <span>💡</span>
+              {` Tip: ${
+                sound.tips[Math.floor(Math.random() * sound.tips.length)]
+              }`}
+            </Typography>
+          </section>
         ) : null}
       </Typography>
     </div>

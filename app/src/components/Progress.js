@@ -35,7 +35,10 @@ const Progress = props => {
         <Route exact path="/progress">
           <Typography variant="h3">Welcome</Typography>
           <Typography variant="subtitle1">
-            Please select a sound from the list for more detail
+            Please select a sound from the list for more information on that
+            sound. If you want to add a sound to your practice session, hit the
+            plus sign. When you're ready to practice, head over to the practice
+            view using the microphone icon.
           </Typography>
         </Route>
         <Route path="/progress/:id">

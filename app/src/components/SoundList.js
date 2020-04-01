@@ -6,8 +6,10 @@ import {
   List,
   ListItem,
   ListItemText,
+  ListItemIcon,
   Divider
 } from "@material-ui/core";
+import { TiPlus } from "react-icons/ti";
 import { Link } from "react-router-dom";
 
 const SoundList = props => {
@@ -43,6 +45,9 @@ const SoundList = props => {
                     }}
                     primary={beat.name}
                   ></ListItemText>
+                  <ListItemIcon>
+                    <TiPlus />
+                  </ListItemIcon>
                 </ListItem>
               </Link>
 

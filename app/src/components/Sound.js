@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Typography } from "@material-ui/core";
 import Video from "./Video";
+import { TiPlus } from "react-icons/ti";
 import { useParams, useLocation } from "react-router-dom";
 
 const styles = {
@@ -34,13 +35,16 @@ const Sound = props => {
 
   return sound ? (
     <div style={styles.SoundCard}>
-      <Typography
-        primary={sound.name}
-        variant="h2"
-        style={{ textTransform: "capitalize" }}
-      >
-        {sound.name}
-      </Typography>
+      <header>
+        <Typography
+          primary={sound.name}
+          variant="h2"
+          style={{ textTransform: "capitalize" }}
+        >
+          {sound.name}
+        </Typography>
+        <TiPlus />
+      </header>
       <Typography variant="subtitle2">
         {sound.creator
           ? `Popularized by ${sound.creator}`

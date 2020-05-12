@@ -1,12 +1,20 @@
 import React from "react";
+import Metronome from "./Metronome";
+import { Grid, Typography } from "@material-ui/core";
+import { Link } from "react-router-dom";
 
 const Practice = props => {
   return (
-    <div>
+    <Grid container alignItems="center">
       {props.current.map(sound => (
-        <p>{sound.name}</p>
+        <Grid item xs={12}>
+          <Link to={`/progress/${sound.id}`}>
+            <Typography variant="h3">{sound.name}</Typography>
+          </Link>
+        </Grid>
       ))}
-    </div>
+      <Metronome />
+    </Grid>
   );
 };
 

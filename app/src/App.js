@@ -4,7 +4,7 @@ import { Route } from "react-router";
 import beatsData from "./assets/beatsData.json";
 
 import Progress from "./components/Progress";
-import Metronome from "./components/Metronome";
+
 import Practice from "./components/Practice";
 import Nav from "./components/Nav";
 import SearchAppBar from "./components/AppBar";
@@ -48,7 +48,6 @@ const App = props => {
           <Practice beats={beats} current={current} />
         </Route>
 
-        {/* <Metronome /> */}
         <Nav value={navValue} setValue={setNavValue} />
       </Container>
     </>

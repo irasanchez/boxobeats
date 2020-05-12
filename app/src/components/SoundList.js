@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import Sound from "./Sound";
+import React from "react";
 import {
   Grid,
   Typography,

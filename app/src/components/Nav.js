@@ -11,35 +11,37 @@ const Nav = ({ value, setValue }) => {
       alignItems: "center",
       height: "10vh",
       maxHeight: "10vh",
-      backgroundColor: "#3F51B5"
+      backgroundColor: "#3F51B5",
     },
     NavLinks: {
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
-      width: "40%"
+      width: "40%",
     },
     Icons: {
       color: "white",
       width: "3.6rem",
       height: "3.6rem",
-      padding: "5%"
-    }
+      padding: "5%",
+    },
   };
+  const { NavLinks, Icons, Footer } = styles;
+
   return (
     <BottomNavigation
       value={value}
       onChange={(event, newValue) => {
         setValue(newValue);
       }}
-      style={styles.Footer}
+      style={Footer}
     >
-      <NavLink style={styles.NavLinks} to="/progress">
-        <BottomNavigationAction icon={<GiStairsGoal style={styles.Icons} />} />
+      <NavLink style={NavLinks} to="/progress">
+        <BottomNavigationAction icon={<GiStairsGoal style={Icons} />} />
       </NavLink>
 
-      <NavLink style={styles.NavLinks} to="/practice">
-        <BottomNavigationAction icon={<GiMicrophone style={styles.Icons} />} />
+      <NavLink style={NavLinks} to="/practice">
+        <BottomNavigationAction icon={<GiMicrophone style={Icons} />} />
       </NavLink>
     </BottomNavigation>
   );

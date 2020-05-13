@@ -11,15 +11,16 @@ import Container from "@material-ui/core/Container";
 const apiUrl = process.env.REACT_APP_API_URL;
 
 const useStyles = makeStyles((theme) => ({
+  container: {
+    maxHeight: "80vh",
+    height: "100%",
+  },
   paper: {
-    marginTop: theme.spacing(8),
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-  },
-  avatar: {
-    margin: theme.spacing(1),
-    backgroundColor: theme.palette.secondary.main,
+    height: "100%",
+    justifyContent: "center",
   },
   form: {
     width: "100%", // Fix IE 11 issue.
@@ -54,7 +55,7 @@ const Register = () => {
   };
 
   return (
-    <Container component="main" maxWidth="xs">
+    <Container component="main" maxWidth="xs" className={classes.container}>
       <div className={classes.paper}>
         <Typography component="h1" variant="h5">
           Sign up

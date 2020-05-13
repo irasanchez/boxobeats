@@ -11,15 +11,16 @@ import Container from "@material-ui/core/Container";
 import { axiosWithAuth } from "./axiosWithAuth";
 
 const useStyles = makeStyles((theme) => ({
+  container: {
+    maxHeight: "80vh",
+    height: "100%",
+  },
   paper: {
-    marginTop: theme.spacing(8),
+    height: "100%",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-  },
-  avatar: {
-    margin: theme.spacing(1),
-    backgroundColor: theme.palette.secondary.main,
+    justifyContent: "center",
   },
   form: {
     width: "100%", // Fix IE 11 issue.
@@ -59,7 +60,7 @@ const Login = () => {
   };
 
   return (
-    <Container component="main" maxWidth="xs">
+    <Container component="main" maxWidth="xs" className={classes.container}>
       <div className={classes.paper}>
         <Typography component="h1" variant="h5">
           Sign in

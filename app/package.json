@@ -1,5 +1,6 @@
 {
-  "name": "app",
+  "name": "boxobeats",
+  "author": "Ira Sanchez irasanchez.com",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Grid, Typography, Paper } from "@material-ui/core";
 import { Route } from "react-router-dom";
 import Sound from "./Sound";
 import SoundList from "./SoundList";
+import { connect } from "react-redux";
+import { getSounds } from "../actions/actions";
+
 const Progress = (props) => {
   const styles = {
     View: {
@@ -23,6 +26,8 @@ const Progress = (props) => {
       // padding: "0 5%",
     },
   };
+
+  useEffect(props.getSounds, []);
 
   return (
     <Grid container style={styles.View}>
@@ -55,4 +60,11 @@ const Progress = (props) => {
   );
 };
 
-export default Progress;
+const mapStateToProps = (state) => {
+  return {
+    sounds: state.sounds,
+    error: state.error,
+  };
+};
+
+export default connect(mapStateToProps, { getSounds })(Progress);

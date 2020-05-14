@@ -10,6 +10,7 @@ import Nav from "./components/Nav";
 import SearchAppBar from "./components/AppBar";
 
 import { CssBaseline, Container } from "@material-ui/core";
+import { axiosWithAuth } from "./components/auth/axiosWithAuth";
 const apiUrl = process.env.REACT_APP_API_URL;
 
 const styles = {
@@ -38,7 +39,10 @@ const App = (props) => {
   };
 
   const getSounds = () => {
-    axios.get(`${apiUrl}/sounds`);
+    axiosWithAuth()
+      .get(`${apiUrl}/sounds`)
+      .then((res) => console.log(res))
+      .catch((err) => console.log(err));
   };
 
   return (

@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { Typography } from "@material-ui/core";
+import { Typography, Button } from "@material-ui/core";
 import Video from "./Video";
 import { TiPlus } from "react-icons/ti";
 import { useParams, useLocation } from "react-router-dom";
+import { connect } from "react-redux";
+import { addToPractice, getSoundByID } from "../actions/actions";
 
 const styles = {
   SoundCard: {
@@ -11,70 +13,57 @@ const styles = {
     justifyContent: "space-evenly",
     padding: "0 5%",
     width: "100%",
-    height: "100%"
-  }
+    height: "100%",
+    header: {
+      display: "flex",
+      justifyContent: "space-between",
+    },
+  },
 };
 
-const Sound = props => {
-  const [sound, setSound] = useState({
-    name: "",
-    tips: [],
-    creator: "",
-    tutorials: [],
-    id: "",
-    prerequisites: [],
-    learned: false
-  });
+const Sound = (props) => {
+  const { currentSound } = props;
   const { id } = useParams();
   const { pathname } = useLocation();
 
   useEffect(() => {
-    let foundSound = props.beats.find(sound => id === sound.id);
-    setSound(foundSound);
+    props.getSoundByID(id);
   }, [id]);
 
-  return sound ? (
+  return currentSound ? (
     <div style={styles.SoundCard}>
-      <header>
+      <header style={styles.SoundCard.header}>
         <Typography
-          primary={sound.name}
+          primary={currentSound.name}
           variant="h2"
           style={{ textTransform: "capitalize" }}
         >
-          {sound.name}
+          {currentSound.name}
         </Typography>
-        <TiPlus onClick={() => props.setCurrent(sound)} />
+        <Button onClick={() => props.addToPractice(currentSound)}>
+          <TiPlus />
+          Add to Practice
+        </Button>
       </header>
-      <section>
-        <Typography variant="h3">Creator:</Typography>
-        <Typography variant="subtitle2">
-          {sound.creator
-            ? `Popularized by ${sound.creator}`
-            : `¯\\_(ツ)_/¯ No idea who 'invented' this`}
-        </Typography>
-      </section>
-      {pathname.includes("/progress") && sound.tutorials ? (
+
+      {pathname.includes("/progress") && currentSound.tutorial ? (
         <section>
           <Typography variant="h3">Tutorial:</Typography>
-          <Video
-            youtubeID={
-              sound.tutorials[
-                Math.floor(Math.random() * sound.tutorials.length)
-              ]
-            }
-          />
+          <Video youtubeID={currentSound.tutorial} />
         </section>
       ) : null}
 
       <Typography>
-        {sound.tips.length ? (
+        {currentSound.tips ? (
           <section>
             <Typography variant="h3">Tips:</Typography>
 
             <Typography>
               <span>💡</span>
               {` Tip: ${
-                sound.tips[Math.floor(Math.random() * sound.tips.length)]
+                currentSound.tips[
+                  Math.floor(Math.random() * currentSound.tips.length)
+                ]
               }`}
             </Typography>
           </section>
@@ -84,4 +73,12 @@ const Sound = props => {
   ) : null;
 };
 
-export default Sound;
+const mapStateToProps = (state) => {
+  return {
+    sounds: state.sounds,
+    error: state.error,
+    currentSound: state.currentSound,
+  };
+};
+
+export default connect(mapStateToProps, { addToPractice, getSoundByID })(Sound);

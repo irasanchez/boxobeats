@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   Grid,
   Typography,
@@ -6,61 +6,53 @@ import {
   ListItem,
   ListItemText,
   ListItemIcon,
-  Divider
+  Divider,
 } from "@material-ui/core";
 import { TiPlus } from "react-icons/ti";
 import { Link } from "react-router-dom";
+import { connect } from "react-redux";
+import { getSounds, addToPractice } from "../actions/actions";
 
-const SoundList = props => {
-  //save this for the other views
-  //const getRandomNSounds = (list, amountNeeded) => {
-  //   if (amountNeeded === list.length) {
-  //     return list;
-  //   } else {
-  //     const randomSounds = [];
-  //     while (amountNeeded > 0) {
-  //       const randomIndex = Math.floor(Math.random() * list.length);
-  //       randomSounds.push(list[randomIndex]);
-  //       amountNeeded--;
-  //     }
-  //     return randomSounds;
-  //   }
-  // };
-
+const SoundList = (props) => {
+  useEffect(props.getSounds, []);
   return (
     <Grid container spacing={24} style={{ width: "100%" }}>
       <List style={{ width: "100%" }}>
-        {props.beats.map(beat => {
+        {props.sounds.map((sound) => {
           return (
             <>
               <ListItem
                 style={{
                   width: "100%",
                   display: "flex",
-                  justifyContent: "space-between"
+                  justifyContent: "space-between",
                 }}
               >
                 <Link
-                  to={`/progress/${beat.id}`}
+                  to={`/progress/${sound.id}`}
                   style={{ textDecoration: "none" }}
                 >
                   <ListItemText
                     style={{
-                      textTransform: "uppercase"
+                      textTransform: "uppercase",
                     }}
-                    primary={beat.name}
+                    primary={sound.name}
                   ></ListItemText>
                 </Link>
                 <ListItemIcon
                   style={{ cursor: "pointer" }}
-                  onClick={() => props.setCurrent(beat)}
+                  onClick={() => props.addToPractice(sound)}
                 >
                   <TiPlus />
                 </ListItemIcon>
               </ListItem>
 
-              {//if this is not the last one in the list, show a divider after
-              props.beats[props.beats.length - 1] !== beat ? <Divider /> : null}
+              {
+                //if this is not the last one in the list, show a divider after
+                props.sounds[props.sounds.length - 1] !== sound ? (
+                  <Divider />
+                ) : null
+              }
             </>
           );
         })}
@@ -69,6 +61,15 @@ const SoundList = props => {
   );
 };
 
-export default SoundList;
+const mapStateToProps = (state) => {
+  return {
+    sounds: state.sounds,
+    error: state.error,
+  };
+};
+
+export default connect(mapStateToProps, { getSounds, addToPractice })(
+  SoundList
+);
 
 //test that the component renders with props

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { AppBar, TextField, Typography, Toolbar } from "@material-ui/core";
 import { IoMdSearch as SearchIcon } from "react-icons/io";
 import { useHistory } from "react-router-dom";
+import { connect } from "react-redux";
 
 const styles = {
   Header: {
@@ -25,7 +26,7 @@ const styles = {
   color: { color: "white" },
 };
 
-export default function SearchAppBar(props) {
+function SearchAppBar(props) {
   const [searchQuery, setSearchQuery] = useState("");
 
   const { push } = useHistory();
@@ -41,14 +42,14 @@ export default function SearchAppBar(props) {
     let newList = [];
 
     if (event.target.value !== "") {
-      current = props.beats;
+      current = props.sounds;
       newList = current.filter((sound) => {
         let name = sound.name.toLowerCase();
         let query = event.target.value.toLowerCase();
         return name.includes(query);
       });
     } else {
-      newList = props.beats;
+      newList = props.sounds;
     }
     props.setFilter(newList);
   };
@@ -56,8 +57,8 @@ export default function SearchAppBar(props) {
   return (
     <AppBar position="sticky" style={styles.Header}>
       <Toolbar style={styles.Toolbar}>
-        <Typography variant="h1" primary="boxobeats" style={styles.h1}>
-          boxobeats
+        <Typography variant="h1" primary="boxosounds" style={styles.h1}>
+          boxosounds
         </Typography>
         <form style={styles.form}>
           <SearchIcon />
@@ -75,3 +76,12 @@ export default function SearchAppBar(props) {
     </AppBar>
   );
 }
+
+const mapStateToProps = (state) => {
+  return {
+    sounds: state.sounds,
+    error: state.error,
+  };
+};
+
+export default connect(mapStateToProps, {})(AppBar);

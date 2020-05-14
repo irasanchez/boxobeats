@@ -26,17 +26,8 @@ const styles = {
 };
 
 const App = (props) => {
-  //grab data from json file and set it to state
-  //FIXME: Must get data dynamically using axios
-  const [beats, setBeats] = useState([]);
   const [filtered, setFilter] = useState([]); //used to enable search
   const [navValue, setNavValue] = useState("");
-  const [current, setCurrent] = useState([]); //sounds to send to practice page
-
-  const addToCurrentSet = (sound) => {
-    alert(`Adding ${sound.name} to the practice list.`);
-    setCurrent([...current, sound]);
-  };
 
   const getSounds = () => {
     axiosWithAuth()
@@ -49,7 +40,7 @@ const App = (props) => {
     <>
       <CssBaseline />
       <Container className="App" style={styles.Container}>
-        <SearchAppBar beats={beats} setFilter={setFilter} />
+        <SearchAppBar setFilter={setFilter} />
 
         <Route path="/register">
           <Register />
@@ -60,10 +51,10 @@ const App = (props) => {
         </Route>
 
         <Route path="/progress">
-          <Progress beats={filtered} setCurrent={addToCurrentSet} />
+          <Progress sounds={filtered} />
         </Route>
         <Route path="/practice">
-          <Practice beats={beats} current={current} />
+          <Practice />
         </Route>
 
         <Nav value={navValue} setValue={setNavValue} />

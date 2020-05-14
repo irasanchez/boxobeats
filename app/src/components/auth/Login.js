@@ -8,7 +8,8 @@ import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
-import { axiosWithAuth } from "./axiosWithAuth";
+import axios from "axios";
+const apiUrl = process.env.REACT_APP_API_URL;
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -40,7 +41,6 @@ const Login = () => {
   });
 
   const handleChanges = (e) => {
-    e.preventDefault();
     setLogin({
       ...login,
       [e.target.name]: e.target.value,
@@ -49,9 +49,11 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axiosWithAuth()
-      .post("/api/login", login)
+    console.log("%%%%%% submitting");
+    axios
+      .post(`${apiUrl}/api/auth/login`, login)
       .then((res) => {
+        console.log("$$$$$$$", res);
         localStorage.setItem("token", res.data.token);
         push("/progress");
       })
@@ -65,7 +67,7 @@ const Login = () => {
         <Typography component="h1" variant="h5">
           Sign in
         </Typography>
-        <form className={classes.form} noValidate>
+        <form className={classes.form} noValidate onSubmit={handleSubmit}>
           <TextField
             variant="outlined"
             margin="normal"

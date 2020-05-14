@@ -4,7 +4,7 @@ import Video from "./Video";
 import { TiPlus } from "react-icons/ti";
 import { useParams, useLocation } from "react-router-dom";
 import { connect } from "react-redux";
-import { addToPractice, getSoundByID } from "../actions/actions";
+import { addToPractice, getSoundByID, getSounds } from "../actions/actions";
 
 const styles = {
   SoundCard: {
@@ -22,11 +22,12 @@ const styles = {
 };
 
 const Sound = (props) => {
-  const { currentSound } = props;
+  const { currentSound, sounds } = props;
   const { id } = useParams();
   const { pathname } = useLocation();
 
   useEffect(() => {
+    props.getSounds();
     props.getSoundByID(id);
   }, [id]);
 
@@ -81,4 +82,8 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps, { addToPractice, getSoundByID })(Sound);
+export default connect(mapStateToProps, {
+  addToPractice,
+  getSoundByID,
+  getSounds,
+})(Sound);

@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { AppBar, TextField, Typography, Toolbar } from "@material-ui/core";
 import { IoMdSearch as SearchIcon } from "react-icons/io";
 import { useHistory } from "react-router-dom";
-import { connect } from "react-redux";
 
 const styles = {
   Header: {
@@ -77,11 +76,4 @@ function SearchAppBar(props) {
   );
 }
 
-const mapStateToProps = (state) => {
-  return {
-    sounds: state.sounds,
-    error: state.error,
-  };
-};
-
-export default connect(mapStateToProps, {})(AppBar);
+export default SearchAppBar;

@@ -4,6 +4,7 @@ import { Route } from "react-router";
 import axios from "axios";
 import Register from "./components/auth/Register";
 import Login from "./components/auth/Login";
+import PrivateRoute from "./components/auth/PrivateRoute";
 import Progress from "./components/Progress";
 import Practice from "./components/Practice";
 import Nav from "./components/Nav";
@@ -50,12 +51,12 @@ const App = (props) => {
           <Login />
         </Route>
 
-        <Route path="/progress">
+        <PrivateRoute path="/progress">
           <Progress sounds={filtered} />
-        </Route>
-        <Route path="/practice">
+        </PrivateRoute>
+        <PrivateRoute path="/practice">
           <Practice />
-        </Route>
+        </PrivateRoute>
 
         <Nav value={navValue} setValue={setNavValue} />
       </Container>

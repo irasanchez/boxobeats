@@ -28,7 +28,7 @@ const Practice = (props) => {
       >
         {props.practiceSet.map((sound) => (
           <Grid style={styles.GridItem} item xs={12}>
-            <Link to={`/progress/${sound.id}`}>
+            <Link to={`/${sound.id}`}>
               <Typography variant="h3">{sound.name}</Typography>
             </Link>
           </Grid>

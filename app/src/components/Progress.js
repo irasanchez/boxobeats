@@ -34,7 +34,7 @@ const Progress = (props) => {
       </Grid>
 
       <Grid item container sm={7} style={styles.Panels}>
-        <Route exact path="/progress">
+        <Route exact path="/">
           <Typography variant="h3">Welcome</Typography>
           <Typography variant="subtitle1">
             Please select a sound from the list for more information on that
@@ -43,7 +43,7 @@ const Progress = (props) => {
             view using the microphone icon.
           </Typography>
         </Route>
-        <Route path="/progress/:id">
+        <Route path="/:id">
           <Paper style={styles.Paper}>
             <Sound />
           </Paper>

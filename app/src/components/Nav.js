@@ -36,7 +36,7 @@ const Nav = ({ value, setValue }) => {
       }}
       style={Footer}
     >
-      <NavLink style={NavLinks} to="/progress">
+      <NavLink style={NavLinks} to="/">
         <BottomNavigationAction icon={<GiStairsGoal style={Icons} />} />
       </NavLink>
 

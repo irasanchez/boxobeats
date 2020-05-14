@@ -1,21 +1,41 @@
 import React from "react";
 import Metronome from "./Metronome";
-import { Grid, Typography } from "@material-ui/core";
+import { Grid, Typography, Paper } from "@material-ui/core";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 
 const Practice = (props) => {
+  const styles = {
+    View: {
+      height: "80vh",
+      maxHeight: "80vh",
+      width: "100%",
+    },
+    Grid: { height: "100%", display: "flex" },
+    GridItem: {
+      width: "50%",
+    },
+  };
+
   return (
-    <Grid container alignItems="center">
-      {props.practiceSet.map((sound) => (
-        <Grid item xs={12}>
-          <Link to={`/progress/${sound.id}`}>
-            <Typography variant="h3">{sound.name}</Typography>
-          </Link>
-        </Grid>
-      ))}
-      <Metronome />
-    </Grid>
+    <Paper style={styles.View}>
+      <Grid
+        container
+        direction="column"
+        alignItems="center"
+        justify="space-around"
+        //style={styles.Grid}
+      >
+        {props.practiceSet.map((sound) => (
+          <Grid style={styles.GridItem} item xs={12}>
+            <Link to={`/progress/${sound.id}`}>
+              <Typography variant="h3">{sound.name}</Typography>
+            </Link>
+          </Grid>
+        ))}
+        <Metronome />
+      </Grid>
+    </Paper>
   );
 };
 

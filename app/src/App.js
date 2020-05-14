@@ -49,7 +49,7 @@ const App = (props) => {
           <Login />
         </Route>
 
-        <PrivateRoute path="/progress">
+        <PrivateRoute path="/">
           <Progress sounds={filtered} />
         </PrivateRoute>
         <PrivateRoute path="/practice">

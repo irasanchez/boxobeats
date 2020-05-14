@@ -21,7 +21,7 @@ const SoundList = (props) => {
       <List style={{ width: "100%" }}>
         {props.sounds.map((sound) => {
           return (
-            <>
+            <React.Fragment key={sound.id}>
               <ListItem
                 style={{
                   width: "100%",
@@ -54,7 +54,7 @@ const SoundList = (props) => {
                   <Divider />
                 ) : null
               }
-            </>
+            </React.Fragment>
           );
         })}
       </List>

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Route } from "react-router";
+import { Route, Redirect } from "react-router";
 import axios from "axios";
 import Register from "./components/auth/Register";
 import Login from "./components/auth/Login";
@@ -41,6 +41,8 @@ const App = (props) => {
       <Container className="App" style={styles.Container}>
         <SearchAppBar setFilter={setFilter} />
 
+        <Redirect from="/" to="/sounds" />
+
         <Route path="/register">
           <Register />
         </Route>
@@ -49,7 +51,7 @@ const App = (props) => {
           <Login />
         </Route>
 
-        <PrivateRoute path="/">
+        <PrivateRoute path="/sounds">
           <Progress sounds={filtered} />
         </PrivateRoute>
         <PrivateRoute path="/practice">

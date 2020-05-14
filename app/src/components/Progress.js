@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Grid, Typography, Paper } from "@material-ui/core";
-import { Route } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import Sound from "./Sound";
 import SoundList from "./SoundList";
 
@@ -34,20 +34,22 @@ const Progress = (props) => {
       </Grid>
 
       <Grid item container sm={7} style={styles.Panels}>
-        <Route exact path="/">
-          <Typography variant="h3">Welcome</Typography>
-          <Typography variant="subtitle1">
-            Please select a sound from the list for more information on that
-            sound. If you want to add a sound to your practice session, hit the
-            plus sign. When you're ready to practice, head over to the practice
-            view using the microphone icon.
-          </Typography>
-        </Route>
-        <Route path="/:id">
-          <Paper style={styles.Paper}>
-            <Sound />
-          </Paper>
-        </Route>
+        <Switch>
+          <Route path="/sounds/:id">
+            <Paper style={styles.Paper}>
+              <Sound />
+            </Paper>
+          </Route>
+          <Route exact path="/sounds">
+            <Typography variant="h3">Welcome</Typography>
+            <Typography variant="subtitle1">
+              Please select a sound from the list for more information on that
+              sound. If you want to add a sound to your practice session, hit
+              the plus sign. When you're ready to practice, head over to the
+              practice view using the microphone icon.
+            </Typography>
+          </Route>
+        </Switch>
       </Grid>
     </Grid>
   );

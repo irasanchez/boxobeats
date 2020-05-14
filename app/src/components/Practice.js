@@ -7,9 +7,8 @@ import { connect } from "react-redux";
 const Practice = (props) => {
   const styles = {
     View: {
-      height: "80vh",
+      height: "100%",
       maxHeight: "80vh",
-      width: "100%",
     },
     Grid: { height: "100%", display: "flex" },
     GridItem: {

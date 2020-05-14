@@ -29,7 +29,10 @@ const SoundList = (props) => {
                   justifyContent: "space-between",
                 }}
               >
-                <Link to={`/${sound.id}`} style={{ textDecoration: "none" }}>
+                <Link
+                  to={`/sounds/${sound.id}`}
+                  style={{ textDecoration: "none" }}
+                >
                   <ListItemText
                     style={{
                       textTransform: "uppercase",

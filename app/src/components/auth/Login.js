@@ -55,7 +55,7 @@ const Login = () => {
       .then((res) => {
         console.log("$$$$$$$", res);
         localStorage.setItem("token", res.data.token);
-        push("/");
+        push("/sounds");
       })
       .catch((err) => console.log(err.response));
     setLogin({ username: "", password: "" });

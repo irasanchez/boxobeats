@@ -8,20 +8,20 @@ export const GET_SOUND_BY_ID = "GET_SOUND_BY_ID";
 export const SET_ERROR = "SET_ERROR";
 export const ADD_TIP = "ADD_TIP";
 export const ADD_TO_PRACTICE = "ADD_TO_PRACTICE";
+export const SET_FILTER = "SET_FILTER";
 
 export const getSounds = () => (dispatch) => {
   dispatch({ type: FETCH_DATA });
   axiosWithAuth()
     .get(`${apiUrl}/api/sounds`)
     .then((res) => {
-      console.log(res);
       dispatch({ type: GET_SOUNDS, payload: res.data });
+      dispatch({ type: SET_FILTER, payload: "" });
     })
     .catch((err) => {
-      console.log("error fetching data from api, err: ", err);
       dispatch({
         type: SET_ERROR,
-        payload: "error fetching data from api, err: ",
+        payload: `error fetching data from api, err: ${err}`,
       });
     });
 };
@@ -46,4 +46,9 @@ export const getSoundByID = (id) => (dispatch) => {
 export const addToPractice = (sound) => ({
   type: ADD_TO_PRACTICE,
   payload: sound,
+});
+
+export const setFilter = (query) => ({
+  type: SET_FILTER,
+  payload: query,
 });

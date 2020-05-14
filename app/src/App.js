@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Route } from "react-router";
-
 import axios from "axios";
 import Register from "./components/auth/Register";
 import Login from "./components/auth/Login";
@@ -9,7 +8,6 @@ import Progress from "./components/Progress";
 import Practice from "./components/Practice";
 import Nav from "./components/Nav";
 import SearchAppBar from "./components/AppBar";
-
 import { CssBaseline, Container } from "@material-ui/core";
 import { axiosWithAuth } from "./components/auth/axiosWithAuth";
 const apiUrl = process.env.REACT_APP_API_URL;

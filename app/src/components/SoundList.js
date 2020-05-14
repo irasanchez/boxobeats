@@ -15,6 +15,7 @@ import { getSounds, addToPractice } from "../actions/actions";
 
 const SoundList = (props) => {
   useEffect(props.getSounds, []);
+
   return (
     <Grid container spacing={24} style={{ width: "100%" }}>
       <List style={{ width: "100%" }}>
@@ -63,7 +64,7 @@ const SoundList = (props) => {
 
 const mapStateToProps = (state) => {
   return {
-    sounds: state.sounds,
+    sounds: state.filtered,
     error: state.error,
   };
 };
@@ -71,5 +72,3 @@ const mapStateToProps = (state) => {
 export default connect(mapStateToProps, { getSounds, addToPractice })(
   SoundList
 );
-
-//test that the component renders with props

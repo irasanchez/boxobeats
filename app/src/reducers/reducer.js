@@ -1,10 +1,11 @@
 import {
-  FETCH_DATA,
-  GET_SOUNDS,
-  GET_SOUND_BY_ID,
-  SET_ERROR,
   ADD_TIP,
   ADD_TO_PRACTICE,
+  FETCH_DATA,
+  GET_SOUND_BY_ID,
+  GET_SOUNDS,
+  SET_ERROR,
+  SET_FILTER,
 } from "../actions/actions";
 
 const initialState = {
@@ -17,6 +18,7 @@ const initialState = {
   practiceSet: [],
   currentUser: {},
   currentSound: {},
+  filtered: [],
 };
 
 export const reducer = (state = initialState, action) => {
@@ -54,6 +56,16 @@ export const reducer = (state = initialState, action) => {
       return {
         ...state,
         practiceSet: [...state.practiceSet, action.payload],
+      };
+    case SET_FILTER:
+      console.log(action.payload);
+      return {
+        ...state,
+        filtered: action.payload
+          ? state.sounds.filter((sound) =>
+              sound.name.toLowerCase().includes(action.payload.toLowerCase())
+            )
+          : [...state.sounds],
       };
     default:
       return state;

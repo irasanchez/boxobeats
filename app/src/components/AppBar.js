@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { AppBar, TextField, Typography, Toolbar } from "@material-ui/core";
 import { IoMdSearch as SearchIcon } from "react-icons/io";
 import { useHistory } from "react-router-dom";
+import { connect } from "react-redux";
+import { setFilter } from "../actions/actions";
 
 const styles = {
   Header: {
@@ -36,21 +38,9 @@ function SearchAppBar(props) {
   };
 
   const changeHandler = (event) => {
-    setSearchQuery(event.target.value); //will not function properly if value is grabbed from state, will skip letters and return searches late
-    let current = [];
-    let newList = [];
-
-    if (event.target.value !== "") {
-      current = props.sounds;
-      newList = current.filter((sound) => {
-        let name = sound.name.toLowerCase();
-        let query = event.target.value.toLowerCase();
-        return name.includes(query);
-      });
-    } else {
-      newList = props.sounds;
-    }
-    props.setFilter(newList);
+    setSearchQuery(event.target.value);
+    props.setFilter(event.target.value);
+    // ⚠ 👆 will not function properly if value is grabbed from state, will skip letters and return searches late due to state being async
   };
 
   return (
@@ -76,4 +66,10 @@ function SearchAppBar(props) {
   );
 }
 
-export default SearchAppBar;
+const mapStateToProps = (state) => {
+  return {
+    error: state.error,
+  };
+};
+
+export default connect(mapStateToProps, { setFilter })(SearchAppBar);

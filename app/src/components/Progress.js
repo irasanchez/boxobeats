@@ -29,7 +29,7 @@ const Progress = (props) => {
     <Grid container style={styles.View}>
       <Grid item sm={5} style={styles.Panels}>
         <Paper>
-          <SoundList setCurrent={props.setCurrent} />
+          <SoundList />
         </Paper>
       </Grid>
 

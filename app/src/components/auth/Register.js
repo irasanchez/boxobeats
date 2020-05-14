@@ -50,7 +50,7 @@ const Register = () => {
     setFormState(defaultFormState);
     axios
       .post(`${apiUrl}/api/auth/register`, formState)
-      .then((res) => push("/sounds"))
+      .then((res) => push("/login"))
       .catch((err) => console.log(err));
   };
 

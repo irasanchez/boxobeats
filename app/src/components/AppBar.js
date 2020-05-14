@@ -57,7 +57,7 @@ function SearchAppBar(props) {
     <AppBar position="sticky" style={styles.Header}>
       <Toolbar style={styles.Toolbar}>
         <Typography variant="h1" primary="boxosounds" style={styles.h1}>
-          boxosounds
+          boxobeats
         </Typography>
         <form style={styles.form}>
           <SearchIcon />

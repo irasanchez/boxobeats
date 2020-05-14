@@ -51,9 +51,9 @@ const App = (props) => {
           <Login />
         </Route>
 
-        <PrivateRoute path="/sounds">
+        <Route path="/sounds">
           <Progress sounds={filtered} />
-        </PrivateRoute>
+        </Route>
         <PrivateRoute path="/practice">
           <Practice />
         </PrivateRoute>

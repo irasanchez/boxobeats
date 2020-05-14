@@ -1,5 +1,6 @@
 import axios from "axios";
 import { axiosWithAuth } from "../components/auth/axiosWithAuth";
+
 const apiUrl = process.env.REACT_APP_API_URL;
 
 export const FETCH_DATA = "FETCH_DATA";
@@ -12,7 +13,7 @@ export const SET_FILTER = "SET_FILTER";
 
 export const getSounds = () => (dispatch) => {
   dispatch({ type: FETCH_DATA });
-  axiosWithAuth()
+  axios
     .get(`${apiUrl}/api/sounds`)
     .then((res) => {
       dispatch({ type: GET_SOUNDS, payload: res.data });
@@ -28,7 +29,7 @@ export const getSounds = () => (dispatch) => {
 
 export const getSoundByID = (id) => (dispatch) => {
   dispatch({ type: FETCH_DATA });
-  axiosWithAuth()
+  axios
     .get(`${apiUrl}/api/sounds/${id}`)
     .then((res) => {
       console.log(res);

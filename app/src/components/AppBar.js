@@ -4,6 +4,7 @@ import { IoMdSearch as SearchIcon } from "react-icons/io";
 import { useHistory } from "react-router-dom";
 import { connect } from "react-redux";
 import { setFilter } from "../actions/actions";
+import { Link } from "react-router-dom";
 
 const styles = {
   Header: {
@@ -47,7 +48,7 @@ function SearchAppBar(props) {
     <AppBar position="sticky" style={styles.Header}>
       <Toolbar style={styles.Toolbar}>
         <Typography variant="h1" primary="boxosounds" style={styles.h1}>
-          boxobeats
+          <Link to="/sounds">boxobeats</Link>
         </Typography>
         <form style={styles.form}>
           <SearchIcon />

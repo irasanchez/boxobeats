@@ -49,12 +49,12 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("%%%%%% submitting");
+
     axios
       .post(`${apiUrl}/api/auth/login`, login)
       .then((res) => {
-        console.log("$$$$$$$", res);
         localStorage.setItem("token", res.data.token);
+        console.log("logging in", localStorage.getItem("token"));
         push("/sounds");
       })
       .catch((err) => console.log(err.response));

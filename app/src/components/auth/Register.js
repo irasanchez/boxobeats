@@ -50,7 +50,7 @@ const Register = () => {
     setFormState(defaultFormState);
     axios
       .post(`${apiUrl}/api/auth/register`, formState)
-      .then((res) => push("/login"))
+      .then((res) => push("/"))
       .catch((err) => console.log(err));
   };
 
@@ -120,7 +120,7 @@ const Register = () => {
           </Button>
           <Grid container justify="flex-end">
             <Grid item>
-              <Link to="/login" variant="body2">
+              <Link to="/" variant="body2">
                 Already have an account? Sign in
               </Link>
             </Grid>

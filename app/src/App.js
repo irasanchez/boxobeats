@@ -37,19 +37,18 @@ const App = (props) => {
       <Container className="App" style={styles.Container}>
         <SearchAppBar />
 
-        <Redirect from="/" to="/sounds" />
-
         <Route path="/register">
           <Register />
         </Route>
 
-        <Route path="/login">
+        <Route exact path="/">
           <Login />
         </Route>
 
         <Route path="/sounds">
           <Progress sounds={props.filtered} />
         </Route>
+
         <PrivateRoute path="/practice">
           <Practice />
         </PrivateRoute>

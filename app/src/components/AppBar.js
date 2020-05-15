@@ -35,7 +35,7 @@ function SearchAppBar(props) {
 
   const handleClick = () => {
     localStorage.removeItem("token");
-    push("/login");
+    push("/");
   };
 
   const changeHandler = (event) => {

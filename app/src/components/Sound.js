@@ -46,13 +46,10 @@ const Sound = (props) => {
           Add to Practice
         </Button>
       </header>
-
-      {pathname.includes("/sounds/") && currentSound.tutorial ? (
-        <section>
-          <Typography variant="h3">Tutorial:</Typography>
-          <Video youtubeID={currentSound.tutorial} />
-        </section>
-      ) : null}
+      <section>
+        <Typography variant="h3">Tutorial:</Typography>
+        <Video youtubeID={currentSound.tutorial} />
+      </section>
 
       <Typography>
         {currentSound.tips ? (

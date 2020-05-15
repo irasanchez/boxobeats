@@ -9,6 +9,7 @@ import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 import axios from "axios";
+import toggleAuth from "../../actions/actions";
 const apiUrl = process.env.REACT_APP_API_URL;
 
 const useStyles = makeStyles((theme) => ({
@@ -32,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Login = () => {
+const Login = (props) => {
   const classes = useStyles();
   const { push } = useHistory();
   const [login, setLogin] = useState({
@@ -54,7 +55,7 @@ const Login = () => {
       .post(`${apiUrl}/api/auth/login`, login)
       .then((res) => {
         localStorage.setItem("token", res.data.token);
-        console.log("logging in", localStorage.getItem("token"));
+        props.toggleAuth();
         push("/sounds");
       })
       .catch((err) => console.log(err.response));
@@ -114,4 +115,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default connect(null, { toggleAuth })(Login);

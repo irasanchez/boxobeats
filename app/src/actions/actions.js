@@ -9,6 +9,7 @@ export const GET_SOUND_BY_ID = "GET_SOUND_BY_ID";
 export const SET_ERROR = "SET_ERROR";
 export const ADD_TIP = "ADD_TIP";
 export const TOGGLE_PRACTICE = "TOGGLE_PRACTICE";
+export const TOGGLE_AUTH = "TOGGLE_AUTH";
 export const SET_FILTER = "SET_FILTER";
 
 export const getSounds = () => (dispatch) => {
@@ -50,4 +51,8 @@ export const togglePractice = (sound) => ({
 export const setFilter = (query) => ({
   type: SET_FILTER,
   payload: query,
+});
+
+export const toggleAuth = () => ({
+  type: TOGGLE_AUTH,
 });

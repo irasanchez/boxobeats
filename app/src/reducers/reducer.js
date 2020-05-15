@@ -1,6 +1,7 @@
 import {
   ADD_TIP,
   TOGGLE_PRACTICE,
+  TOGGLE_AUTH,
   FETCH_DATA,
   GET_SOUND_BY_ID,
   GET_SOUNDS,
@@ -16,7 +17,7 @@ const initialState = {
   updating: false,
   error: "",
   practiceSet: [],
-  currentUser: {},
+  isAuthenticated: false,
   currentSound: {},
   filtered: [],
 };
@@ -53,7 +54,6 @@ export const reducer = (state = initialState, action) => {
         posting: true,
       };
     case TOGGLE_PRACTICE:
-      console.log(action.payload);
       return {
         ...state,
         practiceSet: state.practiceSet.includes(action.payload)
@@ -61,6 +61,11 @@ export const reducer = (state = initialState, action) => {
               (sound) => sound.name !== action.payload.name
             )
           : [...state.practiceSet, action.payload],
+      };
+    case TOGGLE_AUTH:
+      return {
+        ...state,
+        isAuthenticated: !state.isAuthenticated,
       };
     case SET_FILTER:
       return {

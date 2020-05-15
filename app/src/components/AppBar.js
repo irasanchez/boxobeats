@@ -1,9 +1,15 @@
 import React, { useState } from "react";
-import { AppBar, TextField, Typography, Toolbar } from "@material-ui/core";
+import {
+  AppBar,
+  TextField,
+  Typography,
+  Toolbar,
+  Button,
+} from "@material-ui/core";
 import { IoMdSearch as SearchIcon } from "react-icons/io";
 import { useHistory } from "react-router-dom";
 import { connect } from "react-redux";
-import { setFilter } from "../actions/actions";
+import { setFilter, toggleAuth } from "../actions/actions";
 import { Link } from "react-router-dom";
 
 const styles = {
@@ -35,6 +41,7 @@ function SearchAppBar(props) {
 
   const handleClick = () => {
     localStorage.removeItem("token");
+    props.toggleAuth();
     push("/");
   };
 
@@ -61,7 +68,7 @@ function SearchAppBar(props) {
             value={searchQuery}
           />
         </form>
-        <button onClick={handleClick}>Sign out</button>
+        <Button onClick={handleClick}>Sign out</Button>
       </Toolbar>
     </AppBar>
   );
@@ -69,8 +76,10 @@ function SearchAppBar(props) {
 
 const mapStateToProps = (state) => {
   return {
-    error: state.error,
+    isAuthenticated: state.isAuthenticated,
   };
 };
 
-export default connect(mapStateToProps, { setFilter })(SearchAppBar);
+export default connect(mapStateToProps, { setFilter, toggleAuth })(
+  SearchAppBar
+);

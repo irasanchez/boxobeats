@@ -4,7 +4,7 @@ import Video from "./Video";
 import { TiPlus } from "react-icons/ti";
 import { useParams, useLocation } from "react-router-dom";
 import { connect } from "react-redux";
-import { addToPractice, getSoundByID, getSounds } from "../actions/actions";
+import { togglePractice, getSoundByID, getSounds } from "../actions/actions";
 
 const styles = {
   SoundCard: {
@@ -41,7 +41,7 @@ const Sound = (props) => {
         >
           {currentSound.name}
         </Typography>
-        <Button onClick={() => props.addToPractice(currentSound)}>
+        <Button onClick={() => props.togglePractice(currentSound)}>
           <TiPlus />
           Add to Practice
         </Button>
@@ -83,7 +83,7 @@ const mapStateToProps = (state) => {
 };
 
 export default connect(mapStateToProps, {
-  addToPractice,
+  togglePractice,
   getSoundByID,
   getSounds,
 })(Sound);

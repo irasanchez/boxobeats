@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Route, Redirect } from "react-router";
 import axios from "axios";
 import Register from "./components/auth/Register";
@@ -10,6 +10,8 @@ import Nav from "./components/Nav";
 import SearchAppBar from "./components/AppBar";
 import { CssBaseline, Container } from "@material-ui/core";
 import { axiosWithAuth } from "./components/auth/axiosWithAuth";
+import { connect } from "react-redux";
+import { getSounds } from "./actions/actions";
 const apiUrl = process.env.REACT_APP_API_URL;
 
 const styles = {
@@ -25,21 +27,15 @@ const styles = {
 };
 
 const App = (props) => {
-  const [filtered, setFilter] = useState([]); //used to enable search
-  const [navValue, setNavValue] = useState("");
+  const [navValue, setNavValue] = useState(""); //for mui nav
 
-  const getSounds = () => {
-    axiosWithAuth()
-      .get(`${apiUrl}/sounds`)
-      .then((res) => console.log(res))
-      .catch((err) => console.log(err));
-  };
+  useEffect(props.getSounds, []);
 
   return (
     <>
       <CssBaseline />
       <Container className="App" style={styles.Container}>
-        <SearchAppBar setFilter={setFilter} />
+        <SearchAppBar />
 
         <Redirect from="/" to="/sounds" />
 
@@ -52,7 +48,7 @@ const App = (props) => {
         </Route>
 
         <Route path="/sounds">
-          <Progress sounds={filtered} />
+          <Progress sounds={props.filtered} />
         </Route>
         <PrivateRoute path="/practice">
           <Practice />
@@ -64,4 +60,11 @@ const App = (props) => {
   );
 };
 
-export default App;
+const mapStateToProps = (state) => {
+  return {
+    sounds: state.filtered,
+    error: state.error,
+  };
+};
+
+export default connect(mapStateToProps, { getSounds })(App);

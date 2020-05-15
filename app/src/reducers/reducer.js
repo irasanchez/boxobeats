@@ -1,6 +1,6 @@
 import {
   ADD_TIP,
-  ADD_TO_PRACTICE,
+  TOGGLE_PRACTICE,
   FETCH_DATA,
   GET_SOUND_BY_ID,
   GET_SOUNDS,
@@ -52,13 +52,17 @@ export const reducer = (state = initialState, action) => {
         ...state,
         posting: true,
       };
-    case ADD_TO_PRACTICE:
+    case TOGGLE_PRACTICE:
+      console.log(action.payload);
       return {
         ...state,
-        practiceSet: [...state.practiceSet, action.payload],
+        practiceSet: state.practiceSet.includes(action.payload)
+          ? state.practiceSet.filter(
+              (sound) => sound.name !== action.payload.name
+            )
+          : [...state.practiceSet, action.payload],
       };
     case SET_FILTER:
-      console.log(action.payload);
       return {
         ...state,
         filtered: action.payload

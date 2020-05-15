@@ -8,7 +8,7 @@ export const GET_SOUNDS = "GET_SOUNDS";
 export const GET_SOUND_BY_ID = "GET_SOUND_BY_ID";
 export const SET_ERROR = "SET_ERROR";
 export const ADD_TIP = "ADD_TIP";
-export const ADD_TO_PRACTICE = "ADD_TO_PRACTICE";
+export const TOGGLE_PRACTICE = "TOGGLE_PRACTICE";
 export const SET_FILTER = "SET_FILTER";
 
 export const getSounds = () => (dispatch) => {
@@ -32,11 +32,9 @@ export const getSoundByID = (id) => (dispatch) => {
   axios
     .get(`${apiUrl}/api/sounds/${id}`)
     .then((res) => {
-      console.log(res);
       dispatch({ type: GET_SOUND_BY_ID, payload: res.data });
     })
     .catch((err) => {
-      console.log("error fetching data from api, err: ", err);
       dispatch({
         type: SET_ERROR,
         payload: "error fetching data from api, err: ",
@@ -44,8 +42,8 @@ export const getSoundByID = (id) => (dispatch) => {
     });
 };
 
-export const addToPractice = (sound) => ({
-  type: ADD_TO_PRACTICE,
+export const togglePractice = (sound) => ({
+  type: TOGGLE_PRACTICE,
   payload: sound,
 });
 

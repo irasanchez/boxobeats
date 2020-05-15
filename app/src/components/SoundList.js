@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Grid,
   Typography,
@@ -8,14 +8,12 @@ import {
   ListItemIcon,
   Divider,
 } from "@material-ui/core";
-import { TiPlus } from "react-icons/ti";
+import { TiPlus, TiMinus } from "react-icons/ti";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
-import { getSounds, addToPractice } from "../actions/actions";
+import { getSounds, togglePractice } from "../actions/actions";
 
 const SoundList = (props) => {
-  useEffect(props.getSounds, []);
-
   return (
     <Grid container spacing={24} style={{ width: "100%" }}>
       <List style={{ width: "100%" }}>
@@ -42,9 +40,10 @@ const SoundList = (props) => {
                 </Link>
                 <ListItemIcon
                   style={{ cursor: "pointer" }}
-                  onClick={() => props.addToPractice(sound)}
+                  onClick={() => props.togglePractice(sound)}
                 >
-                  <TiPlus />
+                  {console.log("$$$$$", props.practiceSet.includes(sound))}
+                  {props.practiceSet.includes(sound) ? <TiMinus /> : <TiPlus />}
                 </ListItemIcon>
               </ListItem>
 
@@ -66,9 +65,10 @@ const mapStateToProps = (state) => {
   return {
     sounds: state.filtered,
     error: state.error,
+    practiceSet: state.practiceSet,
   };
 };
 
-export default connect(mapStateToProps, { getSounds, addToPractice })(
+export default connect(mapStateToProps, { getSounds, togglePractice })(
   SoundList
 );

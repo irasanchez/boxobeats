@@ -3,6 +3,9 @@ import { Grid, Typography, Paper } from "@material-ui/core";
 import { Route, Switch } from "react-router-dom";
 import Sound from "./Sound";
 import SoundList from "./SoundList";
+import { GiMicrophone } from "react-icons/gi";
+import { TiPlus } from "react-icons/ti";
+import { FaAngleDoubleLeft } from "react-icons/fa";
 
 const Progress = (props) => {
   const styles = {
@@ -21,7 +24,20 @@ const Progress = (props) => {
     Paper: {
       height: "100%",
       width: "100%",
-      // padding: "0 5%",
+      padding: "20px 5%",
+    },
+    Flex: { display: "flex", direction: "row" },
+    Icons: {
+      backgroundColor: "#3F51B5",
+      color: "white",
+      width: "3rem",
+      height: "3rem",
+      padding: "2%",
+      borderRadius: "50%",
+    },
+    P: {
+      width: "80%",
+      padding: "0 2%",
     },
   };
 
@@ -41,13 +57,39 @@ const Progress = (props) => {
             </Paper>
           </Route>
           <Route exact path="/sounds">
-            <Typography variant="h3">Welcome</Typography>
-            <Typography variant="subtitle1">
-              Please select a sound from the list for more information on that
-              sound. If you want to add a sound to your practice session, hit
-              the plus sign. When you're ready to practice, head over to the
-              practice view using the microphone icon.
-            </Typography>
+            <Paper style={styles.Paper}>
+              <Grid
+                container
+                spacing={5}
+                direction="column"
+                style={styles.Paper} //Paper tured out to have the same settings I needed for the grid to work. decided to re-use rather than rewrite
+              >
+                <Grid item>
+                  <Typography variant="h3">Welcome</Typography>
+                </Grid>
+                <Grid item container>
+                  <FaAngleDoubleLeft style={styles.Icons} />
+                  <Typography variant="body1" paragraph style={styles.P}>
+                    Please select a sound from the list for more information on
+                    that sound.
+                  </Typography>
+                </Grid>
+                <Grid item container>
+                  <TiPlus style={styles.Icons} />
+                  <Typography variant="body1" paragraph style={styles.P}>
+                    If you want to add a sound to your practice session, hit the
+                    plus sign.
+                  </Typography>
+                </Grid>
+                <Grid item container>
+                  <GiMicrophone style={styles.Icons} />
+                  <Typography variant="body1" paragraph style={styles.P}>
+                    When you're ready to practice, head over to the practice
+                    view using the microphone icon.
+                  </Typography>
+                </Grid>
+              </Grid>
+            </Paper>
           </Route>
         </Switch>
       </Grid>

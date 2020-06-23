@@ -12,6 +12,7 @@ export const TOGGLE_PRACTICE = "TOGGLE_PRACTICE";
 export const TOGGLE_AUTH = "TOGGLE_AUTH";
 export const SET_FILTER = "SET_FILTER";
 
+// *next async
 export const getSounds = () => (dispatch) => {
   dispatch({ type: FETCH_DATA });
   axios

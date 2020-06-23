@@ -8,6 +8,7 @@ import Progress from "./components/Progress";
 import Practice from "./components/Practice";
 import Nav from "./components/Nav";
 import SearchAppBar from "./components/AppBar";
+import ResponsiveDrawer from "./components/ResponsiveDrawer";
 import { CssBaseline, Container } from "@material-ui/core";
 import { axiosWithAuth } from "./components/auth/axiosWithAuth";
 import { connect } from "react-redux";
@@ -36,23 +37,22 @@ const App = (props) => {
       <CssBaseline />
       <Container className="App" style={styles.Container}>
         <SearchAppBar />
-
+        {/* *next client side routing -> nested route in progress */}
+        <Route path="/test">
+          <ResponsiveDrawer />
+        </Route>
         <Route path="/register">
           <Register />
         </Route>
-
         <Route exact path="/">
           <Login />
         </Route>
-
         <Route path="/sounds">
           <Progress sounds={props.filtered} />
         </Route>
-
         <PrivateRoute path="/practice">
           <Practice />
         </PrivateRoute>
-
         <Nav value={navValue} setValue={setNavValue} />
       </Container>
     </>

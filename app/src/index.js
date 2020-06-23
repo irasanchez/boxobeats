@@ -5,17 +5,31 @@ import { createStore, applyMiddleware } from "redux";
 import { Provider } from "react-redux";
 import { reducer } from "./reducers/reducer";
 import thunk from "redux-thunk";
+import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 
 import "./index.css";
-import App from "./App";
+import App2 from "./experiment/App2";
 import * as serviceWorker from "./serviceWorker";
 
 const store = createStore(reducer, applyMiddleware(thunk));
 
+const theme = createMuiTheme({
+  palette: {
+    primary: {
+      main: "#394F49",
+    },
+    secondary: {
+      main: "#C52233",
+    },
+  },
+});
+
 ReactDOM.render(
   <Provider store={store}>
     <Router>
-      <App />
+      <ThemeProvider theme={theme}>
+        <App2 />
+      </ThemeProvider>
     </Router>
   </Provider>,
   document.getElementById("root")

@@ -50,6 +50,9 @@ const Progress = (props) => {
       </Grid>
 
       <Grid item container sm={7} style={styles.Panels}>
+        {
+          // *next ⬆ responsive
+        }
         <Switch>
           <Route path="/sounds/:id">
             <Paper style={styles.Paper}>

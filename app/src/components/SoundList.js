@@ -42,7 +42,6 @@ const SoundList = (props) => {
                   style={{ cursor: "pointer" }}
                   onClick={() => props.togglePractice(sound)}
                 >
-                  {console.log("$$$$$", props.practiceSet.includes(sound))}
                   {props.practiceSet.includes(sound) ? <TiMinus /> : <TiPlus />}
                 </ListItemIcon>
               </ListItem>

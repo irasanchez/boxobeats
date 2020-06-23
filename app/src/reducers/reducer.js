@@ -22,6 +22,8 @@ const initialState = {
   filtered: [],
 };
 
+//*next js fundamentals and state management
+
 export const reducer = (state = initialState, action) => {
   switch (action.type) {
     case FETCH_DATA:

@@ -1,19 +1,24 @@
-import React from "react";
-import { fade, makeStyles } from "@material-ui/core/styles";
+//React
+import React, { useState } from "react";
+//MUI
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
-import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
 import InputBase from "@material-ui/core/InputBase";
-import Badge from "@material-ui/core/Badge";
-
 import SearchIcon from "@material-ui/icons/Search";
-import AccountCircle from "@material-ui/icons/AccountCircle";
-import HelpIcon from "@material-ui/icons/Help";
-import NotificationsIcon from "@material-ui/icons/Notifications";
-import MoreIcon from "@material-ui/icons/MoreVert";
+//Redux
+import { connect } from "react-redux";
+import { setFilter } from "../../actions/actions";
 
-const SearchBar = () => {
+const SearchBar = (props) => {
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const changeHandler = (event) => {
+    setSearchQuery(event.target.value);
+    props.setFilter(event.target.value);
+    // ⚠ 👆 will not function properly if value is grabbed from state, will skip letters and return searches late due to state being async
+  };
+
   return (
     <AppBar position="static">
       <Toolbar>
@@ -24,6 +29,7 @@ const SearchBar = () => {
           <InputBase
             placeholder="Search…"
             inputProps={{ "aria-label": "search" }}
+            onChange={changeHandler}
           />
         </div>
       </Toolbar>
@@ -31,4 +37,4 @@ const SearchBar = () => {
   );
 };
 
-export default SearchBar;
+export default connect(null, { setFilter })(SearchBar);

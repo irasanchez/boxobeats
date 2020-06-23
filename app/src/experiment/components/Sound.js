@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import {
   Typography,
   ListItem,
-  ListItemIcon,
   ListItemText,
   Collapse,
   Button,
 } from "@material-ui/core";
 import ExpandLessIcon from "@material-ui/icons/ExpandLess";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+import AddIcon from "@material-ui/icons/Add";
 
 import Video from "../../components/Video";
 const Sound = (props) => {
@@ -22,8 +22,9 @@ const Sound = (props) => {
         <ListItemText primary={props.name} />
         {isOpen ? <ExpandLessIcon /> : <ExpandMoreIcon />}
       </ListItem>
+
       <Collapse in={isOpen} timeout="auto" unmountOnExit>
-        <Button color="secondary" variant="contained">
+        <Button color="secondary" variant="contained" startIcon={<AddIcon />}>
           Add to practice
         </Button>
         <Video />

@@ -1,2 +1,0 @@
-primary - 394F49 dark slate gray
-secondary - C52233 cardinal

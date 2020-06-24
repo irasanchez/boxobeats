@@ -6,7 +6,11 @@ import { Provider } from "react-redux";
 import { reducer } from "./reducers/reducer";
 import thunk from "redux-thunk";
 import { CssBaseline } from "@material-ui/core";
-import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
+import {
+  createMuiTheme,
+  ThemeProvider,
+  responsiveFontSizes,
+} from "@material-ui/core/styles";
 import { black, blue, red, gray, purple, brown } from "./assets/colors";
 
 import "./index.css";
@@ -15,7 +19,7 @@ import * as serviceWorker from "./serviceWorker";
 
 const store = createStore(reducer, applyMiddleware(thunk));
 
-const theme = createMuiTheme({
+let theme = createMuiTheme({
   palette: {
     type: "dark",
     primary: purple,
@@ -26,6 +30,7 @@ const theme = createMuiTheme({
     success: blue,
   },
 });
+theme = responsiveFontSizes(theme);
 
 ReactDOM.render(
   <Provider store={store}>

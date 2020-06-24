@@ -1,22 +1,24 @@
 // React
 import React, { useEffect } from "react";
 // Components
-import SearchBar from "./components/SearchBar";
-import Sounds from "./components/Sounds";
-//MUI
-import { Container } from "@material-ui/core";
+import ListView from "./views/ListView";
+import PracticeView from "./views/PracticeView";
 // Redux
 import { connect } from "react-redux";
 import { getSounds } from "../actions/actions";
+//React Router
+import { Route } from "react-router";
 
 const App2 = (props) => {
   useEffect(props.getSounds, []);
   return (
-    <div>
-      <SearchBar />
-      <Container>
-        <Sounds />
-      </Container>
+    <div style={{ height: "100vh" }}>
+      <Route path="/sounds">
+        <ListView />
+      </Route>
+      <Route exact path="/">
+        <PracticeView />
+      </Route>
     </div>
   );
 };

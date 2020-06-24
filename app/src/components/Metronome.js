@@ -13,10 +13,23 @@ import {
   Slider,
 } from "@material-ui/core";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
+import { red } from "../assets/colors";
 
 const useStyles = makeStyles((theme) => ({
   card: {
     marginBottom: theme.spacing(8),
+    width: "80%",
+    maxWidth: "20rem",
+    alignSelf: "center",
+    height: "8rem",
+    padding: theme.spacing(2),
+  },
+  button: {
+    color: theme.palette.getContrastText(red.main),
+    backgroundColor: red.main,
+    "&:hover": {
+      backgroundColor: red.dark,
+    },
   },
 }));
 const Metronome = (props) => {
@@ -48,8 +61,10 @@ const Metronome = (props) => {
         aria-valuetext={`${bpm}`}
       />
       <Button
+        className={classes.button}
         onClick={isTicking ? stopMetronome : startMetronome}
         variant="contained"
+        size="large"
       >
         {isTicking ? "Stop" : "Start"}
       </Button>

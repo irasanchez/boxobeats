@@ -12,7 +12,7 @@ import { Route } from "react-router";
 const App2 = (props) => {
   useEffect(props.getSounds, []);
   return (
-    <div style={{ height: "100vh" }}>
+    <div style={{ height: "100vh", margin: "0 auto" }}>
       <Route path="/sounds">
         <ListView />
       </Route>

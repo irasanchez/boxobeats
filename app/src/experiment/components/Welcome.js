@@ -1,11 +1,10 @@
 import React from "react";
 import { Typography, Grid } from "@material-ui/core";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
-
+import { Link } from "react-router-dom";
 const useStyles = makeStyles((theme) => ({
   grid: {
-    width: "100%",
-    maxWidth: "98vw",
+    width: "80%",
   },
 }));
 
@@ -28,8 +27,8 @@ const Welcome = () => {
         Below, you'll find a metronome if you want to freestyle.
       </Typography>
       <Typography variant="h5">
-        Or, you can check out the sound collection to pick a few things to focus
-        on for this practice session.
+        Or, you can check out the <Link to="/sounds">sound collection</Link> to
+        pick a few things to focus on for this practice session.
       </Typography>
     </Grid>
   );

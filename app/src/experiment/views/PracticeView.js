@@ -5,6 +5,8 @@ import { Grid, Fab } from "@material-ui/core";
 import Welcome from "../components/Welcome";
 import NavigateBeforeSharpIcon from "@material-ui/icons/NavigateBeforeSharp";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
+import { Link } from "react-router-dom";
+import { connect } from "react-redux";
 
 const useStyles = makeStyles((theme) => ({
   fab: {
@@ -14,33 +16,41 @@ const useStyles = makeStyles((theme) => ({
   },
   grid: {
     height: "100%",
-    marginLeft: theme.spacing(2),
-    marginRight: theme.spacing(2),
+    width: "80%",
+    margin: "0 auto",
   },
 }));
-const PracticeView = () => {
+const PracticeView = (props) => {
   const classes = useStyles();
   const theme = useTheme();
   return (
     <Grid
       container
       direction="column"
-      justify="space-evenly"
+      justify="space-between"
       className={classes.grid}
     >
-      <PracticeList />
-      <Welcome />
+      {props.practiceSet.length ? <PracticeList /> : <Welcome />}
       <Metronome />
-      <Fab
-        color="secondary"
-        aria-label="practice"
-        size="large"
-        className={classes.fab}
-      >
-        <NavigateBeforeSharpIcon />
-      </Fab>
+      <Link to="/sounds">
+        <Fab
+          color="secondary"
+          aria-label="practice"
+          size="large"
+          className={classes.fab}
+        >
+          <NavigateBeforeSharpIcon />
+        </Fab>
+      </Link>
     </Grid>
   );
 };
 
-export default PracticeView;
+const mapStateToProps = (state) => {
+  return {
+    practiceSet: state.practiceSet,
+    error: state.error,
+  };
+};
+
+export default connect(mapStateToProps, {})(PracticeView);

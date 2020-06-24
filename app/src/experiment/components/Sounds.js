@@ -29,10 +29,10 @@ const Sounds = (props) => {
       {props.sounds.map((sound) => {
         return <Sound sound={sound} key={sound.id} />;
       })}
-      <Link to="/practice">
+      <Link to="/">
         <Fab
           color="secondary"
-          aria-label="practice"
+          aria-label="home-metronome-practice"
           size="large"
           className={classes.fab}
         >

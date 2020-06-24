@@ -2,8 +2,26 @@ import React from "react";
 import { useMetronome } from "react-metronome-hook";
 import click from "../assets/click.wav";
 import { Toolbar } from "@material-ui/core";
+import {
+  Card,
+  Button,
+  Drawer,
+  Hidden,
+  IconButton,
+  TextField,
+  Typography,
+  Slider,
+} from "@material-ui/core";
+import { makeStyles, useTheme } from "@material-ui/core/styles";
 
-const Metronome = props => {
+const useStyles = makeStyles((theme) => ({
+  card: {
+    marginBottom: theme.spacing(8),
+  },
+}));
+const Metronome = (props) => {
+  const classes = useStyles();
+  const theme = useTheme();
   const {
     startMetronome,
     isTicking,
@@ -11,17 +29,31 @@ const Metronome = props => {
     bpm,
     setBpm,
     setBeatsPerMeasure,
-    setSounds
+    setSounds,
   } = useMetronome(120, 4, [click, click]);
 
+  const handleChange = (e, newValue) => {
+    setBpm(newValue);
+  };
   return (
-    <Toolbar>
-      <p>{bpm}</p>
-      <input placeholder="Change BPM" onChange={e => setBpm(e.target.value)} />
-      <button onClick={isTicking ? stopMetronome : startMetronome}>
+    <Card className={classes.card}>
+      <Typography>BPM: {bpm}</Typography>
+      {/* <input placeholder="Change BPM" onChange={handleChange} /> */}
+      <Slider
+        aria-labelledby="metronome-bpm-slider"
+        max={300}
+        step={4}
+        valueLabelDisplay="off"
+        onChange={handleChange}
+        aria-valuetext={`${bpm}`}
+      />
+      <Button
+        onClick={isTicking ? stopMetronome : startMetronome}
+        variant="contained"
+      >
         {isTicking ? "Stop" : "Start"}
-      </button>
-    </Toolbar>
+      </Button>
+    </Card>
   );
 };
 

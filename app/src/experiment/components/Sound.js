@@ -9,8 +9,12 @@ import {
 import ExpandLessIcon from "@material-ui/icons/ExpandLess";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import AddIcon from "@material-ui/icons/Add";
-import { fade, makeStyles } from "@material-ui/core/styles";
+import RemoveIcon from "@material-ui/icons/Remove";
+import { makeStyles } from "@material-ui/core/styles";
 import Video from "../../components/Video";
+import { connect } from "react-redux";
+import { useLocation } from "react-router-dom";
+import { getSounds, togglePractice } from "../../actions/actions";
 
 const useStyles = makeStyles((theme) => ({
   button: {
@@ -24,16 +28,17 @@ const useStyles = makeStyles((theme) => ({
 
 const Sound = (props) => {
   const classes = useStyles();
+  const { pathname } = useLocation();
 
   const [isOpen, setIsOpen] = useState(false);
   const handleClick = () => {
     setIsOpen(!isOpen);
   };
-  return (
+  return props.sound ? (
     <>
       <ListItem button onClick={handleClick}>
         <ListItemText>
-          <Typography variant="h4">{props.name}</Typography>
+          <Typography variant="h4">{props.sound.name}</Typography>
         </ListItemText>
         {isOpen ? <ExpandLessIcon /> : <ExpandMoreIcon />}
       </ListItem>
@@ -44,18 +49,38 @@ const Sound = (props) => {
         unmountOnExit
         className={classes.collapse}
       >
-        <Button
-          className={classes.button}
-          color="secondary"
-          variant="contained"
-          startIcon={<AddIcon />}
-        >
-          Add to practice
-        </Button>
+        {props.practiceSet.includes(props.sound) ? (
+          <Button
+            className={classes.button}
+            color="secondary"
+            variant="outlined"
+            startIcon={<RemoveIcon />}
+            onClick={() => props.togglePractice(props.sound)}
+          >
+            Remove from practice
+          </Button>
+        ) : (
+          <Button
+            className={classes.button}
+            color="secondary"
+            variant="contained"
+            startIcon={<AddIcon />}
+            onClick={() => props.togglePractice(props.sound)}
+          >
+            Add to practice
+          </Button>
+        )}
         <Video />
       </Collapse>
     </>
-  );
+  ) : null;
 };
 
-export default Sound;
+const mapStateToProps = (state) => {
+  return {
+    practiceSet: state.practiceSet,
+    error: state.error,
+  };
+};
+
+export default connect(mapStateToProps, { togglePractice })(Sound);

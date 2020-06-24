@@ -14,6 +14,7 @@ export const SET_FILTER = "SET_FILTER";
 
 // *next async
 export const getSounds = () => (dispatch) => {
+  console.log("GETTING SOUNDS");
   dispatch({ type: FETCH_DATA });
   axios
     .get(`${apiUrl}/api/sounds`)

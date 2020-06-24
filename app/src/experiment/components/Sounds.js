@@ -8,7 +8,7 @@ import NavigateNextSharpIcon from "@material-ui/icons/NavigateNextSharp";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 //Redux
 import { connect } from "react-redux";
-import { getSounds, togglePractice } from "../../actions/actions";
+
 //React Router
 import { Link } from "react-router-dom";
 
@@ -27,9 +27,9 @@ const Sounds = (props) => {
   return (
     <List>
       {props.sounds.map((sound) => {
-        return <Sound name={sound.name} />;
+        return <Sound sound={sound} key={sound.id} />;
       })}
-      <Link>
+      <Link to="/practice">
         <Fab
           color="secondary"
           aria-label="practice"
@@ -47,8 +47,7 @@ const mapStateToProps = (state) => {
   return {
     sounds: state.filtered,
     error: state.error,
-    practiceSet: state.practiceSet,
   };
 };
 
-export default connect(mapStateToProps, { getSounds, togglePractice })(Sounds);
+export default connect(mapStateToProps, {})(Sounds);

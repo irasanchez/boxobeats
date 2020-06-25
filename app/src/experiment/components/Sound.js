@@ -38,7 +38,7 @@ const Sound = (props) => {
     <>
       <ListItem button onClick={handleClick}>
         <ListItemText>
-          <Typography variant="h4">{props.sound.name}</Typography>
+          <Typography variant="h4">{props.sound.name.toUpperCase()}</Typography>
         </ListItemText>
         {isOpen ? <ExpandLessIcon /> : <ExpandMoreIcon />}
       </ListItem>

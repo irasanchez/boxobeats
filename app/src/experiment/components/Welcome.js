@@ -2,9 +2,19 @@ import React from "react";
 import { Typography, Grid } from "@material-ui/core";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import { Link } from "react-router-dom";
+import { red, brown, blue } from "../../assets/colors";
 const useStyles = makeStyles((theme) => ({
   grid: {
     width: "80%",
+  },
+  title: {
+    backgroundColor: red.main,
+  },
+  metronome: {
+    backgroundColor: brown.main,
+  },
+  collection: {
+    backgroundColor: blue.main,
   },
 }));
 
@@ -21,14 +31,19 @@ const Welcome = () => {
       className={classes.grid}
     >
       <Typography variant="h1">
-        Welcome to <span>boxobeats</span>!
+        Welcome to <span className={classes.title}>boxobeats</span>!
       </Typography>
       <Typography variant="h5">
-        Below, you'll find a metronome if you want to freestyle.
+        Below, you'll find a{" "}
+        <span className={classes.metronome}>metronome</span> if you want to
+        freestyle.
       </Typography>
       <Typography variant="h5">
-        Or, you can check out the <Link to="/sounds">sound collection</Link> to
-        pick a few things to focus on for this practice session.
+        Or, you can check out the{" "}
+        <Link to="/sounds">
+          <span className={classes.collection}>sound collection</span>
+        </Link>{" "}
+        to pick a few things to focus on for this practice session.
       </Typography>
     </Grid>
   );

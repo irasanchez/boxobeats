@@ -9,12 +9,15 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     backgroundColor: red.main,
+    color: theme.palette.getContrastText(red.main),
   },
   metronome: {
     backgroundColor: brown.main,
+    color: theme.palette.getContrastText(brown.main),
   },
   collection: {
     backgroundColor: blue.main,
+    color: theme.palette.getContrastText(blue.main),
   },
 }));
 

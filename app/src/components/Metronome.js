@@ -13,7 +13,7 @@ import {
   Slider,
 } from "@material-ui/core";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
-import { red } from "../assets/colors";
+import { purple } from "../assets/colors";
 
 const useStyles = makeStyles((theme) => ({
   card: {
@@ -25,11 +25,12 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(2),
   },
   button: {
-    color: theme.palette.getContrastText(red.main),
-    backgroundColor: red.main,
-    "&:hover": {
-      backgroundColor: red.dark,
-    },
+    color: theme.palette.getContrastText(purple.main),
+    backgroundColor: purple.main,
+    // "&:hover": {
+    //   backgroundColor: purple.dark,
+    // },
+    // TODO: fix this button styling so that the colors work properly in every state
   },
 }));
 const Metronome = (props) => {

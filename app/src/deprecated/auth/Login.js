@@ -9,7 +9,8 @@ import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 import axios from "axios";
-import toggleAuth from "../../actions/actions";
+import { connect } from "react-redux";
+import { toggleAuth } from "../../actions/actions";
 const apiUrl = process.env.REACT_APP_API_URL;
 
 const useStyles = makeStyles((theme) => ({
@@ -32,6 +33,8 @@ const useStyles = makeStyles((theme) => ({
     margin: theme.spacing(3, 0, 2),
   },
 }));
+
+// *next client auth and forms
 
 const Login = (props) => {
   const classes = useStyles();

@@ -22,6 +22,8 @@ const initialState = {
   filtered: [],
 };
 
+//*next js fundamentals and state management
+
 export const reducer = (state = initialState, action) => {
   switch (action.type) {
     case FETCH_DATA:
@@ -54,6 +56,7 @@ export const reducer = (state = initialState, action) => {
         posting: true,
       };
     case TOGGLE_PRACTICE:
+      console.log("TOGGLING PRACTICE");
       return {
         ...state,
         practiceSet: state.practiceSet.includes(action.payload)

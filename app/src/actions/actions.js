@@ -17,7 +17,13 @@ export const getSounds = () => (dispatch) => {
   axios
     .get(`${apiUrl}/api/sounds`)
     .then((res) => {
-      dispatch({ type: GET_SOUNDS, payload: res.data });
+      let data = res.data.sort((soundA, soundB) => {
+        return soundA.name > soundB.name ? 1 : -1;
+      });
+      dispatch({
+        type: GET_SOUNDS,
+        payload: data,
+      });
       dispatch({ type: SET_FILTER, payload: "" });
     })
     .catch((err) => {

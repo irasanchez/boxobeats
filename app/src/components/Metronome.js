@@ -1,7 +1,5 @@
 import React from "react";
-import { useMetronome } from "react-metronome-hook";
-import click from "../assets/click.wav";
-import { Toolbar } from "@material-ui/core";
+//MUI
 import {
   Card,
   Button,
@@ -14,6 +12,11 @@ import {
 } from "@material-ui/core";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import { purple } from "../assets/colors";
+import { Toolbar } from "@material-ui/core";
+//Metronome
+import { useMetronome } from "react-metronome-hook";
+//Assets
+import click from "../assets/click.wav";
 
 const useStyles = makeStyles((theme) => ({
   card: {
@@ -21,16 +24,14 @@ const useStyles = makeStyles((theme) => ({
     width: "80%",
     maxWidth: "20rem",
     alignSelf: "center",
-    height: "8rem",
+    height: "10rem",
     padding: theme.spacing(2),
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-evenly",
   },
-  button: {
-    color: theme.palette.getContrastText(purple.main),
-    backgroundColor: purple.main,
-    // "&:hover": {
-    //   backgroundColor: purple.dark,
-    // },
-    // TODO: fix this button styling so that the colors work properly in every state
+  slider: {
+    marginTop: theme.spacing(3),
   },
 }));
 const Metronome = (props) => {
@@ -51,21 +52,21 @@ const Metronome = (props) => {
   };
   return (
     <Card className={classes.card}>
-      <Typography>BPM: {bpm}</Typography>
-      {/* <input placeholder="Change BPM" onChange={handleChange} /> */}
       <Slider
         aria-labelledby="metronome-bpm-slider"
-        max={300}
-        step={4}
-        valueLabelDisplay="off"
-        onChange={handleChange}
         aria-valuetext={`${bpm}`}
+        className={classes.slider}
+        defaultValue={120}
+        max={300}
+        onChange={handleChange}
+        step={4}
+        valueLabelDisplay="on"
       />
       <Button
-        className={classes.button}
+        color="primary"
         onClick={isTicking ? stopMetronome : startMetronome}
-        variant="contained"
         size="large"
+        variant="contained"
       >
         {isTicking ? "Stop" : "Start"}
       </Button>

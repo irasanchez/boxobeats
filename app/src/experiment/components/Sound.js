@@ -18,7 +18,7 @@ import { getSounds, togglePractice } from "../../actions/actions";
 
 const useStyles = makeStyles((theme) => ({
   button: {
-    // marginTop: theme.spacing(2),
+    marginTop: theme.spacing(2),
     marginBottom: theme.spacing(2),
   },
   collapse: {

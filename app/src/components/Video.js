@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import YouTube from "@u-wave/react-youtube";
 import PropTypes from "prop-types";
 
-const Video = ({ tutorial = "" }) => {
+const Video = ({ tutorial }) => {
   const [state, setState] = useState({
     suggestedQuality: "auto",
     volume: 100,

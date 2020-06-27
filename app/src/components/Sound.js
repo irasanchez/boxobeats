@@ -70,7 +70,7 @@ const Sound = (props) => {
             Add to practice
           </Button>
         )}
-        <Video sound={props.sound} />
+        <Video tutorial={props.sound.tutorial} />
       </Collapse>
     </>
   ) : null;

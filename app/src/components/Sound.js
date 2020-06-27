@@ -11,10 +11,10 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import AddIcon from "@material-ui/icons/Add";
 import RemoveIcon from "@material-ui/icons/Remove";
 import { makeStyles } from "@material-ui/core/styles";
-import Video from "../../components/Video";
+import Video from "./Video";
 import { connect } from "react-redux";
 import { useLocation } from "react-router-dom";
-import { getSounds, togglePractice } from "../../actions/actions";
+import { getSounds, togglePractice } from "../actions/actions";
 
 const useStyles = makeStyles((theme) => ({
   button: {
@@ -70,7 +70,7 @@ const Sound = (props) => {
             Add to practice
           </Button>
         )}
-        <Video />
+        <Video sound={props.sound} />
       </Collapse>
     </>
   ) : null;

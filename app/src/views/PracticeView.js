@@ -1,5 +1,5 @@
 import React from "react";
-import Metronome from "../../components/Metronome";
+import Metronome from "../components/Metronome";
 import PracticeList from "../components/PracticeList";
 import { Grid, Fab } from "@material-ui/core";
 import Welcome from "../components/Welcome";

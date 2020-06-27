@@ -14,7 +14,7 @@ import {
 import { black, blue, red, gray, purple, brown } from "./assets/colors";
 
 import "./index.css";
-import App2 from "./experiment/App2";
+import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 
 const store = createStore(reducer, applyMiddleware(thunk));
@@ -37,7 +37,7 @@ ReactDOM.render(
     <Router>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <App2 />
+        <App />
       </ThemeProvider>
     </Router>
   </Provider>,

@@ -7,10 +7,10 @@ import Typography from "@material-ui/core/Typography";
 import InputBase from "@material-ui/core/InputBase";
 import SearchIcon from "@material-ui/icons/Search";
 import { fade, makeStyles } from "@material-ui/core/styles";
-import { gray } from "../../assets/colors";
+import { gray } from "../assets/colors";
 //Redux
 import { connect } from "react-redux";
-import { setFilter } from "../../actions/actions";
+import { setFilter } from "../actions/actions";
 
 const useStyles = makeStyles((theme) => ({
   appbar: {

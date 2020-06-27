@@ -27,7 +27,7 @@ const Sounds = (props) => {
   return (
     <List>
       {props.sounds.map((sound) => {
-        return <Sound sound={sound} key={sound.id} />;
+        return <Sound key={sound.id} sound={sound} />;
       })}
       <Link to="/">
         <Fab

@@ -4,7 +4,7 @@ import { makeStyles, useTheme } from "@material-ui/core/styles";
 import ArrowDownwardIcon from "@material-ui/icons/ArrowDownward";
 import SearchIcon from "@material-ui/icons/Search";
 import { Link } from "react-router-dom";
-import { red, brown, blue } from "../../assets/colors";
+import { red, brown, blue } from "../assets/colors";
 
 // styling here, actual component below
 const useStyles = makeStyles((theme) => ({

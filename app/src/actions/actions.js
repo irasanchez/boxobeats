@@ -1,5 +1,4 @@
 import axios from "axios";
-import { axiosWithAuth } from "../components/auth/axiosWithAuth";
 
 const apiUrl = process.env.REACT_APP_API_URL;
 
@@ -59,6 +58,6 @@ export const setFilter = (query) => ({
   payload: query,
 });
 
-export const toggleAuth = () => ({
-  type: TOGGLE_AUTH,
-});
+// export const toggleAuth = () => ({
+//   type: TOGGLE_AUTH,
+// });

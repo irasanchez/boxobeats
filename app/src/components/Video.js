@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import YouTube from "@u-wave/react-youtube";
+import PropTypes from "prop-types";
 
-const Video = ({ youtubeID }) => {
+const Video = ({ tutorial = "" }) => {
   const [state, setState] = useState({
     suggestedQuality: "auto",
     volume: 100,
-    paused: false
+    paused: false,
   });
 
   const handlePlay = () => {
@@ -16,7 +17,7 @@ const Video = ({ youtubeID }) => {
     setState({ ...state, isPlaying: false });
   };
 
-  const handleVolume = value => {
+  const handleVolume = (value) => {
     setState({ ...state, volume: value });
   };
 
@@ -24,7 +25,7 @@ const Video = ({ youtubeID }) => {
 
   return (
     <YouTube
-      video={youtubeID}
+      video={tutorial}
       width="95%"
       height={300}
       controls={true}
@@ -33,7 +34,13 @@ const Video = ({ youtubeID }) => {
       paused={paused}
       onPause={handlePause}
       onPlaying={handlePlay}
+      modestBranding={true}
     />
   );
 };
+
+Video.propTypes = {
+  tutorial: PropTypes.string.isRequired,
+};
+
 export default Video;

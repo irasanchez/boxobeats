@@ -13,6 +13,12 @@ import { connect } from "react-redux";
 import { setFilter } from "../../actions/actions";
 
 const useStyles = makeStyles((theme) => ({
+  appbar: {
+    height: "10vh",
+  },
+  toolbar: {
+    height: "100%",
+  },
   search: {
     position: "relative",
     display: "flex",
@@ -68,8 +74,8 @@ const SearchBar = (props) => {
   };
 
   return (
-    <AppBar position="static">
-      <Toolbar>
+    <AppBar position="static" className={classes.appbar}>
+      <Toolbar className={classes.toolbar}>
         <div className={classes.search}>
           <div className={classes.searchIcon}>
             <SearchIcon />

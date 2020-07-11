@@ -15,6 +15,7 @@ import Video from "./Video";
 import { connect } from "react-redux";
 import { useLocation } from "react-router-dom";
 import { getSounds, togglePractice } from "../actions/actions";
+import PropTypes from "prop-types";
 
 const useStyles = makeStyles((theme) => ({
   button: {
@@ -81,6 +82,10 @@ const mapStateToProps = (state) => {
     practiceSet: state.practiceSet,
     error: state.error,
   };
+};
+
+Sound.propTypes = {
+  sound: PropTypes.object.isRequired,
 };
 
 export default connect(mapStateToProps, { togglePractice })(Sound);

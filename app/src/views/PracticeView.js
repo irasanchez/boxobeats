@@ -16,9 +16,8 @@ const useStyles = makeStyles((theme) => ({
   },
   grid: {
     height: "100%",
-    width: "80%",
     margin: "0 auto",
-    padding: theme.spacing(6),
+    // padding: theme.spacing(6),
     flexWrap: "nowrap",
   },
 }));
@@ -28,12 +27,18 @@ const PracticeView = (props) => {
   return (
     <Grid
       container
+      item
       direction="column"
+      alignItems="center"
       justify="space-between"
       className={classes.grid}
+      xs={10}
+      m={8}
     >
       {props.practiceSet.length ? <PracticeList /> : <Welcome />}
+
       <Metronome />
+
       <Link to="/sounds">
         <Fab
           color="secondary"

@@ -9,7 +9,7 @@ import { red, brown, blue } from "../assets/colors";
 // styling here, actual component below
 const useStyles = makeStyles((theme) => ({
   grid: {
-    width: "96%",
+    // width: "100%",
     height: "70%",
   },
   titleHighlight: {
@@ -43,10 +43,12 @@ const Welcome = () => {
   return (
     <Grid
       container
+      item
       direction="column"
+      alignItems="flex-start"
       justify="space-evenly"
-      alignItems="center"
       className={classes.grid}
+      xs={8}
     >
       <Typography variant="h1">
         Welcome to <span className={classes.titleHighlight}>boxobeats</span>!
